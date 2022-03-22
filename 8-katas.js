@@ -3714,3 +3714,13 @@ function fuelPrice(litres, pricePerLitre) {
   
   return +(litres * (pricePerLitre - discount)).toFixed(2)
 }
+
+
+
+/*
+  Chuck Norris VII - True or False? (Beginner)
+*/
+
+function ifChuckSaysSo(){
+  return 'Chuck Norris' === 'dork'
+}
