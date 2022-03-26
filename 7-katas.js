@@ -71,3 +71,15 @@ function bingo(a) {
 //           .map(x => x.charCodeAt(0)-96)
 //           .every(o => a.includes(o))) ? "WIN" : "LOSE" ;
 //  }
+
+
+
+/*
+  Disemvowel Trolls
+*/
+
+function disemvowel(str) {
+  const vowels = ['a', 'e', 'i', 'o', 'u']
+  
+  return str.split('').filter(character => !vowels.includes(character.toLowerCase())).join('')
+}
