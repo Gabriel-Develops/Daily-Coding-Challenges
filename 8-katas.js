@@ -3227,3 +3227,30 @@ var cubeChecker = function(volume, side) {
 */
 
 const websites = new Array(1000).fill('codewars')
+
+
+
+/*
+  Sum of differences in array
+*/
+
+function sumOfDifferences(arr) {
+  if (arr.length <= 1)
+    return 0
+  
+  let descArray = arr.sort((a, b) => b - a)
+  
+  return descArray[0] - descArray[descArray.length - 1]
+}
+
+// I will admit that skipping the arithmetic in the middle of the array was clever but the following solution was able
+// to do the arithmetic quite neatly so I would like to show that code here
+
+// const sumOfDifferences = arr => arr
+// .sort((a, b) => b - a)
+// .map((a, i) => a - arr[i + 1] || 0)
+// .reduce((a, b) => a + b, 0);
+
+// The use of the short term evaluation is quite clever and the map and reduce methods are simple and easy to read.
+
+// Another clever solution was to simply find the Max and Min in the array and return the difference
