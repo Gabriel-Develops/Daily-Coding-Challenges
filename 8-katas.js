@@ -3169,3 +3169,15 @@ const checkTheBucket = bucket => bucket.includes('gold');
 function whoIsPaying(name){
   return name.length > 2 ? [name, name.substring(0, 2)] : [name]
 }
+
+
+
+/*
+  Training JS #6: Basic data types--Boolean and conditional statements if..else
+*/
+
+function trueOrFalse(val){
+  return (!!val).toString();
+}
+
+// My attempt at being one of those clever answers on codewars
