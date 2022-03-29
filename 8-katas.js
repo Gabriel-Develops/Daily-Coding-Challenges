@@ -3104,3 +3104,37 @@ function Sleigh() {}
 Sleigh.prototype.authenticate = function(name, password) {
   return name === 'Santa Claus' && password === 'Ho Ho Ho!';
 };
+
+
+
+/*
+  Tip Calculator
+*/
+
+function calculateTip(amount, rating) {
+  let tipRate;
+  
+  switch (rating.toLowerCase()) {
+    case 'terrible':
+      tipRate = 0
+      break
+    case 'poor':
+      tipRate = .05
+      break
+    case 'good':
+      tipRate = .10
+      break
+    case 'great':
+      tipRate = .15
+      break
+    case 'excellent':
+      tipRate = .20
+      break
+    default:
+      return 'Rating not recognised'
+  }
+  
+  return Math.ceil(amount * tipRate)
+}
+
+// Solved this 4 different ways using different methods each time
