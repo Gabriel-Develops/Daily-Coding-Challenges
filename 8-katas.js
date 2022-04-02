@@ -515,3 +515,17 @@ function arrayPlusArray(arr1, arr2) {
   // Join the two arrays and then reduce them into a sum
   return arr1.concat(arr2).reduce((sum, element) => sum + element)
 }
+
+
+
+/*
+  Is he gonna survive?
+*/
+
+function hero(bullets, dragons){
+  return (bullets/2 >= dragons) ? true : false
+}
+
+// A ternary is not needed here quite funnily you could just return the conditional.
+// I just had a brainfart and completely forgot that
+//return (bullets/2 >= dragons) is enough
