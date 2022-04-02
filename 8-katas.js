@@ -564,3 +564,19 @@ function lovefunc(flower1, flower2){
 
 // Adding two even numbers or two odd numbers result in an even number, which should result in a false
 // Adding one even and one odd will result in an odd number, which should result in a true
+
+
+
+/*
+  DNA to RNA Conversion
+*/
+
+function DNAtoRNA(dna) {
+  // Can't use replaceAll for some reason so I will do a map instead
+  return dna.split('')
+    .map(character => character === 'T' ? 'U' : character)
+    .join('')
+}
+
+// Another clever solution I saw was using split('T') and then join('U')
+// Another was using replace('T', 'U') within a while loop checking for indexOf('T' !== -1)
