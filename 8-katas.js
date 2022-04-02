@@ -551,3 +551,16 @@ function grow(x){
 function makeUpperCase(str) {
   return str.toUpperCase()
 }
+
+
+
+/*
+  Opposites Attract
+*/
+
+function lovefunc(flower1, flower2){
+  return (flower1 + flower2) % 2 === 0 ? false : true
+}
+
+// Adding two even numbers or two odd numbers result in an even number, which should result in a false
+// Adding one even and one odd will result in an odd number, which should result in a true
