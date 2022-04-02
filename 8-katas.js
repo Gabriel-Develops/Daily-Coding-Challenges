@@ -480,3 +480,27 @@ function positiveSum(arr) {
 function check(a,x){
     return a.includes(x);
   };
+
+
+
+/*
+  Calculate BMI
+*/
+
+function bmi(weight, height) {
+  let bmi = weight / height**2;
+  switch (true) {
+      case (bmi <= 18.5) :
+      return "Underweight";
+      case (bmi <= 25) :
+      return "Normal";
+      case (bmi <= 30) :
+      return "Overweight";
+      case (bmi > 30) :
+      return "Obese";
+  }
+}
+
+// The switch works but forcing the switch felt wrong.
+// According to the comments an if else statement would be faster.
+// In the future I'll probably avoid forcing switches like this but this was cool to see
