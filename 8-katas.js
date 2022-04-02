@@ -541,3 +541,13 @@ function grow(x){
 }
 
 // for every number, we return product * number, making sure to start product at one
+
+
+
+/*
+  MakeUpperCase
+*/
+
+function makeUpperCase(str) {
+  return str.toUpperCase()
+}
