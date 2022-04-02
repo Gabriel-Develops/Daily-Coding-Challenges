@@ -580,3 +580,21 @@ function DNAtoRNA(dna) {
 
 // Another clever solution I saw was using split('T') and then join('U')
 // Another was using replace('T', 'U') within a while loop checking for indexOf('T' !== -1)
+
+
+
+/*
+  Sum without highest and lowest number
+*/
+
+function sumArray(array) {
+  if (!array || array.length < 3) return 0
+  
+  array.sort((a, b) => a - b)
+  array.pop()
+  array.shift()
+  return array.reduce((sum, element) => sum + element, 0)
+}
+
+// I could have replaced pop and shift with a slice(1, -1) which is pretty clever, I believe this would have allowed me to do it all in one line.
+// Using pop and shift prevents one line because the return the value that is being popped and shifted
