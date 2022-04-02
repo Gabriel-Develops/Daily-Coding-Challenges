@@ -504,3 +504,14 @@ function bmi(weight, height) {
 // The switch works but forcing the switch felt wrong.
 // According to the comments an if else statement would be faster.
 // In the future I'll probably avoid forcing switches like this but this was cool to see
+
+
+
+/*
+  Array plus array
+*/
+
+function arrayPlusArray(arr1, arr2) {
+  // Join the two arrays and then reduce them into a sum
+  return arr1.concat(arr2).reduce((sum, element) => sum + element)
+}
