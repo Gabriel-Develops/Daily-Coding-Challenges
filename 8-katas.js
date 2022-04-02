@@ -529,3 +529,15 @@ function hero(bullets, dragons){
 // A ternary is not needed here quite funnily you could just return the conditional.
 // I just had a brainfart and completely forgot that
 //return (bullets/2 >= dragons) is enough
+
+
+
+/*
+  Beginner - Reduce but Grow
+*/
+
+function grow(x){
+  return x.reduce((product, number) => product * number, 1)
+}
+
+// for every number, we return product * number, making sure to start product at one
