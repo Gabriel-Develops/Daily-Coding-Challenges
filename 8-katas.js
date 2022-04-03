@@ -688,3 +688,19 @@ function points(games) {
 // If you split it into an array of two scores then you don't have to deal with this
 // I also saw people handle the conditionals using two ternary's one nested into the other 
 // I thought of something like this but I didn't think it was very readable
+}
+
+
+
+/*
+  Sum Arrays
+*/
+
+function sum (numbers) {
+  "use strict";
+  if (numbers.length === 0)
+      return 0
+  return numbers.reduce((sum, element) => sum + element, 0)    
+};
+
+// The conditional seems to be uneeded as noone else included it
