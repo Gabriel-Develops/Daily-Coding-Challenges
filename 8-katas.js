@@ -598,3 +598,13 @@ function sumArray(array) {
 
 // I could have replaced pop and shift with a slice(1, -1) which is pretty clever, I believe this would have allowed me to do it all in one line.
 // Using pop and shift prevents one line because the return the value that is being popped and shifted
+
+
+
+/*
+  Simple multiplication 
+*/
+
+function simpleMultiplication(number) {
+  return number % 2 === 0 ? number * 8 : number * 9
+}
