@@ -629,3 +629,22 @@ function betterThanAverage(classPoints, yourPoints) {
 // function betterThanAverage(classPoints, yourPoints) {
 //   return yourPoints > classPoints.reduce((sum, number) => sum + number, yourPoints) / ++classPoints.length
 // }
+
+
+
+/*
+  Find Maximum and Minimum Values of a List
+*/
+
+var min = function(list){
+  list.sort((a, b) => a - b)
+  return list[0];
+}
+
+var max = function(list){
+  list.sort((a, b) => b - a)   
+  return list[0];
+}
+
+// return list[0] was already populated so I figured I would write code around that. Each sort puts its desired number at the beginning of the array
+// This mutates the parameter which may be unwanted but the exercise didn't specify that it wasn't allowed
