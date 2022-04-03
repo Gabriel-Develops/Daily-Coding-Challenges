@@ -648,3 +648,9 @@ var max = function(list){
 
 // return list[0] was already populated so I figured I would write code around that. Each sort puts its desired number at the beginning of the array
 // This mutates the parameter which may be unwanted but the exercise didn't specify that it wasn't allowed
+
+
+
+/*
+  Count the Monkeys!
+*/
