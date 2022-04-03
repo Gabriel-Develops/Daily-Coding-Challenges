@@ -608,3 +608,24 @@ function sumArray(array) {
 function simpleMultiplication(number) {
   return number % 2 === 0 ? number * 8 : number * 9
 }
+
+
+
+/*
+  How good are you really?
+*/
+
+function betterThanAverage(classPoints, yourPoints) {
+  // First line finds sum of array and yourPoints, second divides sum by total scores
+  let avg = classPoints.reduce((sum, element) => sum + element, 0) + yourPoints
+  avg = avg / (classPoints.length + 1)
+  
+  return yourPoints > avg
+}
+
+// A clever one line solution would be to start the sum in the reduce with the value of yourPoints and to divide by ++classPoints.length
+// Allowing a one line solution
+
+// function betterThanAverage(classPoints, yourPoints) {
+//   return yourPoints > classPoints.reduce((sum, number) => sum + number, yourPoints) / ++classPoints.length
+// }
