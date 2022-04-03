@@ -669,10 +669,22 @@ function monkeyCount(n) {
   Total amount of points
 */
 
-function monkeyCount(n) {
-  let array = []
-  for (let i = 1; i <= n; i++) {
-    array.push(i)
-  }
-  return array
+function points(games) {
+  return games.reduce((sum, element) => {
+    let x = element.split(':')[0]
+    let y = element.split(':')[1]
+    
+    if (x < y) 
+      return sum + 0
+    else if (x > y) 
+      return sum + 3
+    else 
+      return sum + 1
+  }, 0)
 }
+
+// I saw a couple of people read the score with bracket notation, grabbing x and y by using element[0] and element[2] respectively.
+// I decided not to go with this route because it breaks if the score has double digit results. 
+// If you split it into an array of two scores then you don't have to deal with this
+// I also saw people handle the conditionals using two ternary's one nested into the other 
+// I thought of something like this but I didn't think it was very readable
