@@ -3092,3 +3092,15 @@ let a = "dev"
 let b = "Lab"
 
 let name = a + b
+
+
+
+/*
+  Sleigh Authentication
+*/
+
+function Sleigh() {}
+
+Sleigh.prototype.authenticate = function(name, password) {
+  return name === 'Santa Claus' && password === 'Ho Ho Ho!';
+};
