@@ -3081,3 +3081,14 @@ function mango(quantity, price){
 */
 
 const sayHello = ( name, city, state ) => `Hello, ${name.join(' ')}! Welcome to ${city}, ${state}!`
+
+
+
+/*
+  Grasshopper - Variable Assignment Debug
+*/
+
+let a = "dev"
+let b = "Lab"
+
+let name = a + b
