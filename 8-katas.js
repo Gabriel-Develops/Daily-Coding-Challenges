@@ -3060,3 +3060,16 @@ function stairsIn20(s){
 */
 
 const sixToast = n => Math.abs(n - 6);
+
+
+
+/*
+  Price of Mangoes
+*/
+
+function mango(quantity, price){
+  let freeMangoes = Math.trunc(quantity / 3)
+  let leftOver = quantity - freeMangoes
+  
+  return leftOver * price
+}
