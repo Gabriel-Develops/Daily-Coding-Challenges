@@ -3052,3 +3052,11 @@ function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
 function stairsIn20(s){
   return s.reduce((weekSum, dayArray) => weekSum += dayArray.reduce((daySum, day) => daySum += day, 0), 0) * 20
 }
+
+
+
+/*
+  BASIC: Making Six Toast.
+*/
+
+const sixToast = n => Math.abs(n - 6);
