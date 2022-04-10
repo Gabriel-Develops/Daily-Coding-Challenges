@@ -765,3 +765,44 @@ function sumMix(x){
 }
 
 // Use the unary operator on number to convert all array elements into number types
+
+
+
+/*
+  Rock Paper Scissors!
+*/
+
+const rps = (p1, p2) => {
+  if (p1 === p2)
+    return 'Draw!'
+  else if (p1 === 'scissors' && p2 === 'paper')
+    return 'Player 1 won!'
+  else if (p1 === 'paper' && p2 === 'rock')
+    return 'Player 1 won!'
+  else if (p1 === 'rock' && p2 === 'scissors')
+    return 'Player 1 won!'
+  else if (p1 === 'rock' && p2 === 'paper')
+    return 'Player 2 won!'
+  else if (p1 === 'scissors' && p2 === 'rock')
+    return 'Player 2 won!'
+  else if (p1 === 'paper' && p2 === 'scissors')
+    return 'Player 2 won!'
+};
+
+// It's a pretty moutful of a soltion.
+// So this OOP solution is really cool
+
+// const rps = (p1, p2) => {
+//   if (p1 === p2) return "Draw!";
+//   var rules = {rock: "scissors", paper: "rock", scissors: "paper"};
+//   if (p2 === rules[p1]) {
+//     return "Player 1 won!";
+//   }
+//   else {
+//     return "Player 2 won!";
+//   }
+// };
+
+// The rules object creates a sort of map that lets the logic figure out if a scenario is met where player one wins, of course filtering out draws first.
+
+// The reason I didn't just do return 'Player 2 won!' was to check inputs but it doesn't seem to be necessary.
