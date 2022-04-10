@@ -743,3 +743,13 @@ var countSheep = function (num){
   
   return string
 }
+
+
+
+/*
+  Sentence Smash
+*/
+
+function smash (words) {
+  return words.join(' ')
+};
