@@ -727,3 +727,19 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
 function areYouPlayingBanjo(name) {
   return name[0].toLowerCase() === 'r' ? `${name} plays banjo` : `${name} does not play banjo`
 }
+
+
+
+/*
+  If you can't sleep, just count sheep!!
+*/
+
+var countSheep = function (num){
+  let string = ''
+  
+  for (let i = 1; i <= num; i++) {
+    string += `${i} sheep...`
+  }
+  
+  return string
+}
