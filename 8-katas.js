@@ -704,3 +704,16 @@ function sum (numbers) {
 };
 
 // The conditional seems to be uneeded as noone else included it
+
+
+
+/*
+  Will you make it?
+*/
+
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+  return distanceToPump <= mpg * fuelLeft
+};
+
+// I've stopped reaching for a ternary operator when wanting a true or false return
+// Instead now just returning the result of the conditional
