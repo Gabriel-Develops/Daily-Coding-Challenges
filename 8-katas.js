@@ -753,3 +753,15 @@ var countSheep = function (num){
 function smash (words) {
   return words.join(' ')
 };
+
+
+
+/*
+  Sum Mixed Array
+*/
+
+function sumMix(x){
+  return x.reduce((sum, number) => sum + +number, 0)
+}
+
+// Use the unary operator on number to convert all array elements into number types
