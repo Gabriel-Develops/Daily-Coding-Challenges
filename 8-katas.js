@@ -806,3 +806,13 @@ const rps = (p1, p2) => {
 // The rules object creates a sort of map that lets the logic figure out if a scenario is met where player one wins, of course filtering out draws first.
 
 // The reason I didn't just do return 'Player 2 won!' was to check inputs but it doesn't seem to be necessary.
+
+
+
+/*
+  Convert a string to an array
+*/
+
+function stringToArray(string){
+  return string.split(' ')
+}
