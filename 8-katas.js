@@ -934,3 +934,23 @@ function feast(beast, dish) {
 // startsWith/endsWith method could have also worked, and slice could have also worked here
 // dish.startsWith(beast[0]) && dish.endsWith(beast[beast.length-1])
 // beast[0]===dish[0] && beast.slice(-1)===dish.slice(-1)
+
+
+
+/*
+  Check same case
+*/
+
+function sameCase(a, b){
+  if (a.toLowerCase() === a.toUpperCase() || b.toLowerCase() === b.toUpperCase())
+    return -1
+  
+  let aIsLower = false, bIsLower = false
+  
+  if (a === a.toLowerCase())
+    aIsLower = true
+  if (b === b.toLowerCase())
+    bIsLower = true
+  
+  return aIsLower === bIsLower ? 1 : 0
+}
