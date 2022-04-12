@@ -871,3 +871,13 @@ function isDivideBy(number, a, b) {
 const areaOrPerimeter = function(l , w) {
   return l === w ? l * w : 2 * (l + w)
 };
+
+
+
+/*
+  You Can't Code Under Pressure #1
+*/
+
+function doubleInteger(i) {
+  return i * 2;
+}
