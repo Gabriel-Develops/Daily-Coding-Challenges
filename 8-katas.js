@@ -881,3 +881,20 @@ const areaOrPerimeter = function(l , w) {
 function doubleInteger(i) {
   return i * 2;
 }
+
+
+
+/*
+  Transportation on vacation 
+*/
+
+function rentalCarCost(d) {
+  let total = 40 * d
+  
+  if (d >= 7)
+    return total - 50
+  else if (d >= 3)
+    return total - 20
+  else
+    return total
+}
