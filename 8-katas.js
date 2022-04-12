@@ -898,3 +898,13 @@ function rentalCarCost(d) {
   else
     return total
 }
+
+
+
+/*
+  Grasshopper - Personalized Message
+*/
+
+function greet (name, owner) {
+  return name.toLowerCase() === owner.toLowerCase() ? 'Hello boss' : 'Hello guest'
+}
