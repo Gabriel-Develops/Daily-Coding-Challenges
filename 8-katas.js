@@ -920,3 +920,17 @@ function greet (name, owner) {
 function removeExclamationMarks(s) {
   return s.split('!').join('');
 }
+
+
+
+/*
+  The Feast of Many Beasts
+*/
+
+function feast(beast, dish) {
+  return beast[0] === dish[0] && beast[beast.length - 1] === dish[dish.length - 1]
+}
+
+// startsWith/endsWith method could have also worked, and slice could have also worked here
+// dish.startsWith(beast[0]) && dish.endsWith(beast[beast.length-1])
+// beast[0]===dish[0] && beast.slice(-1)===dish.slice(-1)
