@@ -908,3 +908,15 @@ function rentalCarCost(d) {
 function greet (name, owner) {
   return name.toLowerCase() === owner.toLowerCase() ? 'Hello boss' : 'Hello guest'
 }
+
+// the toLowerCase method isn't reeally needed in this case but I decided to leave it in
+
+
+
+/*
+  Remove exclamation marks
+*/
+
+function removeExclamationMarks(s) {
+  return s.split('!').join('');
+}
