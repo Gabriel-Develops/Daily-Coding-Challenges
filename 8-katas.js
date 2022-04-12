@@ -3042,3 +3042,13 @@ function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
   sharkSpeed = dolphin ? sharkSpeed/2 : sharkSpeed;
   return pontoonDistance/youSpeed < sharkDistance/sharkSpeed ? "Alive!" : "Shark Bait!";
 }
+
+
+
+/*
+  How many stairs will Suzuki climb in 20 years?
+*/
+
+function stairsIn20(s){
+  return s.reduce((weekSum, dayArray) => weekSum += dayArray.reduce((daySum, day) => daySum += day, 0), 0) * 20
+}
