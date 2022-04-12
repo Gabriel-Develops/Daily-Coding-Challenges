@@ -861,3 +861,13 @@ function firstNonConsecutive (arr) {
 function isDivideBy(number, a, b) {
   return (number % a === 0 && number % b === 0)
 }
+
+
+
+/*
+  Area or Perimeter
+*/
+
+const areaOrPerimeter = function(l , w) {
+  return l === w ? l * w : 2 * (l + w)
+};
