@@ -996,3 +996,13 @@ function getGrade (s1, s2, s3) {
   else 
     return 'F'
 }
+
+
+
+/*
+  Double Char
+*/
+
+function doubleChar(str) {
+  return str.split("").map(element => element + element).join("");
+}
