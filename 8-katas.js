@@ -954,3 +954,23 @@ function sameCase(a, b){
   
   return aIsLower === bIsLower ? 1 : 0
 }
+
+
+
+/*
+  Beginner Series #4 Cockroach
+*/
+
+function cockroachSpeed(s) {
+  // 1km = 100,000cm
+  // 1hr = 3600 seconds
+  
+  // Multiply by 100,000 then divide by 3,600
+  
+  // return Math.floor(s * 100000 / 3600)
+  
+  // or just simplify 100,000 / 3,600 => 250/9
+  // or 100,000 / 3,600 => 27.777777...
+  
+  return Math.floor(s * 250 / 9)
+}
