@@ -974,3 +974,25 @@ function cockroachSpeed(s) {
   
   return Math.floor(s * 250 / 9)
 }
+
+
+
+/*
+  Grasshopper - Grade book
+*/
+
+function getGrade (s1, s2, s3) {
+  let avg = (s1 + s2 + s3) / 3
+  console.log(avg)
+  
+  if (avg >= 90)
+    return 'A'
+  else if (avg >= 80)
+    return 'B'
+  else if (avg >= 70)
+    return 'C'
+  else if (avg >= 60)
+    return 'D'
+  else 
+    return 'F'
+}
