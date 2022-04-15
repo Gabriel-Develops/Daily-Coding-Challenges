@@ -1170,3 +1170,16 @@ String.prototype.toAlternatingCase = function () {
     .map(c => c === c.toLowerCase() ? c.toUpperCase() : c.toLowerCase())
     .join('')
 }
+
+
+
+/*
+  Quarter of the year
+*/
+
+const quarterOf = (month) => {
+  return Math.ceil(month / 12 * 4);
+}
+
+// I chose to divide by the amount of months and then multiply by number of quarters but alternatively you could have just dividide by the number of months in a quarter or
+// return Math.ceil(month / 3)
