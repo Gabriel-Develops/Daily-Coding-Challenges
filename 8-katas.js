@@ -1183,3 +1183,13 @@ const quarterOf = (month) => {
 
 // I chose to divide by the amount of months and then multiply by number of quarters but alternatively you could have just dividide by the number of months in a quarter or
 // return Math.ceil(month / 3)
+
+
+
+/*
+  Keep up the hoop
+*/
+
+function hoopCount(n) {
+  return n >= 10 ? "Great, now move on to tricks" : "Keep at it until you get it";
+}
