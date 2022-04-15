@@ -1193,3 +1193,35 @@ const quarterOf = (month) => {
 function hoopCount(n) {
   return n >= 10 ? "Great, now move on to tricks" : "Keep at it until you get it";
 }
+
+
+
+/*
+  Welcome!
+*/
+
+function greet(language) {
+  let db = {
+    english: 'Welcome',
+    czech: 'Vitejte',
+    danish: 'Velkomst',
+    dutch: 'Welkom',
+    estonian: 'Tere tulemast',
+    finnish: 'Tervetuloa',
+    flemish: 'Welgekomen',
+    french: 'Bienvenue',
+    german: 'Willkommen',
+    irish: 'Failte',
+    italian: 'Benvenuto',
+    latvian: 'Gaidits',
+    lithuanian: 'Laukiamas',
+    polish: 'Witamy',
+    spanish: 'Bienvenido',
+    swedish: 'Valkommen',
+    welsh: 'Croeso'
+  }
+  if (!db[language])
+    return db.english
+  
+  return db[language]
+}
