@@ -1006,3 +1006,13 @@ function getGrade (s1, s2, s3) {
 function doubleChar(str) {
   return str.split("").map(element => element + element).join("");
 }
+
+
+
+/*
+  L1: Set Alarm
+*/
+
+function setAlarm(employed, vacation){
+  return employed && !vacation
+}
