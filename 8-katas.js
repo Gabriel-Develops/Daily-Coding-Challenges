@@ -1097,3 +1097,20 @@ function removeEveryOther(arr){
 function removeEveryOther(arr){
   return arr.filter((element, index) => index % 2 === 0)
 }
+
+
+
+/*
+  Thinkful - Logic Drills: Traffic light
+*/
+
+function updateLight(current) {
+  return {
+    green: 'yellow',
+    yellow: 'red',
+    red: 'green'
+  }[current]
+}
+
+// I saw this type of solution earlier in Get Planet Name By ID figured, this would be the perfect area to implement it in
+// Worked perfectly. Of course a switch could be used, if else, maybe even an array that looks at the next element in line looping back to the first if at the end
