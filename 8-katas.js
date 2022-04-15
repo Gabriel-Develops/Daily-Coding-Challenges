@@ -1114,3 +1114,13 @@ function updateLight(current) {
 
 // I saw this type of solution earlier in Get Planet Name By ID figured, this would be the perfect area to implement it in
 // Worked perfectly. Of course a switch could be used, if else, maybe even an array that looks at the next element in line looping back to the first if at the end
+
+
+
+/*
+  Third Angle of a Triangle
+*/
+
+function otherAngle(a, b) {
+  return 180 - a - b
+}
