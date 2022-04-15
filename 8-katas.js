@@ -1136,3 +1136,25 @@ function twiceAsOld(dadYearsOld, sonYearsOld) {
 }
 
 // An interesting aproach I saw was finding the difference between the dad's age and the son's age doubled and then just find the abosulte of it. Quite clever
+
+
+
+/*
+  Correct the mistakes of the character recognition software
+*/
+
+function correct(string)
+{
+	return string.split('').map(c => {
+    switch (c) {
+      case '5':
+        return 'S'
+      case '0':
+        return 'O'
+      case '1':
+        return 'I'
+      default:
+        return c
+    }
+  }).join('')
+}
