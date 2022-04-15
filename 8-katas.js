@@ -1079,3 +1079,21 @@ function getPlanetName(id){
 function enough(cap, on, wait) {
   return cap-on>=wait?0:wait-(cap-on);
 }
+
+
+
+/*
+  Removing Elements
+*/
+
+function removeEveryOther(arr){
+  return arr.filter((element, index) => index % 2 === 0 ? element : null)
+}
+
+// the ternary is unnessary the filter filters out an element if its false and keeps it if its true
+// A better solution would be 
+
+// v2
+function removeEveryOther(arr){
+  return arr.filter((element, index) => index % 2 === 0)
+}
