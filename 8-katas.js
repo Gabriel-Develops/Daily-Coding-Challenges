@@ -1124,3 +1124,15 @@ function updateLight(current) {
 function otherAngle(a, b) {
   return 180 - a - b
 }
+
+
+
+/*
+  Twice as old
+*/
+
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  return dadYearsOld > sonYearsOld * 2 ? dadYearsOld - sonYearsOld * 2 : sonYearsOld * 2 - dadYearsOld
+}
+
+// An interesting aproach I saw was finding the difference between the dad's age and the son's age doubled and then just find the abosulte of it. Quite clever
