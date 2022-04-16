@@ -1225,3 +1225,15 @@ function greet(language) {
   
   return db[language]
 }
+
+
+
+/*
+  All Star Code Challenge #18
+*/
+
+function strCount(str, letter){  
+  return str.split('').filter(element => element === letter).length
+}
+
+// A similar solution would be to split on the desired letter and return length - 1
