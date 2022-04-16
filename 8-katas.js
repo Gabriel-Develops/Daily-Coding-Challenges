@@ -1286,3 +1286,25 @@ function findLongest(str) {
   }
   return longest
 }
+
+
+
+/*
+  Expressions Matter 
+*/
+
+function expressionMatter(a, b, c) {
+  // + +
+  // * *
+  // + *
+  // (+) *
+  // * + 
+  // * (+)
+  return [
+    a + b + c, 
+    a * b * c, 
+    a + b * c,
+    (a + b) * c,
+    a * b + c,
+    a * (b + c)].reduce((max, element) => element > max ? max = element : max, 0)
+}
