@@ -1348,3 +1348,13 @@ function findDifference(a, b) {
   //return volumeA > volumeB ? volumeA - volumeB : volumeB - volumeA
   return Math.abs(volumeA - volumeB)
 }
+
+
+
+/*
+  Sort and Star
+*/
+
+function twoSort(s) {
+  return s.sort()[0].split('').join('***')
+}
