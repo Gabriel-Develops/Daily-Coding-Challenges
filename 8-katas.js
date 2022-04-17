@@ -1382,3 +1382,15 @@ function howMuchILoveYou(nbPetals) {
   // One line
   // return ['I love you', 'a little', 'a lot', 'passionately', 'madly', 'not at all'][--nbPetals % 6]
 }
+
+
+
+/*
+  Filter out the geese
+*/
+
+function gooseFilter (birds) {
+  let geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
+  
+  return birds.filter(element => !geese.includes(element))
+}
