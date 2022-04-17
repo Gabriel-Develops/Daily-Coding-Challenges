@@ -1358,3 +1358,11 @@ function findDifference(a, b) {
 function twoSort(s) {
   return s.sort()[0].split('').join('***')
 }
+
+
+
+/*
+  Function 3 - multiplying two numbers
+*/
+
+const multiply = (x, y) => x * y
