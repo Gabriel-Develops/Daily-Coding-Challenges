@@ -1334,3 +1334,17 @@ function createArray(number){
 function checkForFactor (base, factor) {
   return base % factor === 0
 }
+
+
+
+/*
+  Difference of Volumes of Cuboids
+*/
+
+function findDifference(a, b) {
+  let volumeA = a.reduce((volume, element) => volume *= element, 1)
+  let volumeB = b.reduce((volume, element) => volume *= element, 1)
+  
+  //return volumeA > volumeB ? volumeA - volumeB : volumeB - volumeA
+  return Math.abs(volumeA - volumeB)
+}
