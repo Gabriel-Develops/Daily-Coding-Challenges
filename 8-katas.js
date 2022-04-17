@@ -1308,3 +1308,19 @@ function expressionMatter(a, b, c) {
     a * b + c,
     a * (b + c)].reduce((max, element) => element > max ? max = element : max, 0)
 }
+
+
+
+/*
+  Unfinished Loop - Bug Fixing #1
+*/
+
+function createArray(number){
+  let newArray = []
+  
+  for(let counter = 1; counter <= number; counter++){
+    newArray.push(counter)
+  }
+  
+  return newArray
+}
