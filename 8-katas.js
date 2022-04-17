@@ -1366,3 +1366,19 @@ function twoSort(s) {
 */
 
 const multiply = (x, y) => x * y
+
+
+
+/*
+  I love you, a little , a lot, passionately ... not at all
+*/
+
+function howMuchILoveYou(nbPetals) {
+  let passion = ['I love you', 'a little', 'a lot', 'passionately', 'madly', 'not at all']
+  
+  nbPetals--
+  return passion[nbPetals % 6]
+  
+  // One line
+  // return ['I love you', 'a little', 'a lot', 'passionately', 'madly', 'not at all'][--nbPetals % 6]
+}
