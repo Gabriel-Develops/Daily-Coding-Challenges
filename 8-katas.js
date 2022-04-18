@@ -1479,3 +1479,13 @@ const humanYearsCatYearsDogYears = function(humanYears) {
   
   return Array(humanYears, catYears, dogYears)
 }
+
+
+
+/*
+  Is it a palindrome?
+*/
+
+function isPalindrome(x) {
+  return x.toLowerCase() === x.toLowerCase().split('').reverse().join('')
+}
