@@ -1451,3 +1451,31 @@ function finalGrade (exam, projects) {
   else
     return 0
 }
+
+
+
+/*
+  Cat years, Dog years
+*/
+
+const humanYearsCatYearsDogYears = function(humanYears) {
+  let catYears = 0, dogYears = 0
+  
+  for (let i = 0; i < humanYears; i++) {
+    switch (i) {
+      case 0:
+        catYears += 15
+        dogYears += 15
+        break
+      case 1:
+        catYears += 9
+        dogYears += 9
+        break
+      default:
+        catYears += 4
+        dogYears += 5
+    }
+  }
+  
+  return Array(humanYears, catYears, dogYears)
+}
