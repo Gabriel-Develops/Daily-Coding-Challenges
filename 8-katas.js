@@ -1421,3 +1421,16 @@ function well(x){
   else
     return 'Fail!'
 }
+
+
+
+/*
+  To square(root) or not to square(root)
+*/
+
+function squareOrSquareRoot(array) {
+  return array.map(element => Math.sqrt(element) === Math.trunc(Math.sqrt(element)) ? Math.sqrt(element) : element ** 2)
+}
+
+// Another method to check if the sqrt is a whole number is to mod 1 and check to see if the remainder is equal to zero
+// return array.map(element => Math.sqrt(element) % 1 === 0 ? Math.sqrt(element) : element ** 2)
