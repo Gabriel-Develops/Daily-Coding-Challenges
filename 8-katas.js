@@ -1489,3 +1489,16 @@ const humanYearsCatYearsDogYears = function(humanYears) {
 function isPalindrome(x) {
   return x.toLowerCase() === x.toLowerCase().split('').reverse().join('')
 }
+
+
+
+/*
+  N-th Power
+*/
+
+function index(array, n){
+  return array[n] ? array[n] ** n : -1
+}
+
+// I wanted to try to solve this problem without using array.length > n as the conditional
+// In javascript if you look for an index not present in the array, you get undefined back which is falsey and can be used in a ternary 
