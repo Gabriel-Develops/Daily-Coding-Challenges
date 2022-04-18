@@ -1434,3 +1434,20 @@ function squareOrSquareRoot(array) {
 
 // Another method to check if the sqrt is a whole number is to mod 1 and check to see if the remainder is equal to zero
 // return array.map(element => Math.sqrt(element) % 1 === 0 ? Math.sqrt(element) : element ** 2)
+
+
+
+/*
+  Student's Final Grade
+*/
+
+function finalGrade (exam, projects) {
+  if (exam > 90 || projects > 10)
+    return 100
+  else if (exam > 75 && projects >= 5)
+    return 90
+  else if (exam > 50 && projects >= 2)
+    return 75
+  else
+    return 0
+}
