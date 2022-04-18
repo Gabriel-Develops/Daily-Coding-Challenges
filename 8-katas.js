@@ -1404,3 +1404,20 @@ function gooseFilter (birds) {
 function sumStr(a,b) {
   return `${+a + +b}`; 
 }
+
+
+
+/*
+  Well of Ideas - Easy Version
+*/
+
+function well(x){
+  let count = x.filter(element => element === 'good').length
+  
+  if (count > 2)
+    return 'I smell a series!'
+  if (count > 0)
+    return 'Publish!'
+  else
+    return 'Fail!'
+}
