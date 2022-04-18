@@ -1394,3 +1394,13 @@ function gooseFilter (birds) {
   
   return birds.filter(element => !geese.includes(element))
 }
+
+
+
+/*
+  Sum The Strings
+*/
+
+function sumStr(a,b) {
+  return `${+a + +b}`; 
+}
