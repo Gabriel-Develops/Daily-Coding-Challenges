@@ -1502,3 +1502,15 @@ function index(array, n){
 
 // I wanted to try to solve this problem without using array.length > n as the conditional
 // In javascript if you look for an index not present in the array, you get undefined back which is falsey and can be used in a ternary 
+
+
+
+/*
+  Volume of a Cuboid
+*/
+
+class Kata {
+  static getVolumeOfCuboid(length, width, height) {
+    return length * width * height
+  }
+}
