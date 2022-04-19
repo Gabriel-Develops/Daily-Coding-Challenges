@@ -1585,3 +1585,13 @@ function warnTheSheep(queue) {
 }
 
 // Ternary checks to see if position of wolf is at end, if it isn't it finds the position of the sheep in front of it
+
+
+
+/*
+  Super Duper Easy
+*/
+
+function problem(x){
+  return typeof x === "number" ? x * 50 + 6 : "Error";
+}
