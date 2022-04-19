@@ -1524,3 +1524,13 @@ class Kata {
 function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
   return laLigaGoals + copaDelReyGoals + championsLeagueGoals
 }
+
+
+
+/*
+  Is it even?
+*/
+
+function testEven(n) {
+  return n % 2 === 0
+}
