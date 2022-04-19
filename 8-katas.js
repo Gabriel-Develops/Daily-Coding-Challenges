@@ -1559,3 +1559,17 @@ function getRealFloor(n) {
   else
     return n - 2
 }
+
+
+
+/*
+  Is the string uppercase?
+*/
+
+String.prototype.isUpperCase = function() {
+  return this == this.toUpperCase()
+}
+
+// console logging this results in [String: 'c'] being returned, and trying to use three === to compare fails the comparison
+// To work around this I used two equal signs but I could have also used .valueOf() or .toString()
+// These two methods would have converted the object into a string allowing me to compare with three === signs
