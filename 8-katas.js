@@ -1534,3 +1534,13 @@ function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
 function testEven(n) {
   return n % 2 === 0
 }
+
+
+
+/*
+  Grasshopper - Terminal game move function
+*/
+
+function move (position, roll) {
+  return position + (roll * 2)
+}
