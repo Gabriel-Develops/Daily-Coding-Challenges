@@ -1573,3 +1573,15 @@ String.prototype.isUpperCase = function() {
 // console logging this results in [String: 'c'] being returned, and trying to use three === to compare fails the comparison
 // To work around this I used two equal signs but I could have also used .valueOf() or .toString()
 // These two methods would have converted the object into a string allowing me to compare with three === signs
+
+
+
+/*
+  A wolf in sheep's clothing
+*/
+
+function warnTheSheep(queue) {
+  return queue.indexOf('wolf') === queue.length - 1 ? "Pls go away and stop eating my sheep" : `Oi! Sheep number ${queue.length - 1 - queue.indexOf('wolf')}! You are about to be eaten by a wolf!`
+}
+
+// Ternary checks to see if position of wolf is at end, if it isn't it finds the position of the sheep in front of it
