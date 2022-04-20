@@ -1661,3 +1661,11 @@ function unusualFive() {
 // After looking at the answers I feel foolish, I tried really hard trying to solve this using math and it worked but their was a much easier approach and it was ...
 // return 'Hello'.length
 // ...
+
+
+
+/*
+  Function 2 - squaring an argument
+*/
+
+const square = num => num ** 2
