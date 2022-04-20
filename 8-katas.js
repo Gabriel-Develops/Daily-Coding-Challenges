@@ -1612,3 +1612,22 @@ function saleHotdogs(n){
 //   return n * 95
 // else
 //   return n * 90
+
+
+
+/*
+  What is between?
+*/
+
+function between(a, b) {
+  let array = []
+  
+  do {
+    array.push(a)
+    a++
+  } while (a <= b)
+    
+  return array
+}
+
+// I wanted to use a do while loop here but it a simple while loop would be sufficient. If a is ever bigger than b, this would fail.
