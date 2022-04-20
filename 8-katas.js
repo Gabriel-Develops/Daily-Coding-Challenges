@@ -1641,3 +1641,23 @@ function between(a, b) {
 function sayHello(name) {
   return `Hello, ${name}`
 }
+
+
+
+/*
+  5 without numbers !!
+*/
+
+function unusualFive() {
+  let array = Math.PI.toString().split('')
+  array.shift()
+  array.shift()
+  array.shift()
+  array.shift()
+  array.shift()
+  return Number(array.shift())
+}
+
+// After looking at the answers I feel foolish, I tried really hard trying to solve this using math and it worked but their was a much easier approach and it was ...
+// return 'Hello'.length
+// ...
