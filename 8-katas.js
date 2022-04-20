@@ -1631,3 +1631,13 @@ function between(a, b) {
 }
 
 // I wanted to use a do while loop here but it a simple while loop would be sufficient. If a is ever bigger than b, this would fail.
+
+
+
+/*
+  Grasshopper - Debug sayHello
+*/
+
+function sayHello(name) {
+  return `Hello, ${name}`
+}
