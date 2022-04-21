@@ -1719,3 +1719,17 @@ function combat(health, damage) {
 
 // using math.max is also a clever way to solve this problem
 // return Math.max(0, health - damage)
+
+
+
+/*
+  Exclamation marks series #11: Replace all vowel to exclamation mark in the sentence
+*/
+
+function replace(s){
+  let vowels = ['a', 'e', 'i', 'o', 'u']
+  
+  return s.split('').map(element => vowels.includes(element.toLowerCase()) ? '!' : element).join('')
+}
+
+// I prefer not to use regex as it takes out all of the fun
