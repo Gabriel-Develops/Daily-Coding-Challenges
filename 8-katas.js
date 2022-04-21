@@ -1706,3 +1706,16 @@ function hello(name) {
 // Cleaner solution using slice method and concatenation
 // const hello = s =>
 // `Hello, ${s ? (s[0].toUpperCase() + s.slice(1).toLowerCase()) : 'World'}!`;
+
+
+
+/*
+  Grasshopper - Terminal game combat function
+*/
+
+function combat(health, damage) {
+  return damage > health ? 0 : health - damage
+}
+
+// using math.max is also a clever way to solve this problem
+// return Math.max(0, health - damage)
