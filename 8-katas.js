@@ -1685,3 +1685,24 @@ const arr = N => {
   
   return arr
 }
+
+
+
+/*
+  Hello, Name or World!
+*/
+
+function hello(name) {
+  if (!name)
+    return 'Hello, World!'
+
+  let letters = name.toLowerCase().split('')
+  letters[0] = letters[0].toUpperCase()
+  let capitalized = letters.join('')
+  
+  return `Hello, ${capitalized}!`
+}
+
+// Cleaner solution using slice method and concatenation
+// const hello = s =>
+// `Hello, ${s ? (s[0].toUpperCase() + s.slice(1).toLowerCase()) : 'World'}!`;
