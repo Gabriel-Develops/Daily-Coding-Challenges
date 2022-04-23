@@ -1745,3 +1745,16 @@ function getChar(c) {
 }
 
 // Takes in a character code and returns back the ascii character tied to that integer
+
+
+
+/*
+  Exclamation marks series #1: Remove an exclamation mark from the end of string
+*/
+
+function remove (string) {
+  return string.endsWith('!') ? string.slice(0, string.length - 1) : string
+}
+
+// return string[string.length - 1] === '!' ? string.slice(0, string.length - 1) : string
+// A cleaner way is to use -1 in the slice method as it accepts negative indexes
