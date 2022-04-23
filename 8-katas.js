@@ -1733,3 +1733,15 @@ function replace(s){
 }
 
 // I prefer not to use regex as it takes out all of the fun
+
+
+
+/*
+  get character from ASCII Value
+*/
+
+function getChar(c) {
+  return String.fromCharCode(c)
+}
+
+// Takes in a character code and returns back the ascii character tied to that integer
