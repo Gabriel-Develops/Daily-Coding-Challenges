@@ -1758,3 +1758,33 @@ function remove (string) {
 
 // return string[string.length - 1] === '!' ? string.slice(0, string.length - 1) : string
 // A cleaner way is to use -1 in the slice method as it accepts negative indexes
+
+
+
+/*
+  Drink about
+*/
+
+function peopleWithAgeDrink(old) {
+  if (old < 14)
+    return 'drink toddy'
+  else if (old < 18)
+    return 'drink coke'
+  else if (old < 21)
+    return 'drink beer'
+  else
+    return 'drink whisky'
+}
+
+// switch (true) {
+//     case old < 14:
+//       return 'drink toddy'
+//     case old < 18:
+//       return 'drink coke'
+//     case old < 21:
+//       return 'drink beer'
+//     case old >= 21:
+//       return 'drink whisky'
+// }
+
+// Forcing a switch case doesn't feel right and so I opted to using an if else statement instead
