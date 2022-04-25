@@ -1906,6 +1906,7 @@ function hexToDec(hexString){
   No zeros for heros
 */
 
+// Solving the problem using String logic
 function noBoringZeros(n) {
   n = n.toString().split('')
   
@@ -1914,4 +1915,13 @@ function noBoringZeros(n) {
   }
   
   return +n.join('')
+}
+
+// Solving the problem using Number logic
+function noBoringZeros(n) {
+  while (n % 10 === 0 && n !== 0) {
+    n = n / 10
+  }
+  
+  return n
 }
