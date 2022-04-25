@@ -1962,3 +1962,13 @@ function mouthSize(animal) {
 }
 
 // A ternary would have sufficed
+
+
+
+/*
+  Reverse List Order
+*/
+
+function reverseList(list) {
+  return list.reverse()
+}
