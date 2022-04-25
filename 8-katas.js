@@ -1850,3 +1850,52 @@ function pipeFix(numbers){
   
   return arr
 }
+
+
+
+/*
+  Hex to Decimal
+*/
+
+function hexToDec(hexString){
+  // Create a key object to translate letters into numbers
+  let hex = {
+    a: 10,
+    b: 11,
+    c: 12,
+    d: 13,
+    e: 14,
+    f: 15,
+  }
+  
+  // Check for negative sign and remove it if its there
+  let negative = false
+  if (hexString[0] === '-') {
+    negative = true
+    hexString = hexString.slice(1)
+  }
+  
+  // A hex number is base 16, 
+  // so A => 16 power of 0 * 10
+  // If we reverse the string, the index correlates with the power of each number
+  let total = 0
+  
+  hexString.toLowerCase()
+    .split('')
+    .reverse()
+    .forEach((element, index) => {
+    if (hex[element])
+      return total += (16 ** index) * hex[element]
+    else
+      return total += (16 ** index) * element
+  })
+  
+  // Before we exit we convert to negative
+  if (negative)
+    total *= -1
+  
+  return total
+}
+
+// parseInt(hexString, 16)
+// ...
