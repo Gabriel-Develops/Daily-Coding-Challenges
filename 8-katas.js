@@ -1945,3 +1945,20 @@ function capitalizeWord(word) {
 function xor(a, b) {
   return (a && !b) || (!a && b)
 }
+
+
+
+/*
+  The Wide-Mouthed frog! 
+*/
+
+function mouthSize(animal) {
+  switch (animal.toLowerCase()) {
+    case 'alligator':
+      return 'small'
+    default:
+      return 'wide'
+  }
+}
+
+// A ternary would have sufficed
