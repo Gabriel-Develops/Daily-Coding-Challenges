@@ -1935,3 +1935,13 @@ function noBoringZeros(n) {
 function capitalizeWord(word) {
   return word[0].toUpperCase() + word.slice(1);
 }
+
+
+
+/*
+  Exclusive "or" (xor) Logical Operator
+*/
+
+function xor(a, b) {
+  return (a && !b) || (!a && b)
+}
