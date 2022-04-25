@@ -1899,3 +1899,19 @@ function hexToDec(hexString){
 
 // parseInt(hexString, 16)
 // ...
+
+
+
+/*
+  No zeros for heros
+*/
+
+function noBoringZeros(n) {
+  n = n.toString().split('')
+  
+  while(n[n.length - 1] === '0') {
+    n.pop()
+  }
+  
+  return +n.join('')
+}
