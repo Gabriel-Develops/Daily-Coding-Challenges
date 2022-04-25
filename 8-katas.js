@@ -1831,3 +1831,22 @@ function helloWorld(){
  `"^--'..'   '-`-^-'"--    `-^-'`.''"""""`.,^.`.--' 
 */
 // Pokemon Break
+
+
+
+/*
+  Training JS #1: create your first JS function and print "Hello World!"
+*/
+
+function pipeFix(numbers){
+  let first = numbers[0], last = numbers[numbers.length - 1]
+  console.log(first, last)
+  
+  let arr = []
+  
+  for (let i = first; i <= last; i++) {
+    arr.push(i)
+  }
+  
+  return arr
+}
