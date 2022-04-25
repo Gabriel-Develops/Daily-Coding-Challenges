@@ -1972,3 +1972,17 @@ function mouthSize(animal) {
 function reverseList(list) {
   return list.reverse()
 }
+
+
+
+/*
+  Vowel remover
+*/
+
+function shortcut (string) {
+  const VOWELS = ['a', 'e', 'i', 'o', 'u']
+  
+  return string.toLowerCase().split('')
+    .filter(element => VOWELS.indexOf(element) === -1)
+    .join('')
+}
