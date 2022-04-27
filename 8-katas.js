@@ -2045,3 +2045,23 @@ function mergeArrays(arr1, arr2) {
 function reverse(string){
   return string.split(' ').reverse().join(' ')
 }
+
+
+
+/*
+  Multiplication table for number
+*/
+
+function multiTable(number) {
+  let table = "";
+  for(let i = 1; i <= 10; i++){
+    table += (`${i} * ${number} = ${number*i}`);
+    if(i !== 10){
+      table += "\n";
+    }
+  }
+  return table;
+}
+
+// An alternative to checking to see if i is 10, is to slice the string from beginning up to but not including the last character '\n'
+// return table.slice(0, -1)
