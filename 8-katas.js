@@ -2035,3 +2035,13 @@ function mergeArrays(arr1, arr2) {
 // I wanted to solve this problem without using set, Set would have removed unique values from the array meaning that the filter would be unnecessary
 // Someones one line solution
 // return Array.from(new Set(arr1.concat(arr2).sort((a,b) => (a-b))));
+
+
+
+/*
+  Reversing Words in a String
+*/
+
+function reverse(string){
+  return string.split(' ').reverse().join(' ')
+}
