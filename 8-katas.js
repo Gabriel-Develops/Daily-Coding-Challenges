@@ -1996,3 +1996,14 @@ function shortcut (string) {
 function take(arr, n) {
   return arr.slice(0, n)
 }
+
+
+
+/*
+  Grasshopper - Basic Function Fixer
+*/
+
+function addFive(num) {
+  let total = num + 5
+  return total
+}
