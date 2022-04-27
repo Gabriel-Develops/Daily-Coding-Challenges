@@ -2007,3 +2007,31 @@ function addFive(num) {
   let total = num + 5
   return total
 }
+
+
+
+/*
+  Merge two sorted arrays into one
+*/
+
+function mergeArrays(arr1, arr2) {
+  // Test Cases
+  if (arr1.length === 0 && arr2.length === 0)
+    return []
+  // Sort the returned array
+  else if (arr1.length === 0)
+    return arr2.sort((a, b) => a - b)
+  else if (arr2.length === 0)
+    return arr1.sort((a, b) => a - b)
+  
+  // If all test cases passed, we concatenate both arrays
+  // Sort
+  // Filter checks that the elements only pass if they are the first of that element in the array
+  return arr1.concat(arr2)
+    .sort((a, b) => a - b)
+    .filter((element, index, array) => array.indexOf(element) === index)
+}
+
+// I wanted to solve this problem without using set, Set would have removed unique values from the array meaning that the filter would be unnecessary
+// Someones one line solution
+// return Array.from(new Set(arr1.concat(arr2).sort((a,b) => (a-b))));
