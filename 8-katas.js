@@ -2065,3 +2065,15 @@ function multiTable(number) {
 
 // An alternative to checking to see if i is 10, is to slice the string from beginning up to but not including the last character '\n'
 // return table.slice(0, -1)
+
+
+
+/*
+  Bin to Decimal
+*/
+
+function binToDec(bin){
+  return bin.split('').reverse().reduce((total, number, index) => total += 2 ** index * +number, 0)
+}
+
+// PARSE INT !!!
