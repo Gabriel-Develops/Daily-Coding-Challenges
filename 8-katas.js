@@ -2148,3 +2148,26 @@ function preFizz(n) {
 
 // Another solution is to use the from method on the Array constructor
 // Array.from({length: n}, (element, index) => index + 1)
+
+
+
+/*
+  Convert to Binary
+*/
+
+function toBinary(n){
+  let binary = []
+  
+  // Divide by two method,
+  // Add remainder after dividing by two to the start of the binary number
+  while (n > 0) {
+    n % 2 === 0 ? binary.unshift('0') : binary.unshift('1')
+    
+    n = Math.trunc(n / 2)
+  }
+  
+  return +binary.join('')
+}
+
+// Easy Way
+// return +n.toString(2)
