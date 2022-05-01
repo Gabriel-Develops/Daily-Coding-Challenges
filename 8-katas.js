@@ -2131,3 +2131,20 @@ function equal5(){
   var b=v3   //set number value to b
   return a%b;
 }
+
+
+
+/*
+  Pre-FizzBuzz Workout #1
+*/
+
+function preFizz(n) {
+  return Array(n).fill(null).map((element, index) => index + 1)
+}
+
+// An alternative to the fill method is to use the spread operator,
+// [...Array(3)], map would now work directly on this array
+// [...Array(3)].map((element, index) => index + 1)
+
+// Another solution is to use the from method on the Array constructor
+// Array.from({length: n}, (element, index) => index + 1)
