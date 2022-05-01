@@ -2181,3 +2181,21 @@ function toBinary(n){
 function plural(n) {
   return n !== 1
 }
+
+
+
+/*
+  Find the position!
+*/
+
+function position(letter){
+  const alphabet = 'abcdefghijklmnopqrstuvwxyz'
+  
+  return `Position of alphabet: ${alphabet.indexOf(letter.toLowerCase()) + 1}`
+}
+
+// charCodeAt method is another clever way to solve this kata. a is position 97 in ASCII so if you minus 96 from the character code
+// you will get the letters position in the alphabet
+
+// return letter.charCodeAt() - 96
+// return letter.toLowerCase().charCodeAt() - 96
