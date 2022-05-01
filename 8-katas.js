@@ -2171,3 +2171,13 @@ function toBinary(n){
 
 // Easy Way
 // return +n.toString(2)
+
+
+
+/*
+  Plural
+*/
+
+function plural(n) {
+  return n !== 1
+}
