@@ -2241,3 +2241,15 @@ var championsLeagueGoals = 10
 var copaDelReyGoals = 5
 
 var totalGoals = laLigaGoals + championsLeagueGoals + copaDelReyGoals
+
+
+
+/*
+  String cleaning
+*/
+
+function stringClean(s){
+  return s.split('').filter(element => element.charCodeAt() < 48 || element.charCodeAt() > 57).join('')
+}
+
+// My goal was to avoid using regex to solve this solution
