@@ -2253,3 +2253,13 @@ function stringClean(s){
 }
 
 // My goal was to avoid using regex to solve this solution
+
+
+
+/*
+  Stringy Strings
+*/
+
+function stringy(size) {
+  return Array.from({length: size}, (_, index) => index % 2 === 0 ? '1' : '0').join('')
+}
