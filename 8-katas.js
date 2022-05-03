@@ -2288,3 +2288,21 @@ function getSize(width, height, depth) {
     width * height * depth
   ]  
 }
+
+
+
+/*
+  Remove duplicates from list
+*/
+
+function distinct(a) {
+  return a.filter((element, index) => {
+    // First test shows tests for uniquess
+    return a.indexOf(element) === a.lastIndexOf(element) || index === a.indexOf(element)
+    // Second test passes the element's first appearance in the array
+    // If you use lastIndexOf it will pass the last appearance of the element in the array
+  })
+}
+
+// Best Practice
+// return Array.from(new Set(a));
