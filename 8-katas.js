@@ -688,7 +688,6 @@ function points(games) {
 // If you split it into an array of two scores then you don't have to deal with this
 // I also saw people handle the conditionals using two ternary's one nested into the other 
 // I thought of something like this but I didn't think it was very readable
-}
 
 
 
@@ -2306,3 +2305,57 @@ function distinct(a) {
 
 // Best Practice
 // return Array.from(new Set(a));
+
+
+
+/*
+  L1: Bartender, drinks!
+*/
+
+function getDrinkByProfession(param){
+  switch (param.toLowerCase()) {
+    case 'jabroni':
+      return 'Patron Tequila'
+    case 'school counselor':
+      return 'Anything with Alcohol'
+    case 'programmer':
+      return 'Hipster Craft Beer'
+    case 'bike gang member':
+      return 'Moonshine'
+    case 'politician':
+      return 'Your tax dollars'
+    case 'rapper':
+      return 'Cristal'
+    default:
+      return 'Beer'
+  }
+}
+// Using a Map
+/*
+  const drinkMap = new Map()
+  drinkMap.set('jabroni', 'Patron Tequila')
+  drinkMap.set('school counselor', 'Anything with Alcohol')
+  drinkMap.set('programmer', 'Hipster Craft Beer')
+  drinkMap.set('bike gang member', 'Moonshine')
+  drinkMap.set('politician', 'Your tax dollars')
+  drinkMap.set('rapper', 'Cristal')
+  
+  return drinkMap.get(param.toLowerCase()) ? drinkMap.get(param.toLowerCase()) : 'Beer'
+*/
+// I wanted to see if I could use the Map Class to solve this problem and my solution works but I think a switch is better practice in this case
+
+// A more elegant solution by someone else who also used a Map
+/*
+function getDrinkByProfession(param){
+  let map = new Map([
+      ["jabroni", "Patron Tequila"],
+      ["school counselor", "Anything with Alcohol"],
+      ["programmer", "Hipster Craft Beer"],
+      ["bike gang member", "Moonshine"],
+      ["politician", "Your tax dollars"],
+      ["rapper", "Cristal"]
+      ]);
+      
+   let normal = param.toLowerCase();
+   return map.has(normal) ? map.get(normal) : "Beer";
+*/
