@@ -2273,3 +2273,18 @@ function stringy(size) {
 function apple(x){
   return x ** 2 > 1000 ? "It's hotter than the sun!!" : "Help yourself to a honeycomb Yorkie for the glovebox."
 }
+
+
+
+/*
+  Surface Area and Volume of a Box
+*/
+
+function getSize(width, height, depth) {
+  return [
+    // Surface Area
+    2 * (height * width) + 2 * (height * depth) + 2 * (width * depth),
+    // Volume
+    width * height * depth
+  ]  
+}
