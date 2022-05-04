@@ -2359,3 +2359,13 @@ function getDrinkByProfession(param){
    let normal = param.toLowerCase();
    return map.has(normal) ? map.get(normal) : "Beer";
 */
+
+
+
+/*
+  Grasshopper - Function syntax debugging
+*/
+
+function main (verb, noun) {
+  return verb + noun
+}
