@@ -2369,3 +2369,13 @@ function getDrinkByProfession(param){
 function main (verb, noun) {
   return verb + noun
 }
+
+
+
+/*
+  Multiple of index
+*/
+
+function main (verb, noun) {
+  return verb + noun
+}
