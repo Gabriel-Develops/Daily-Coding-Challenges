@@ -25,3 +25,15 @@ function squareDigits(num){
 // For every digit, double it using Math.pow
 // Join all elements in array
 // Lastly using the unary (+) operator, convert result to a number
+
+
+
+/*
+  Pull your words together, man!
+*/
+
+function sentencify(words) {
+  words = words.join(' ').split('')
+  words.splice(0, 1, words[0].toUpperCase())
+  return words.join('') +'.'
+}
