@@ -37,3 +37,16 @@ function sentencify(words) {
   words.splice(0, 1, words[0].toUpperCase())
   return words.join('') +'.'
 }
+
+
+
+/*
+  Pull your words together, man!
+*/
+
+String.prototype.toJadenCase = function () {
+  strArray = this.toString().split(' ')
+  
+  return strArray.map(element => element[0].toUpperCase() + element.slice(1))
+    .join(' ')
+}
