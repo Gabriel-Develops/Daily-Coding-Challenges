@@ -2403,3 +2403,20 @@ function rainAmount(mm) {
 function include(arr, item){
   return arr.includes(item)
 }
+
+
+
+/*
+  Remove First and Last Character Part Two
+*/
+
+function array(arr){
+  finalArray = arr.split(',')
+  
+  if (finalArray.length < 3)
+    return null
+  
+  return finalArray.slice(1, -1).join(' ')
+}
+
+//  return arr.split(',').length < 3 ? null : arr.split(',').slice(1, -1).join(' ')
