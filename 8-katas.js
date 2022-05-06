@@ -2472,3 +2472,13 @@ function  calculateAge(year1, year2) {
   
   return year1 < year2 ? `You are ${year2 - year1} year${plural} old.` : `You will be born in ${year1 - year2} year${plural}.`
 }
+
+
+
+/*
+  Take the Derivative
+*/
+
+function derive(coefficient,exponent) {
+  return `${coefficient * exponent}x^${exponent - 1}`
+}
