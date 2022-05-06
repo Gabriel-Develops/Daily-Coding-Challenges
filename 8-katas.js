@@ -2482,3 +2482,13 @@ function  calculateAge(year1, year2) {
 function derive(coefficient,exponent) {
   return `${coefficient * exponent}x^${exponent - 1}`
 }
+
+
+
+/*
+  Grasshopper - Array Mean
+*/
+
+var findAverage = function (nums) {
+  return nums.reduce((sum, number) => sum += number, 0) / nums.length
+}
