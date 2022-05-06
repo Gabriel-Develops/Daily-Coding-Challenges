@@ -2492,3 +2492,15 @@ function derive(coefficient,exponent) {
 var findAverage = function (nums) {
   return nums.reduce((sum, number) => sum += number, 0) / nums.length
 }
+
+
+
+/*
+  Determine offspring sex based on genes XX and XY chromosomes
+*/
+
+function chromosomeCheck(sperm) {
+  return sperm.includes('Y') ? "Congratulations! You're going to have a son." : "Congratulations! You're going to have a daughter."
+}
+
+// We could reduce the repetition by return son or daughter in the ternary and concatanating with the first part of the sentence.
