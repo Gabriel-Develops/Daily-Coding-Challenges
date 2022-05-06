@@ -2446,3 +2446,13 @@ function remove (string) {
   
   return filteredString
 }
+
+
+
+/*
+  Palindrome Strings
+*/
+
+function isPalindrome(line) {
+  return line.toString() === line.toString().split("").reverse().join("");
+}
