@@ -2456,3 +2456,19 @@ function remove (string) {
 function isPalindrome(line) {
   return line.toString() === line.toString().split("").reverse().join("");
 }
+
+
+
+/*
+  How old will I be in 2099?
+*/
+
+function  calculateAge(year1, year2) {
+  if (year1 === year2)
+    return 'You were born this very year!'
+  
+  // plural is 's' if and only if the difference is more than one year
+  let plural = Math.abs(year1 - year2) === 1 ? '' : 's'
+  
+  return year1 < year2 ? `You are ${year2 - year1} year${plural} old.` : `You will be born in ${year1 - year2} year${plural}.`
+}
