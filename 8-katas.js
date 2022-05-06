@@ -2430,3 +2430,19 @@ function array(arr){
 function addLength(str){
   return str.split(" ").map( word => `${word} ${word.length}`)
 }
+
+
+
+/*
+  Exclamation marks series #2: Remove all exclamation marks from the end of sentence
+*/
+
+function remove (string) {  
+  let filteredString = string
+  
+  while (filteredString.endsWith('!')) {
+    filteredString = filteredString.slice(0, -1)
+  }
+  
+  return filteredString
+}
