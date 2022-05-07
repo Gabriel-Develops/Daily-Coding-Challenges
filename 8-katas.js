@@ -2504,3 +2504,17 @@ function chromosomeCheck(sperm) {
 }
 
 // We could reduce the repetition by return son or daughter in the ternary and concatanating with the first part of the sentence.
+
+
+
+/*
+  Exclamation marks series #6: Remove n exclamation marks in the sentence from left to right
+*/
+
+function remove(s, n) {
+  for (let i = 0; i < n; i++) {
+    s = s.replace('!', '')
+  }
+  
+  return s
+}
