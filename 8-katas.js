@@ -2603,3 +2603,22 @@ function calculator(a,b,sign){
 
 // A better test to see if the input is a number is to compare the input to the input converted to a number like so
 // +input === input
+
+
+
+/*
+  No Loops 2 - You only need one
+*/
+
+function check(a,x,i = 0){
+  if (i === a.length)
+    return false
+
+  return a[i] === x ? true : check(a,x,++i)
+};
+
+// return a.includes(x)
+
+// Using the includes method is the obvious answer but I knew this could be solved with recursion and wanted to try it
+// Another recursion soltion I saw without adding an extra parameter was popping the array one element per check and 
+// having a stop condition checking for the arrays length to be zero
