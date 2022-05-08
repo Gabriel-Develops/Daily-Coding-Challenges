@@ -2545,3 +2545,15 @@ class Ball {
 // var Ball = function(ballType) {
 //   this.ballType = ballType || 'regular';
 // };
+
+
+
+/*
+  Do you speak "English"?
+*/
+
+function spEng(sentence){
+  return sentence.toLowerCase().includes('english')
+}
+
+// The tests for this problem aren't very good
