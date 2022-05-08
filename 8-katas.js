@@ -2567,3 +2567,39 @@ function spEng(sentence){
 function howManyLightsabersDoYouOwn(name) {
   return name === 'Zach' ? 18 : 0
 }
+
+
+
+/*
+  simple calculator 
+*/
+
+function calculator(a,b,sign){
+  // filters out inputs that aren't numbers
+  if (Number.isNaN(a * b))
+    return 'unknown value'
+
+  switch (sign) {
+  case '+':
+    return a + b
+  case '-':
+    return a - b
+  case '*':
+    return a * b
+  case '/':
+    return a / b
+  default:
+    return 'unknown value'
+  }
+}
+
+// const signs = {
+//   '+': a + b,
+//   '-': a - b,
+//   '*': a * b,
+//   '/': a / b
+// }
+// return sign in signs ? signs[sign] : 'unknown value'
+
+// A better test to see if the input is a number is to compare the input to the input converted to a number like so
+// +input === input
