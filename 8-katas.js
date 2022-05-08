@@ -2528,3 +2528,20 @@ function remove(s, n) {
 function animal(obj){
   return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`;
 }
+
+
+
+/*
+  Regular Ball Super Ball
+*/
+
+class Ball {
+  constructor(ballType = "regular") {
+    this.ballType = ballType;
+  }
+}
+
+// Before JavaScript had classes a class was defined as a function expression
+// var Ball = function(ballType) {
+//   this.ballType = ballType || 'regular';
+// };
