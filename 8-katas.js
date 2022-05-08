@@ -2557,3 +2557,13 @@ function spEng(sentence){
 }
 
 // The tests for this problem aren't very good
+
+
+
+/*
+  How many lightsabers do you own?
+*/
+
+function howManyLightsabersDoYouOwn(name) {
+  return name === 'Zach' ? 18 : 0
+}
