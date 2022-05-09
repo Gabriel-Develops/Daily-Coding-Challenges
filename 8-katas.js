@@ -2680,3 +2680,38 @@ function exponent(a,b){
 function subt(a,b){
   return a - b
 }
+
+
+
+/*
+  Find the Remainder
+*/
+
+function remainder(n, m){
+  return n > m ? n % m : m % n;
+}
+
+// My original solution below, negative inputs don't need to be filter out,
+// NaN is automatically returned when trying to mod by zero
+// We could use a ternary to figure out the order of the mod
+// Knowing how the mod operation works can help us reduce 11 lines of code into one line and it still remains readable.
+// Only improvement would be to replace the letters to a and b for readability.
+
+// let number, mod
+  
+// // Finds number and mod
+// if (n > m) {
+//   number = n, mod = m
+// } else {
+//   number = m, mod = n
+// }
+
+// // Fixes negative inputs
+// number = Math.abs(number)
+// mod = Math.abs(mod)
+
+// return m === 0 ? NaN : number % mod
+
+// function remainder(a, b){
+//   return a > b ? a % b : b % a;
+// }
