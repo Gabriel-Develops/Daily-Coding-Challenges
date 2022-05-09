@@ -2632,3 +2632,21 @@ function check(a,x,i = 0){
 function usdcny(usd) {
   return `${(usd*6.75).toFixed(2)} Chinese Yuan`
 }
+
+
+
+/*
+  Smallest unused ID
+*/
+
+function nextId(ids){
+  // Sorts ids
+  ids.sort((a, b) => a - b)
+  
+  // Removes duplicates
+  let uniqueIds = Array.from(new Set(ids))
+  
+  let position = uniqueIds.find((element, index) => element !== index)
+  
+  return position ? uniqueIds.indexOf(position) : uniqueIds.length
+}
