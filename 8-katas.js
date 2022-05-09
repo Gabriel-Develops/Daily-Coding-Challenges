@@ -2715,3 +2715,18 @@ function remainder(n, m){
 // function remainder(a, b){
 //   return a > b ? a % b : b % a;
 // }
+
+
+
+/*
+  Regex count lowercase letters
+*/
+
+function lowercaseCount(str){
+  return str.split('').reduce((count, c) => (c === c.toLowerCase() && c !== c.toUpperCase()) ? ++count : count, 0)
+}
+
+// I also really liked this solution which compares the letter in question to be greater than 'a' and lower than 'z'
+// function lowercaseCount(str) {
+//   return Array.from(str).reduce((n, c) => n + ("a" <= c && c <= "z" ? 1 : 0), 0)
+// }
