@@ -2622,3 +2622,13 @@ function check(a,x,i = 0){
 // Using the includes method is the obvious answer but I knew this could be solved with recursion and wanted to try it
 // Another recursion soltion I saw without adding an extra parameter was popping the array one element per check and 
 // having a stop condition checking for the arrays length to be zero
+
+
+
+/*
+  USD => CNY
+*/
+
+function usdcny(usd) {
+  return `${(usd*6.75).toFixed(2)} Chinese Yuan`
+}
