@@ -2756,3 +2756,15 @@ function remove (string) {
 // Filter is can be bypassed by using split to its full strength and splitting on '!' !!!
 // This means that the solution can be summed up to 
 // return string.split('!').join('') + '!'
+
+
+
+/*
+  Printing Array elements with Comma delimiters
+*/
+
+function printArray(array){
+  return array.join();
+}
+
+// join method by default uses commas as a delimeter
