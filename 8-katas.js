@@ -2768,3 +2768,30 @@ function printArray(array){
 }
 
 // join method by default uses commas as a delimeter
+
+
+
+/*
+  Simple validation of a username with regex
+*/
+
+function validateUsr(username) {
+  // Tests for length
+  if (username.length < 4 || username.length > 16)
+    return false
+  
+  // Each letters ASCII code is compared againts tests
+  for (let letter of username) {
+    let letterCode = letter.charCodeAt()
+    
+    // Test for lowercase, underscore, and number
+    if ((letterCode < 'a'.charCodeAt() || letterCode > 'z'.charCodeAt()) &&
+       (letterCode !== '_'.charCodeAt()) &&
+       (letterCode < '0'.charCodeAt() || letterCode > '9'.charCodeAt())) {
+      return false
+    }
+  }
+  return true
+}
+
+// I tried to maintain readability while trying to solve this without using Regex
