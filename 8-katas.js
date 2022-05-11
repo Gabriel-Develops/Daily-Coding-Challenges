@@ -2806,3 +2806,17 @@ const isDivisible = (wallLength, pixelSize) => wallLength % pixelSize === 0
 
 // Another one line although I'd argue less readable solution is the following. It converts falsey values (0) into true and truthy values (anything else) into false
 // const isDivisible = (wallLength, pixelSize) => !(wallLength % pixelSize)
+
+
+
+/*
+  Swap Values
+*/
+
+function swapValues(arr) {
+  let temp = arr[0];
+  arr[0] = arr[1];
+  arr[1] = temp;
+}
+
+// return arr.reverse()
