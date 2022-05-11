@@ -2730,3 +2730,15 @@ function lowercaseCount(str){
 // function lowercaseCount(str) {
 //   return Array.from(str).reduce((n, c) => n + ("a" <= c && c <= "z" ? 1 : 0), 0)
 // }
+
+
+
+/*
+  Formatting decimal places #0
+*/
+
+function twoDecimalPlaces(n) {
+  return +n.toFixed(2);
+}
+
+// Math.round is a more accurate method than number.toFixed as it properly is able to round numbers like 2.675 to 2.68
