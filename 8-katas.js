@@ -2795,3 +2795,14 @@ function validateUsr(username) {
 }
 
 // I tried to maintain readability while trying to solve this without using Regex
+
+
+
+/*
+  Thinkful - Number Drills: Pixelart planning
+*/
+
+const isDivisible = (wallLength, pixelSize) => wallLength % pixelSize === 0
+
+// Another one line although I'd argue less readable solution is the following. It converts falsey values (0) into true and truthy values (anything else) into false
+// const isDivisible = (wallLength, pixelSize) => !(wallLength % pixelSize)
