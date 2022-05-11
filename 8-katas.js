@@ -2742,3 +2742,17 @@ function twoDecimalPlaces(n) {
 }
 
 // Math.round is a more accurate method than number.toFixed as it properly is able to round numbers like 2.675 to 2.68
+
+
+
+/*
+  Exclamation marks series #4: Remove all exclamation marks from sentence but ensure a exclamation mark at the end of string
+*/
+
+function remove (string) {
+  return string.split('').filter(character => character !== '!').join('') + '!'
+}
+
+// Filter is can be bypassed by using split to its full strength and splitting on '!' !!!
+// This means that the solution can be summed up to 
+// return string.split('!').join('') + '!'
