@@ -2854,3 +2854,69 @@ function answer3(){
   //the answer should be "yes" or "no"
   return "yes";
 }
+
+
+
+/*
+  Return the day
+*/
+
+function whatday(num) { 
+  const days = new Map()
+
+  days.set(1, 'Sunday')
+  days.set(2, 'Monday')
+  days.set(3, 'Tuesday')
+  days.set(4, 'Wednesday')
+  days.set(5, 'Thursday')
+  days.set(6, 'Friday')
+  days.set(7, 'Saturday')
+
+  return days.get(num) || 'Wrong, please enter a number between 1 and 7'
+  // return days.has(num) ? days.get(num) : 'Wrong, please enter a number between 1 and 7'
+}
+
+
+// With a Switch
+// switch (num) {
+//   case 1:
+//     return 'Sunday'
+//   case 2:
+//     return 'Monday'
+//   case 3:
+//     return 'Tuesday'
+//   case 4:
+//     return 'Wednesday'
+//   case 5:
+//     return 'Thursday'
+//   case 6:
+//     return 'Friday'
+//   case 7:
+//     return 'Saturday'
+//   default:
+//     return 'Wrong, please enter a number between 1 and 7'
+// }
+
+
+// With an Object
+// const days = {
+//   1: 'Sunday',
+//   2: 'Monday',
+//   3: 'Tuesday',
+//   4: 'Wednesday',
+//   5: 'Thursday',
+//   6: 'Friday',
+//   7: 'Saturday',
+// }
+
+// return days[num] || 'Wrong, please enter a number between 1 and 7'
+// return num in days ? days[num] : 'Wrong, please enter a number between 1 and 7'
+
+
+// With an Array
+// const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
+// return days[--num] || 'Wrong, please enter a number between 1 and 7'
+
+// I wanted to try to see how many different ways I could solve this problem.
+// I feel like maps are made for this but only one other person used a Map
