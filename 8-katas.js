@@ -2920,3 +2920,22 @@ function whatday(num) {
 
 // I wanted to try to see how many different ways I could solve this problem.
 // I feel like maps are made for this but only one other person used a Map
+
+
+
+/*
+  repeatIt
+*/
+
+const repeatIt = function(str, n) {
+  return typeof str === 'string' ? str.repeat(n) : 'Not a string'
+}
+
+
+// if (typeof str !== 'string')
+//   return 'Not a string'
+  
+// return str.repeat(n)
+
+// Alternate return
+// return Array.from({length: n}, element => str).join('')
