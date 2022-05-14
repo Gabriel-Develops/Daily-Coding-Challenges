@@ -3012,3 +3012,22 @@ function howManydays(month) {
 //    do something
 //    break
 // Another tip would be to use the default value to represent the months that have 31 days to reduce the size of the switch.
+
+
+
+/*
+  Sum of Multiples
+*/
+
+function sumMul(n,m){ 
+  if (n >= m)
+    return 'INVALID'
+  
+  let multiples = []
+  
+  for (let i = 1; n * i < m; i++) {
+    multiples.push(n * i)
+  }
+  
+  return multiples.reduce((sum, number) => sum += number, 0)
+}
