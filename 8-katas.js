@@ -2939,3 +2939,39 @@ const repeatIt = function(str, n) {
 
 // Alternate return
 // return Array.from({length: n}, element => str).join('')
+
+
+
+/*
+  Training JS #10: loop statement --for
+*/
+
+function pickIt(arr) {
+  let even = [], odd = []
+  
+  for (let number of arr) {
+    number % 2 === 0 ? even.push(number) : odd.push(number)
+  }
+  
+  return [odd, even]
+}
+
+
+// ONE LINER WITH FILTER METHOD
+// const pickIt = arr => [arr.filter(element => element % 2 !== 0), arr.filter(element => element % 2 === 0)]
+
+
+// FOR LOOP
+// function pickIt(arr){
+//   let odd=[],even=[];
+  
+//   //coding here
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] % 2 === 0)
+//       even.push(arr[i])
+//     else
+//       odd.push(arr[i])
+//   }
+  
+//   return [odd,even];
+// }
