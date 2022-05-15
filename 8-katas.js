@@ -3031,3 +3031,14 @@ function sumMul(n,m){
   
   return multiples.reduce((sum, number) => sum += number, 0)
 }
+
+
+
+/*
+  Holiday VI - Shark Pontoon
+*/
+
+function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
+  sharkSpeed = dolphin ? sharkSpeed/2 : sharkSpeed;
+  return pontoonDistance/youSpeed < sharkDistance/sharkSpeed ? "Alive!" : "Shark Bait!";
+}
