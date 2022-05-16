@@ -3151,3 +3151,11 @@ function validateCode (code) {
   
   return nums.includes(firstDigit)
 }
+
+
+
+/*
+  Man in the west
+*/
+
+const checkTheBucket = bucket => bucket.includes('gold');
