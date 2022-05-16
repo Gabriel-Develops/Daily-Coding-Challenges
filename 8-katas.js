@@ -3181,3 +3181,21 @@ function trueOrFalse(val){
 }
 
 // My attempt at being one of those clever answers on codewars
+
+
+
+/*
+  Define a card suit
+*/
+
+function defineSuit(card) {
+  const suitMap = new Map()
+  suitMap.set('♣', 'clubs')
+  suitMap.set('♦', 'diamonds')
+  suitMap.set('♥', 'hearts')
+  suitMap.set('♠', 'spades')
+  
+  const suit = card.slice(-1)
+  
+  return suitMap.get(suit)
+}
