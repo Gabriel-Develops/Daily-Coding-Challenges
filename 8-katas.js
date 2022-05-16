@@ -3138,3 +3138,16 @@ function calculateTip(amount, rating) {
 }
 
 // Solved this 4 different ways using different methods each time
+
+
+
+/*
+  validate code with simple regex
+*/
+
+function validateCode (code) {
+  const firstDigit = code.toString()[0]
+  const nums = ['1', '2', '3']
+  
+  return nums.includes(firstDigit)
+}
