@@ -3219,3 +3219,11 @@ function shortenToDate(longDate) {
 var cubeChecker = function(volume, side) {
   return side ** 3 === volume && side > 0;
 };
+
+
+
+/*
+  Kata Example Twist
+*/
+
+const websites = new Array(1000).fill('codewars')
