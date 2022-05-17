@@ -3199,3 +3199,13 @@ function defineSuit(card) {
   
   return suitMap.get(suit)
 }
+
+
+
+/*
+  Remove the time
+*/
+
+function shortenToDate(longDate) {
+  return longDate.split(",")[0];
+}
