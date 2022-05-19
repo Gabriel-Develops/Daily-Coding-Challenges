@@ -3254,3 +3254,13 @@ function sumOfDifferences(arr) {
 // The use of the short term evaluation is quite clever and the map and reduce methods are simple and easy to read.
 
 // Another clever solution was to simply find the Max and Min in the array and return the difference
+
+
+
+/*
+  Is it a number?
+*/
+
+function isDigit(s) {
+  return Number.parseFloat(s) === +s
+}
