@@ -3275,3 +3275,11 @@ function isDigit(s) {
 
 // Again empty inputs would be converted to zero and would return true, when they should have returned false.
 // Regex could have been used to solve this problem but I am trying to solve my katas without it
+
+
+
+/*
+  Grasshopper - Combine strings
+*/
+
+const combineNames = (...names) => names.join(' ');
