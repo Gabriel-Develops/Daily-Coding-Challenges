@@ -3264,3 +3264,14 @@ function sumOfDifferences(arr) {
 function isDigit(s) {
   return Number.parseFloat(s) === +s
 }
+
+// At first I attempted to use isNaN by converting the input into a number using the unary plus(+) this works but runs into an issue
+// with empty inputs like '', and ' ' etc. It converts them into zeros and essentially fails by returning true.
+// I couldn't figure out an alternative but it seems that using both parseFloat and unary plus can account for this.
+// + will convert an empty input into 0 and parseFloat will convert it into NaN.
+// My initial failed attempt was doing something like this.
+
+// return !Number.isNaN(+s)
+
+// Again empty inputs would be converted to zero and would return true, when they should have returned false.
+// Regex could have been used to solve this problem but I am trying to solve my katas without it
