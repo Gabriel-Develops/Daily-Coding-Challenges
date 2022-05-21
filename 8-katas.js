@@ -3291,3 +3291,23 @@ const combineNames = (...names) => names.join(' ');
 */
 
 const isLockNessMonster = s => s.includes('tree fiddy') || s.includes('3.50');
+
+
+
+/*
+  Is there a vowel in there?
+*/
+
+function isVow(a){
+  // a, e, i, o, u corresponds to 
+  // 97, 101, 105, 111, 117
+  const VOWELS = new Map([
+    [97, "a"], 
+    [101, "e"], 
+    [105, "i"], 
+    [111, "o"], 
+    [117, "u"]
+  ])
+  
+  return a.map(number => VOWELS.get(number) || number)
+}
