@@ -3319,3 +3319,26 @@ function isVow(a){
 */
 
 const odds = values => values.filter(number => number % 2 != 0)
+
+
+
+/*
+  Who ate the cookie?
+*/
+
+function cookie(x){
+  let person = ''
+  
+  switch(typeof x) {
+    case 'string':
+      person = 'Zach'
+      break
+    case 'number':
+      person = 'Monica'
+      break
+    default:
+      person = 'the dog'
+  }
+  
+  return `Who ate the last cookie? It was ${person}!`
+}
