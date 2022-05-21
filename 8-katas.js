@@ -3311,3 +3311,11 @@ function isVow(a){
   
   return a.map(number => VOWELS.get(number) || number)
 }
+
+
+
+/*
+  Are arrow functions odd?
+*/
+
+const odds = values => values.filter(number => number % 2 != 0)
