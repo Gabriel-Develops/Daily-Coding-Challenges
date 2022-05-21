@@ -3342,3 +3342,16 @@ function cookie(x){
   
   return `Who ate the last cookie? It was ${person}!`
 }
+
+
+
+/*
+  Regexp Basics - is it a digit?
+*/
+
+String.prototype.digit = function() {
+  return this.length > 1 ? false : Number.parseInt(this) >= 0 && Number.parseInt(this) <= 9
+};
+
+// An easier way to do this is to compare the string to strings '0' and '9', JS allows us to make these types of comparisons as it is comparing their charCodes to each other
+// return this.length === 1 && '0' <= this && this <= '9';
