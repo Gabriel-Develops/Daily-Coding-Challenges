@@ -3355,3 +3355,31 @@ String.prototype.digit = function() {
 
 // An easier way to do this is to compare the string to strings '0' and '9', JS allows us to make these types of comparisons as it is comparing their charCodes to each other
 // return this.length === 1 && '0' <= this && this <= '9';
+
+
+
+/*
+  Find Nearest square number
+*/
+
+function nearestSq(n){
+  if (Number.isInteger(Math.sqrt(n)))
+    return n
+  
+  let i = 1
+  while(true) {
+    if (Number.isInteger(Math.sqrt(n + i)))
+      return n + i
+    else if (Number.isInteger(Math.sqrt(n - i)))
+      return n - i
+    else
+      i++
+  }
+}
+
+// for (let i = 1; true; i++) {
+//   if (Number.isInteger(Math.sqrt(n + i)))
+//     return n + i
+//   else if (Number.isInteger(Math.sqrt(n - i)))
+//     return n - i
+// }
