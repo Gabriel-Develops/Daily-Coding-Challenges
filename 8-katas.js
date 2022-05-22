@@ -3383,3 +3383,18 @@ function nearestSq(n){
 //   else if (Number.isInteger(Math.sqrt(n - i)))
 //     return n - i
 // }
+
+// A clever mathematical solution was to sqrt the n, round it, and then square it
+// Simply doing so gets you the result in one calculation without using loops
+// The function looks something like this
+// const nearestSq = n => Math.pow(Math.round(Math.sqrt(n)), 2);
+
+
+
+/*
+  Get number from string
+*/
+
+function getNumberFromString(s) {
+  return +s.split('').filter(c => '0' <= c && c <= '9').join('')
+}
