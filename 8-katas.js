@@ -3423,3 +3423,28 @@ function leo(oscar){
   else
     return 'When will you give Leo an Oscar?'
 }
+
+
+
+/*
+  Duck Duck Goose
+*/
+
+function duckDuckGoose(players, goose) {
+  let index
+
+  if (goose === 0)
+    index = 0
+  else if (goose % players.length === 0)
+    index = players.length - 1
+  else
+    index = (goose % players.length - 1)
+  
+  return players[index].name
+}
+
+// So this problem deals with 1 based arrays but to reset them to 0 based we could have taken goose and immediately subtracted one
+// Then doing goose % players.length would have worked perfectly.
+
+// return players[(goose - 1) % players.length].name
+// This return would have solved the problem in one line
