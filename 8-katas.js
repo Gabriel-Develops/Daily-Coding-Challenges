@@ -3398,3 +3398,11 @@ function nearestSq(n){
 function getNumberFromString(s) {
   return +s.split('').filter(c => '0' <= c && c <= '9').join('')
 }
+
+
+
+/*
+  get ascii value of character
+*/
+
+const getASCII = c => c.charCodeAt();
