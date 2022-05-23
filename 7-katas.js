@@ -83,3 +83,13 @@ function disemvowel(str) {
   
   return str.split('').filter(character => !vowels.includes(character.toLowerCase())).join('')
 }
+
+
+
+/*
+  Highest and Lowest
+*/
+
+function highAndLow(numbers){
+  return `${Math.max(...numbers.split(" "))} ${Math.min(...numbers.split(" "))}`;
+}
