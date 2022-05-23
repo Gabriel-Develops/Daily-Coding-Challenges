@@ -3463,3 +3463,16 @@ var quote = function(fighter) {
   
   return fighterResponses.get(fighter.toLowerCase())
 };
+
+
+
+/*
+  Thinkful - Number Drills: Blue and red marbles
+*/
+
+function guessBlue(blueStart, redStart, bluePulled, redPulled) {
+  const blueLeft = blueStart - bluePulled
+  const totalMarbles = blueLeft + redStart - redPulled
+  
+  return blueLeft / totalMarbles
+}
