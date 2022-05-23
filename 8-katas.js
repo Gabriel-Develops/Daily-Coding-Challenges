@@ -3448,3 +3448,18 @@ function duckDuckGoose(players, goose) {
 
 // return players[(goose - 1) % players.length].name
 // This return would have solved the problem in one line
+
+
+
+/*
+  For UFC Fans (Total Beginners ): Conor McGregor vs George Saint Pierre
+*/
+
+var quote = function(fighter) {
+  let fighterResponses = new Map([
+    ['george saint pierre', 'I am not impressed by your performance.'],
+    ['conor mcgregor', 'I\'d like to take this chance to apologize.. To absolutely NOBODY!']
+  ])
+  
+  return fighterResponses.get(fighter.toLowerCase())
+};
