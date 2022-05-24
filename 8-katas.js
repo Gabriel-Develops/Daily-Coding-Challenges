@@ -3490,3 +3490,24 @@ function myFirstKata(a, b) {
     return a % b + b % a;
   }
 }
+
+
+
+/*
+  Pillars
+*/
+
+function pillars(num_pill, dist, width) {
+  if (num_pill <= 1)
+    return 0
+  else if (num_pill === 2)
+    return dist * 100
+  
+  let pillarsTotalWidth = (num_pill - 2) * width
+  let distanceBetweenPill = (num_pill - 1) * dist * 100
+  
+  return pillarsTotalWidth + distanceBetweenPill
+}
+
+// Second if statement is completely useless, if num_pill is two we don't want to include pillarsTotalWidth but since we subtract two at the start then it would end up as zero in the end.
+// First check is importance for the same reason, if we didn't account for it we would get a negative pillar Width
