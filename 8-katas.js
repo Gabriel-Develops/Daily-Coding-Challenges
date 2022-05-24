@@ -3511,3 +3511,21 @@ function pillars(num_pill, dist, width) {
 
 // Second if statement is completely useless, if num_pill is two we don't want to include pillarsTotalWidth but since we subtract two at the start then it would end up as zero in the end.
 // First check is importance for the same reason, if we didn't account for it we would get a negative pillar Width
+
+
+
+/*
+  UEFA EURO 2016
+*/
+
+function uefaEuro2016([team1, team2], [score1, score2]){
+  let outcome
+  if (score1 > score2)
+    outcome = team1 + ' won!'
+  else if (score1 < score2)
+    outcome = team2 + ' won!'
+  else
+    outcome = 'teams played draw.'
+  
+  return `At match ${team1} - ${team2}, ${outcome}`
+}
