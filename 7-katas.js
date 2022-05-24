@@ -93,3 +93,16 @@ function disemvowel(str) {
 function highAndLow(numbers){
   return `${Math.max(...numbers.split(" "))} ${Math.min(...numbers.split(" "))}`;
 }
+
+
+
+/*
+  Descending Order
+*/
+
+function descendingOrder(n){
+  return +n.toString()
+    .split('')
+    .sort((a,b)=>b-a)
+    .join('');
+}
