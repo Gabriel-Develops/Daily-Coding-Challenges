@@ -3529,3 +3529,15 @@ function uefaEuro2016([team1, team2], [score1, score2]){
   
   return `At match ${team1} - ${team2}, ${outcome}`
 }
+
+// Replacing the teams paramater and the scores paramater with an array of respective variables makes the solution a lot easier to write and read.
+
+
+
+/*
+  Parse float
+*/
+
+function parseF(s) {
+  return Number.isNaN(Number.parseFloat(s)) ? null : Number.parseFloat(s);
+}
