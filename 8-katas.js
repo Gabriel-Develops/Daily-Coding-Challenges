@@ -3565,3 +3565,29 @@ function pointsPer48(ppg, mpg) {
 function all( arr, fun ){
   return arr.every( element => fun(element))
 }
+
+// Another way to call every would be to simply provide the callback function 
+// return arr.every(fun)
+// Would have been a valid answer as well.
+
+
+
+/*
+  Compare within margin
+*/
+
+function closeCompare(a, b, margin = 0){
+  const trueMargin = Math.abs(a - b)
+  
+  if (margin >= trueMargin)
+    return 0
+  else if (a < b)
+    return -1
+  else if (a > b)
+    return 1
+}
+
+// Math.sign can be used to cleverly reduce the answer to a one liner.
+// Math.sign returns either +/- 1 based on the sign of the number passed in so we could replace lines 3584-3587 with Math.sign(a - b)
+// Pairing this up with a ternary operator can lead to a one liner that looks like
+// return margin >= Math.abs(a - b) ? 0 : Math.sign(a - b)
