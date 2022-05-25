@@ -3541,3 +3541,17 @@ function uefaEuro2016([team1, team2], [score1, score2]){
 function parseF(s) {
   return Number.isNaN(Number.parseFloat(s)) ? null : Number.parseFloat(s);
 }
+
+
+
+/*
+  NBA full 48 minutes average
+*/
+
+function pointsPer48(ppg, mpg) {
+  return mpg === 0 ? 0 : +((48/mpg * ppg).toFixed(1))  
+}
+
+// A short circuit evaluation can be used to make a really concise solution.
+// return +((48 / mpg * ppg).toFixed(1)) || 0
+// I will admit its pretty hard to read but it's perfect as a codewars solution
