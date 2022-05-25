@@ -3591,3 +3591,13 @@ function closeCompare(a, b, margin = 0){
 // Math.sign returns either +/- 1 based on the sign of the number passed in so we could replace lines 3584-3587 with Math.sign(a - b)
 // Pairing this up with a ternary operator can lead to a one liner that looks like
 // return margin >= Math.abs(a - b) ? 0 : Math.sign(a - b)
+
+
+
+/*
+  Grasshopper - Order of operations
+*/
+
+function orderOperations () {
+  return (2 + 2) * (2 + 2) * 2
+}
