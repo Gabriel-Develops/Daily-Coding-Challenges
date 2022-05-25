@@ -3555,3 +3555,13 @@ function pointsPer48(ppg, mpg) {
 // A short circuit evaluation can be used to make a really concise solution.
 // return +((48 / mpg * ppg).toFixed(1)) || 0
 // I will admit its pretty hard to read but it's perfect as a codewars solution
+
+
+
+/*
+  Enumerable Magic #1 - True for All?
+*/
+
+function all( arr, fun ){
+  return arr.every( element => fun(element))
+}
