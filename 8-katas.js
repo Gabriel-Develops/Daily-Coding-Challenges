@@ -3601,3 +3601,17 @@ function closeCompare(a, b, margin = 0){
 function orderOperations () {
   return (2 + 2) * (2 + 2) * 2
 }
+
+
+
+/*
+  Power
+*/
+
+function numberToPower(number, power){
+  let total = 1
+  for (let i = 0; i < power; i++) {
+    total *= number
+  }
+  return total
+}
