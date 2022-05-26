@@ -3615,3 +3615,14 @@ function numberToPower(number, power){
   }
   return total
 }
+
+
+
+/*
+  ASCII Total
+*/
+
+function uniTotal (string) {
+  return string.split('')
+    .reduce((sum, c) => sum += c.charCodeAt(), 0)
+}
