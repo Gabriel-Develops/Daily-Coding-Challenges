@@ -3626,3 +3626,31 @@ function uniTotal (string) {
   return string.split('')
     .reduce((sum, c) => sum += c.charCodeAt(), 0)
 }
+
+
+
+/*
+  pick a set of first elements
+*/
+
+function first(arr, n = 1) {
+  let finalArray = []
+
+  for (let i = 0; finalArray.length < n; i++) {
+    // Early exit, in case arr is smaller than n
+    if (!arr[i])
+      return finalArray
+    
+    finalArray.push(arr[i])
+  }
+  
+  return finalArray
+}
+
+// I'm kind of embarressed but the point of the kata was to use slice
+// I'd love to say that this was my personal challenge to try not to use slice but I just had a brainfart
+// Anyways slice as we know returns a subarray of an array taking in two parameters a starting index that is included
+// and an ending index that is not included, you could also use negative indexes eg. -1 to go up to the last element in the array.
+// so the return would look like
+// return arr.slice(0, n)
+// ta da......
