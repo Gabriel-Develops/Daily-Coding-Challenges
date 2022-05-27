@@ -3654,3 +3654,18 @@ function first(arr, n = 1) {
 // so the return would look like
 // return arr.slice(0, n)
 // ta da......
+
+
+
+/*
+  Evil or Odious
+*/
+
+function evil(n) {
+  let sumOfOnes = 0
+  const binaryArr = n.toString(2).split('')
+
+  sumOfOnes = binaryArr.reduce((count, num) => num === '1' ? ++count : count, 0)
+  
+  return sumOfOnes % 2 === 0 ? "It's Evil!" : "It's Odious!"
+}
