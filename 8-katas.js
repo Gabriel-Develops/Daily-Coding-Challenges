@@ -3701,3 +3701,16 @@ function grabDoll(dolls){
   
   return bag;
 }
+
+
+
+/*
+  Fuel Calculator 
+*/
+
+function fuelPrice(litres, pricePerLitre) {
+  // Finds minimum of discount calculation or .25
+  let discount = Math.min(Math.floor(litres / 2) * .05, .25)
+  
+  return +(litres * (pricePerLitre - discount)).toFixed(2)
+}
