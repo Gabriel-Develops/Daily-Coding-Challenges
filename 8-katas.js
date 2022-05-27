@@ -3679,3 +3679,25 @@ function evil(n) {
 function integrate(coefficient, exponent) {
   return `${coefficient/++exponent}x^${exponent}`
 }
+
+
+
+/*
+  Training JS #11: loop statement --break,continue
+*/
+
+function grabDoll(dolls){
+  let bag = []
+  
+  for (let doll of dolls) {
+    if (doll !== 'Hello Kitty' && doll !== 'Barbie doll')
+      continue
+    
+    bag.push(doll)
+    
+    if (bag.length === 3)
+      break
+  }
+  
+  return bag;
+}
