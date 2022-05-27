@@ -3669,3 +3669,13 @@ function evil(n) {
   
   return sumOfOnes % 2 === 0 ? "It's Evil!" : "It's Odious!"
 }
+
+
+
+/*
+  Find the Integral
+*/
+
+function integrate(coefficient, exponent) {
+  return `${coefficient/++exponent}x^${exponent}`
+}
