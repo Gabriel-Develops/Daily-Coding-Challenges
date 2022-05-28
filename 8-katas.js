@@ -3724,3 +3724,29 @@ function fuelPrice(litres, pricePerLitre) {
 function ifChuckSaysSo(){
   return 'Chuck Norris' === 'dork'
 }
+
+
+
+/*
+  Training JS #9: loop statement --while and do..while
+*/
+
+function padIt(str,n){
+  let initialLength = str.length
+  let padded = str.split('')
+  
+  while(padded.length - initialLength !== n) {
+    if ((padded.length - initialLength) % 2 === 0)
+      padded.unshift('*')
+    else
+      padded.push('*')
+  }
+  
+  return padded.join('')
+}
+
+// I wanted to solve this kata with my own self imposed restrictions,
+// 1, initial parameters were non modifiable
+// 2, counter variables weren't allowed
+// This led me to using the difference in the size of the strings(initial, and current) compared to n as my way to know if the loop should continue
+// Pretty fun challenge
