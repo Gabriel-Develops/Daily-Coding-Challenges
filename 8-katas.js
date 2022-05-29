@@ -3750,3 +3750,17 @@ function padIt(str,n){
 // 2, counter variables weren't allowed
 // This led me to using the difference in the size of the strings(initial, and current) compared to n as my way to know if the loop should continue
 // Pretty fun challenge
+
+
+
+/*
+  Contamination #1 -String-
+*/
+
+const contamination = (text, char) => !text || !char ? '' : char.repeat(text.length);
+
+// Just when I thought I was being clever I find out that the ternary is completely uneccessary 
+// If char is '', we can repeat it 100 times it will still be ''
+// If text is '', we repeat char zero times (text.length = 0)
+// Therefore we could just return char.repeat(text.length)
+// without the ternary
