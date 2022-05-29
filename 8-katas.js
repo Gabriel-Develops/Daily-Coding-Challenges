@@ -3764,3 +3764,27 @@ const contamination = (text, char) => !text || !char ? '' : char.repeat(text.len
 // If text is '', we repeat char zero times (text.length = 0)
 // Therefore we could just return char.repeat(text.length)
 // without the ternary
+
+
+
+/*
+  Basic subclasses - Adam and Eve
+*/
+
+class God {
+  static create(){
+    return [new Man(), new Woman()]
+  }
+}
+
+class Human {
+  
+}
+
+class Man extends Human {
+  
+}
+
+class Woman extends Human {
+  
+}
