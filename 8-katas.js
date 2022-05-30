@@ -3788,3 +3788,14 @@ class Man extends Human {
 class Woman extends Human {
   
 }
+
+
+
+/*
+  Freudian translator 
+*/
+
+function toFreud(string) {
+  if (string.length === 0) return ''
+  return Array.from({length: string.split(' ').length}, element => 'sex').join(' ');
+}
