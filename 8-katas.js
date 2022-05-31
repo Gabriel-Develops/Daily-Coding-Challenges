@@ -3799,3 +3799,11 @@ function toFreud(string) {
   if (string.length === 0) return ''
   return Array.from({length: string.split(' ').length}, element => 'sex').join(' ');
 }
+
+
+
+/*
+  Template Strings
+*/
+
+const TempleStrings = (obj, feature) => `${obj} are ${feature}`;
