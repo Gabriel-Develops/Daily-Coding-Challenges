@@ -3807,3 +3807,27 @@ function toFreud(string) {
 */
 
 const TempleStrings = (obj, feature) => `${obj} are ${feature}`;
+
+
+
+/*
+  Polish alphabet
+*/
+
+function correctPolishLetters (string) {
+  const polishMap = new Map([
+    ['ą', 'a'],
+    ['ć', 'c'],
+    ['ę', 'e'],
+    ['ł', 'l'],
+    ['ń', 'n'],
+    ['ó', 'o'],
+    ['ś', 's'],
+    ['ź', 'z'],
+    ['ż', 'z']
+  ])
+  
+  return string.split('')
+    .map(c => polishMap.has(c) ? polishMap.get(c) : c)
+    .join('')
+}
