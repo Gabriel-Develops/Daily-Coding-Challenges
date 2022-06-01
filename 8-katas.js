@@ -3831,3 +3831,20 @@ function correctPolishLetters (string) {
     .map(c => polishMap.has(c) ? polishMap.get(c) : c)
     .join('')
 }
+
+
+
+/*
+  Name on billboard
+*/
+
+function billboard(name, price = 30) {
+  let total = 0;
+  for (let c of name) {
+      total += price;
+  }
+  return total;
+}
+
+// A clever mathematical solution was
+// return name.length / (1 / price)
