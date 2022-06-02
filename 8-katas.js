@@ -3858,3 +3858,19 @@ function billboard(name, price = 30) {
 function _if(bool, func1, func2) {
   bool ? func1() : func2()
 }
+
+
+
+/*
+  Geometry Basics: Distance between points in 2D
+*/
+
+function distanceBetweenPoints(a, b) {
+  // x^2 + y^2 = z^2
+  let x = Math.abs(a.x - b.x)
+  let y = Math.abs(a.y - b.y)
+  
+  let distance = Math.sqrt(x ** 2 + y ** 2)
+  
+  return +distance.toFixed(6)
+}
