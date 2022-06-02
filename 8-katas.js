@@ -3848,3 +3848,13 @@ function billboard(name, price = 30) {
 
 // A clever mathematical solution was
 // return name.length / (1 / price)
+
+
+
+/*
+  The 'if' function
+*/
+
+function _if(bool, func1, func2) {
+  bool ? func1() : func2()
+}
