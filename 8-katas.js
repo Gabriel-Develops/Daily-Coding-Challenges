@@ -3874,3 +3874,28 @@ function distanceBetweenPoints(a, b) {
   
   return +distance.toFixed(6)
 }
+
+
+
+/*
+  Logical calculator
+*/
+
+function logicalCalc(array, op){
+  if (op === 'AND')
+    return array.every(bool => bool)
+  
+  else if (op === 'OR')
+    return array.some(bool => bool)
+  
+  else if (op === 'XOR') {
+    let result = array[0] ^ array[1]
+    
+    // Skip first and last element in array
+    for (let i = 1; i < array.length - 1; i++) {
+      result = result ^ array[i + 1]
+    }
+    
+    return !!result
+  }
+}
