@@ -3909,3 +3909,11 @@ function logicalCalc(array, op){
 function joinStrings(string1, string2){
   return `${string1} ${string2}`
 }
+
+
+
+/*
+  Type of sum
+*/
+
+const typeOfSum = (a, b) => typeof(a + b);
