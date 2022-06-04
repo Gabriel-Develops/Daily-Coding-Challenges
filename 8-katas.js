@@ -3917,3 +3917,22 @@ function joinStrings(string1, string2){
 */
 
 const typeOfSum = (a, b) => typeof(a + b);
+
+
+
+/*
+  Classy Classes
+*/
+
+class Person {
+
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  
+  get info() {
+    return `${this.name}s age is ${this.age}`;
+  }
+  
+}
