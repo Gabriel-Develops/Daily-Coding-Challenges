@@ -3989,3 +3989,31 @@ function findMultiples(integer, limit) {
   }
   return arr;
 }
+
+
+
+/*
+  Multiply the number
+*/
+
+function multiply(number){
+  let digits = 0, num = number;
+  
+  while (Math.abs(num) >= 1) {
+    num = num / 10;
+    digits++;
+  }
+  
+  return number * Math.pow(5, digits);
+}
+
+// This kata is a testament to my improvement, the first solution showcases my lack of knowledge of the length property and the fact
+// that you could use it for numbers
+// It also had errors that needed fixing.
+// Like the lack of a Math.abs and the lack of checking if it was >= to 1 instead of just > 1
+
+function multiply(number){
+  return number * (5 ** Math.abs(number).toString().length)
+}
+
+// The second solution is my current solution to the probelm, showcasing the use of length and **
