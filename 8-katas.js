@@ -3959,3 +3959,18 @@ function printArray(array){
 }
 
 // My second solution removes the issues with my if statement
+
+
+
+/*
+  Printing Array elements with Comma delimiters II
+*/
+
+function giveMeFive(obj){
+  const arr = [];
+  for (let key in obj){
+    if (key.length === 5) arr.push(key);
+    if (obj[key].length === 5) arr.push(obj[key]);
+  }
+  return arr;
+}
