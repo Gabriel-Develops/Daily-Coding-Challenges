@@ -3974,3 +3974,18 @@ function giveMeFive(obj){
   }
   return arr;
 }
+
+
+
+/*
+  Find Multiples of a Number
+*/
+
+function findMultiples(integer, limit) {
+  const arr = [];
+  
+  for (let i = 1; integer * i <= limit; i++) {
+    arr.push(integer * i);
+  }
+  return arr;
+}
