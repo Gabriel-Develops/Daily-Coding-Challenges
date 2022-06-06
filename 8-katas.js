@@ -3936,3 +3936,26 @@ class Person {
   }
   
 }
+
+
+
+/*
+  Printing Array elements with Comma delimiters II
+*/
+
+const printArray = array => {
+  if (typeof array[0] !== 'object')
+    return array.join()
+  
+  return JSON.stringify(array)
+}
+
+// My first solution was kind of naive because I was only testing the first element checking for an object.
+// What if the first element was a number and the rest are objects?
+// My use of array.join() and JSON.stringify() were correct
+
+function printArray(array){
+  return array.some(element => typeof element === 'object') ? JSON.stringify(array) : array.join()
+}
+
+// My second solution removes the issues with my if statement
