@@ -4017,3 +4017,18 @@ function multiply(number){
 }
 
 // The second solution is my current solution to the probelm, showcasing the use of length and **
+
+
+
+/*
+  Object Oriented Piracy 
+*/
+
+function Ship(draft,crew) {
+  this.draft = draft;
+  this.crew = crew;
+   
+   this.isWorthIt = function () {
+     return draft - (crew * 1.5) > 20;
+   }
+ }
