@@ -4055,3 +4055,11 @@ class Ship {
     return this.draft - this.crew * 1.5 > 20
   }
 }
+
+
+
+/*
+  Basic Training: Add item to an Array
+*/
+
+websites.push('codewars')
