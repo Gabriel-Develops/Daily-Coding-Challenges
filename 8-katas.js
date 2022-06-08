@@ -4032,3 +4032,26 @@ function Ship(draft,crew) {
      return draft - (crew * 1.5) > 20;
    }
  }
+
+// Best practices dictate that it would be better to use a es6 Class or to add the method to the prototype instead of the constructor as this will prevent copys of the same code being produced every time a new object is created
+
+// Prototype Method
+function Ship(draft,crew) {
+  this.draft = draft;
+  this.crew = crew;
+}
+ 
+Ship.prototype.isWorthIt = function() {
+  return this.draft - this.crew * 1.5 > 20
+}
+
+// Class Method
+class Ship {
+  constructor(draft, crew) {
+    this.draft = draft
+    this.crew = crew
+  }
+  isWorthIt() {
+    return this.draft - this.crew * 1.5 > 20
+  }
+}
