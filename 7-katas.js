@@ -106,3 +106,28 @@ function descendingOrder(n){
     .sort((a,b)=>b-a)
     .join('');
 }
+
+
+
+/*
+  Mumbling
+*/
+
+function accum(s) {
+  let arr = s.toLowerCase().split('')
+  
+  let final = arr.map((c, index) => {
+    let n = index + 1
+    let sect = ''
+    
+    for (let i = 0; i < n; i++) {
+      if (i === 0)
+        sect += c.toUpperCase()
+      else
+        sect += c
+    }
+    return sect
+  }).join('-')
+  
+  return final
+}
