@@ -4063,3 +4063,11 @@ class Ship {
 */
 
 websites.push('codewars')
+
+
+
+/*
+  Simple Comparison? 
+*/
+
+const add = (a, b) => a == b
