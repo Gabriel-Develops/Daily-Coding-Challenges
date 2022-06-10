@@ -4071,3 +4071,13 @@ websites.push('codewars')
 */
 
 const add = (a, b) => a == b
+
+
+
+/*
+  Find the Slope
+*/
+
+function getMiddle(s){
+  return s.substring(Math.floor((s.length - 1) / 2), Math.ceil((s.length - 1) / 2) + 1 );
+}
