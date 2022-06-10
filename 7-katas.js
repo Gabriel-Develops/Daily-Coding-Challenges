@@ -131,3 +131,13 @@ function accum(s) {
   
   return final
 }
+
+
+
+/*
+  Get the Middle Character
+*/
+
+function getMiddle(s){
+  return s.substring(Math.floor((s.length - 1) / 2), Math.ceil((s.length - 1) / 2) + 1 );
+  }
