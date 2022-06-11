@@ -4094,3 +4094,11 @@ const hotpo = (n, acc = 0) => {
   else
     return n % 2 === 0 ? hotpo(n / 2, ++acc) : hotpo(n * 3 + 1, ++acc)
 }
+
+
+
+/*
+  Calculate Price Excluding VAT
+*/
+
+const excludingVatPrice = price => price === null ? -1 : +(price / 1.15).toFixed(2)
