@@ -4081,3 +4081,16 @@ const add = (a, b) => a == b
 function getMiddle(s){
   return s.substring(Math.floor((s.length - 1) / 2), Math.ceil((s.length - 1) / 2) + 1 );
 }
+
+
+
+/*
+  Collatz Conjecture (3n+1)
+*/
+
+const hotpo = (n, acc = 0) => {
+  if (n <= 1)
+    return acc
+  else
+    return n % 2 === 0 ? hotpo(n / 2, ++acc) : hotpo(n * 3 + 1, ++acc)
+}
