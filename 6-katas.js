@@ -21,3 +21,25 @@ function high(x){
   
   return highest.word
 }
+
+
+
+/*
+  Find the odd int
+*/
+
+function findOdd(A) {
+  const sumObj = A.reduce((sumObj, num) => {
+    if (!(num in sumObj))
+      sumObj[num] = 1
+    else
+      sumObj[num]++
+    
+    return sumObj
+  }, {})
+  
+  for (let num in sumObj) {
+    if (sumObj[num] % 2 !== 0)
+      return +num
+  }
+}
