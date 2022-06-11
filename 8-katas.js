@@ -4102,3 +4102,13 @@ const hotpo = (n, acc = 0) => {
 */
 
 const excludingVatPrice = price => price === null ? -1 : +(price / 1.15).toFixed(2)
+
+
+
+/*
+  Training JS #18: Methods of String object--concat() split() and its good friend join()
+*/
+
+function splitAndMerge(string, separator) {
+  return string.split(' ').map(word => word.split('').join(separator)).join(' ')
+}
