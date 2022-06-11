@@ -4112,3 +4112,22 @@ const excludingVatPrice = price => price === null ? -1 : +(price / 1.15).toFixed
 function splitAndMerge(string, separator) {
   return string.split(' ').map(word => word.split('').join(separator)).join(' ')
 }
+
+
+
+/*
+  Grader
+*/
+
+function grader(score) {
+  if (score > 1 || score < .6)
+    return 'F';
+  else if (score >= .9)
+    return 'A';
+  else if (score >= .8)
+    return 'B';
+  else if (score >= .7)
+    return 'C';
+  else if (score >= .6)
+    return 'D';
+}
