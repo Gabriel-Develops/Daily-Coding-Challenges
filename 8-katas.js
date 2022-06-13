@@ -4143,11 +4143,3 @@ class Ghost {
     this.color = ['white', 'yellow', 'purple', 'red'][Math.floor(Math.random() * 4)];
   }
 }
-
-
-
-/*
-  You're a square!
-*/
-
-const isSquare = n => Number.isInteger(Math.sqrt(n));

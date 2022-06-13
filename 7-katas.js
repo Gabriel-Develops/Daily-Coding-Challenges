@@ -141,3 +141,11 @@ function accum(s) {
 function getMiddle(s){
   return s.substring(Math.floor((s.length - 1) / 2), Math.ceil((s.length - 1) / 2) + 1 );
   }
+
+
+
+  /*
+    You're a square!
+  */
+  
+  const isSquare = n => Number.isInteger(Math.sqrt(n));
