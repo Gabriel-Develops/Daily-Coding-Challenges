@@ -149,3 +149,7 @@ function getMiddle(s){
   */
   
   const isSquare = n => Number.isInteger(Math.sqrt(n));
+
+  // A really clever solution I saw was finding if there was a remainder by doing mod 1 and checking it to be equal to zero
+
+  // return Math.sqrt(n) % 1 === 0

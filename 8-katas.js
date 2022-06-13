@@ -4143,3 +4143,16 @@ class Ghost {
     this.color = ['white', 'yellow', 'purple', 'red'][Math.floor(Math.random() * 4)];
   }
 }
+
+
+
+/*
+  Be Concise I - The Ternary Operator
+*/
+
+const describeAge = age => `You're a(n) ${age <= 12 ? 'kid' : age <= 17 ? 'teenager' : age <= 64 ? 'adult' : 'elderly'}`;
+
+// Im not a huge fan of nested ternerays but the challenge was to write the ternary using the least amount of characters.
+// I ended up using 100
+// If you rename the paramater to a, remove spaces, and change the checks to check less than one above instead of less than or equal to
+// You can get as low as 69 characters
