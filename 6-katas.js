@@ -43,3 +43,15 @@ function findOdd(A) {
       return +num
   }
 }
+
+
+
+/*
+  Array.diff
+*/
+
+function arrayDiff(a, b) {
+  return a.filter(element => b.indexOf(element) === -1)
+}
+
+// An alternative to indexOf would be the has method and the includes method
