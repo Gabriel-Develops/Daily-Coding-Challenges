@@ -161,3 +161,20 @@ const isSquare = n => Number.isInteger(Math.sqrt(n));
 */
   
 const filter_list = l => l.filter(element => typeof element !== 'string');
+
+
+
+/*
+  Isograms
+*/
+  
+function isIsogram(str){
+  const string = str.toLowerCase()
+  
+  for (let letter of string) {
+    if (string.indexOf(letter) !== string.lastIndexOf(letter))
+      return false
+  }
+  
+  return true
+}
