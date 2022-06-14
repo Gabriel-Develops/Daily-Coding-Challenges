@@ -178,3 +178,7 @@ function isIsogram(str){
   
   return true
 }
+
+// A clever one line solution is to make a Set out of the string and compare the length of the Set to the length of the original string.
+
+// return new Set(str.toLowerCase()).size === str.length
