@@ -140,16 +140,24 @@ function accum(s) {
 
 function getMiddle(s){
   return s.substring(Math.floor((s.length - 1) / 2), Math.ceil((s.length - 1) / 2) + 1 );
-  }
+}
 
 
 
-  /*
-    You're a square!
-  */
+/*
+  You're a square!
+*/
+
+const isSquare = n => Number.isInteger(Math.sqrt(n));
+
+// A really clever solution I saw was finding if there was a remainder by doing mod 1 and checking it to be equal to zero
+
+// return Math.sqrt(n) % 1 === 0
+
+
+
+/*
+  You're a square!
+*/
   
-  const isSquare = n => Number.isInteger(Math.sqrt(n));
-
-  // A really clever solution I saw was finding if there was a remainder by doing mod 1 and checking it to be equal to zero
-
-  // return Math.sqrt(n) % 1 === 0
+const filter_list = l => l.filter(element => typeof element !== 'string');
