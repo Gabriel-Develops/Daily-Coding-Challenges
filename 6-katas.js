@@ -126,3 +126,25 @@ function duplicateEncode(word){
   
   return encodedString
 }
+
+
+
+/*
+  Take a Ten Minutes Walk
+*/
+
+function isValidWalk(walk) {
+  if (walk.length !== 10)
+    return false
+  
+  const directionSum = {
+    'n': 0,
+    's': 0,
+    'w': 0,
+    'e': 0
+  }
+  
+  walk.forEach(direction => directionSum[direction]++)
+  
+  return directionSum['n'] === directionSum['s'] && directionSum['w'] === directionSum['e']
+}
