@@ -76,3 +76,30 @@ function likes(names) {
       return `${names[0]}, ${names[1]} and ${names.length - 2} others like this`;
   }
 }
+
+
+
+/*
+  Counting Duplicates
+*/
+
+function duplicateCount(text){
+  const charCount = text.toLowerCase()
+    .split('')
+    .reduce((countObj, character) => {
+      if (character in countObj)
+        countObj[character]++
+      else
+        countObj[character] = 1
+      
+      return countObj
+    }, {})
+  
+  let duplicates = 0
+  for (let entry in charCount) {
+    if (charCount[entry] > 1)
+      duplicates++
+  }
+  
+  return duplicates
+}
