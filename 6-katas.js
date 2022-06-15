@@ -103,3 +103,26 @@ function duplicateCount(text){
   
   return duplicates
 }
+
+
+
+/*
+  Duplicate Encoder
+*/
+
+function duplicateEncode(word){
+  const string = word.toLowerCase()
+  
+  let encodedString = ''
+  for (let character of string) {
+    // To determine if a character is a duplicate
+    // We can check to see if the first instance of the character's index
+    // and the last one match
+    if (string.indexOf(character) !== string.lastIndexOf(character))
+      encodedString += ')'
+    else
+      encodedString += '('
+  }
+  
+  return encodedString
+}
