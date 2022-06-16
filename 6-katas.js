@@ -148,3 +148,21 @@ function isValidWalk(walk) {
   
   return directionSum['n'] === directionSum['s'] && directionSum['w'] === directionSum['e']
 }
+
+
+
+/*
+  Persistent Bugger.
+*/
+
+function persistence(num, count = 0) {
+  if (num < 10)
+    return count
+  
+  let newNum = num
+    .toString()
+    .split('')
+    .reduce((total, num) => total *= num, 1)
+  
+  return persistence(newNum, ++count)
+}
