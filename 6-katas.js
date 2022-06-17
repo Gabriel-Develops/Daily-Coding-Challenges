@@ -166,3 +166,22 @@ function persistence(num, count = 0) {
   
   return persistence(newNum, ++count)
 }
+
+
+
+/*
+  Replace With Alphabet Position
+*/
+
+function alphabetPosition(text) {
+  const letterArray = text
+    .toLowerCase()
+    .split('')
+    .filter(character => character >= 'a' && character <= 'z')
+  
+  const numberArray = letterArray
+    .map(letter => letter.charCodeAt() - 96)
+    .join(' ')
+  
+  return numberArray
+}
