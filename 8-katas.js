@@ -4156,3 +4156,11 @@ const describeAge = age => `You're a(n) ${age <= 12 ? 'kid' : age <= 17 ? 'teena
 // I ended up using 100
 // If you rename the paramater to a, remove spaces, and change the checks to check less than one above instead of less than or equal to
 // You can get as low as 69 characters
+
+
+
+/*
+  Ensure question
+*/
+
+const ensureQuestion = s => s.endsWith('?') ? s : s+'?'
