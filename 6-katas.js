@@ -185,3 +185,25 @@ function alphabetPosition(text) {
   
   return numberArray
 }
+
+
+
+/*
+  Your order, please
+*/
+
+function order(words){
+  return words
+    .split(' ')
+    // Make a new array, where we check each word and
+    // find the number that contains index + 1
+    .map((word, index, originalArray) => {
+      for (let word of originalArray) {
+        for (let character of word) {
+          if (+character === (index + 1))
+            return word
+        }
+      }
+    })
+    .join(' ')
+}
