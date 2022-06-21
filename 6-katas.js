@@ -207,3 +207,35 @@ function order(words){
     })
     .join(' ')
 }
+
+
+
+/*
+  Tribonacci Sequence
+*/
+
+function tribonacci(signature,n){
+  if (signature.length > n)
+    return signature.slice(0, n)
+  
+  for (let i = 0; signature.length !== n; i++) {
+    // array made from three previous list items
+    // Three could be replaced with initial length of signature to make dynamic
+    let sequence = signature.slice(i, i + 3)
+    let sequenceSum = sequence.reduce((sum, num) => sum += num, 0)
+    
+    signature.push(sequenceSum)
+  }
+  
+  return signature
+}
+
+// Slice and reduce could have been replaced with a simple addition of three elements, this would reduce the time
+// complexity
+
+// function tribonacci(signature,n){  
+//   for (var i = 0; i < n-3; i++) { // iterate n times
+//     signature.push(signature[i] + signature[i+1] + signature[i+2]); // add last 3 array items and push to trib
+//   }
+//   return signature.slice(0, n); //return trib - length of n
+// }
