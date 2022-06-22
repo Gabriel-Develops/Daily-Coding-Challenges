@@ -4164,3 +4164,28 @@ const describeAge = age => `You're a(n) ${age <= 12 ? 'kid' : age <= 17 ? 'teena
 */
 
 const ensureQuestion = s => s.endsWith('?') ? s : s+'?'
+
+
+
+/*
+  Ensure question
+*/
+
+function aliasGen(first, last){
+  if (first[0].toUpperCase() < 'A' || first[0].toUpperCase() > 'Z' ||
+      last[0].toUpperCase() < 'A' || last[0].toUpperCase() > 'Z')
+    return 'Your name must start with a letter from A - Z.'
+  else
+    return `${firstName[first[0].toUpperCase()]} ${surname[last[0].toUpperCase()]}`
+}
+
+// The if statement is bulky but works
+// A simpler if statement would be to just check if the letter is in the object using the in keyword
+
+// Alternative solution
+// function aliasGen(first, last){
+//   if ((first[0].toUpperCase() in firstName) && (last[0].toUpperCase() in surname))
+//     return `${firstName[first[0].toUpperCase()]} ${surname[last[0].toUpperCase()]}`
+//   else
+//     return 'Your name must start with a letter from A - Z.'
+// }
