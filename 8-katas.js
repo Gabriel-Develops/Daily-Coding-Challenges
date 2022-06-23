@@ -4189,3 +4189,15 @@ function aliasGen(first, last){
 //   else
 //     return 'Your name must start with a letter from A - Z.'
 // }
+
+
+
+/*
+  Age Range Compatibility Equation
+*/
+
+function datingRange(age) {
+  const min = Math.floor(age > 14 ? age / 2 + 7 : age - 0.10 * age);
+  const max = Math.floor(age > 14 ? (age - 7) * 2 : age + 0.10 * age);
+  return `${min}-${max}`;
+}
