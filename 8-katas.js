@@ -4201,3 +4201,19 @@ function datingRange(age) {
   const max = Math.floor(age > 14 ? (age - 7) * 2 : age + 0.10 * age);
   return `${min}-${max}`;
 }
+
+
+
+/*
+  Grasshopper - Terminal Game #1
+*/
+
+class Hero {
+  constructor(name = 'Hero') {
+    this.name = name;
+    this.position = '00';
+    this.health = 100;
+    this.damage = 5;
+    this.experience = 0;
+  }
+}
