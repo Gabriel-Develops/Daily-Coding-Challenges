@@ -4267,7 +4267,7 @@ const rooms = {
 
 
 /*
-  Grasshopper - Create the rooms
+  Classy Extentions
 */
 
 class Cat extends Animal {
