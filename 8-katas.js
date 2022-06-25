@@ -4261,3 +4261,17 @@ const rooms = {
   }
   
 }
+
+// This kata wasn't very clear but was easy to accomplish
+
+
+
+/*
+  Grasshopper - Create the rooms
+*/
+
+class Cat extends Animal {
+  speak() {
+    return `${this.name} meows.`;
+  }
+}
