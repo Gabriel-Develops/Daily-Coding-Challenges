@@ -4236,3 +4236,28 @@ function main () {
   buyHealth()
   printStatus()
 }
+
+
+
+/*
+  Grasshopper - Create the rooms
+*/
+
+const rooms = {
+  room1: {
+    name: 'room1',
+    description: 'This is room 1',
+    completed: true
+  },
+  room2: {
+    name: 'room2',
+    description: 'This is room 2',
+    completed: false
+  },
+  room3: {
+    name: 'room3',
+    description: 'This is room 3',
+    completed: false
+  }
+  
+}
