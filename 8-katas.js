@@ -4275,3 +4275,21 @@ class Cat extends Animal {
     return `${this.name} meows.`;
   }
 }
+
+
+
+/*
+  Training JS #16: Methods of String object--slice(), substring() and substr()
+*/
+
+function cutIt(arr){
+  let min = Infinity
+  for (string of arr) {
+    if (string.length < min) min = string.length
+  }
+  
+  return arr.map(string => string.slice(0, min))
+}
+
+// Another method would be to use a Math.min method to find the shortest length passing in an array of string lengths from the array
+// Math.min(...arr.map(string => string.length))
