@@ -4414,3 +4414,18 @@ function twoHighest(arr) {
 function colorOf(r,g,b){
   return `#${r.toString(16).padStart(2,'0')}${g.toString(16).padStart(2,'0')}${b.toString(16).padStart(2,'0')}`;
 }
+
+
+
+/*
+  Training JS #14: Methods of Number object--toString() and toLocaleString()
+*/
+
+function SafeInteger(n) {
+  return Number.isSafeInteger(n);
+}
+
+// isSafeInteger returns a boolean showing if the number passed in is a safe integer
+// A safeInteger is an integer that can be represented using JS's 53bit signed integers
+// In other words numbers no bigger than ± 9,007,199,254,740,991 or ± 2^53
+// Another solution would be to compare the number to the fixed properties MAX_SAFE_INTEGER AND MIN_SAFE_INTEGER that come with the Number Object
