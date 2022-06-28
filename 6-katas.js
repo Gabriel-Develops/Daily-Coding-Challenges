@@ -239,3 +239,31 @@ function tribonacci(signature,n){
 //   }
 //   return signature.slice(0, n); //return trib - length of n
 // }
+
+
+
+/*
+  Unique In Order
+*/
+
+const uniqueInOrder = iterable => {
+  if (typeof iterable === 'string') 
+    iterable = iterable.split('')
+  for (let i = 0; i < iterable.length; i++) {
+    if (iterable[i] === iterable[i + 1]) {
+      iterable.splice(i, 1)
+      i -= 2
+    }
+  }
+  return iterable
+}
+
+// My first solution first checks to see if the input is a string and fixes for that
+// We then iterate through the array using a for loop. This is a bit hard to read as we have to decrease i by 2 everytime we remove an element from the array.
+
+// Trying this problem again leads us to use the spread operator which forms an array from an iterable object
+// We pair this with a filer method that leads to a more readable and pleasent overall function
+
+const uniqueInOrder = iterable => {
+  return [...iterable].filter((char, index, arr) => char !== arr[index + 1])
+}
