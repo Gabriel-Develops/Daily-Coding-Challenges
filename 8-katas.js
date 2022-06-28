@@ -4293,3 +4293,18 @@ function cutIt(arr){
 
 // Another method would be to use a Math.min method to find the shortest length passing in an array of string lengths from the array
 // Math.min(...arr.map(string => string.length))
+
+
+
+/*
+  Training JS #15: Methods of Number object--toFixed(), toExponential() and toPrecision()
+*/
+
+function howManySmaller(arr,n){
+  let count = 0
+  for (let num of arr) {
+    if (+num.toFixed(2) < n)
+      count++
+  }
+  return count
+}
