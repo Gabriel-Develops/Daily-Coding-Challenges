@@ -203,3 +203,29 @@ function XO(str) {
   
   return xoCount['x'] === xoCount['o']
 }
+
+
+
+/*
+  Shortest Word
+*/
+  
+function findShort(s){
+  return Math.min(...s.split(" ").map(word=>word.length));
+}
+
+// I've seen the math.min method used in similar problems and wanted to try my hand
+// Pairing the method with the spread operator means I can pass in an entire array as parameters to this method
+
+// I also wanted to try solving this problem using a normal for loop so I used a for...of loop and passed in the lengths of the words and found the min
+
+// function findShort(s){
+//   let min = Infinity
+  
+//   for (let word of s.split(' ')) {
+//     if (word.length < min)
+//       min = word.length
+//   }
+  
+//   return min
+// }
