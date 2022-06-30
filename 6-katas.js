@@ -264,6 +264,6 @@ const uniqueInOrder = iterable => {
 // Trying this problem again leads us to use the spread operator which forms an array from an iterable object
 // We pair this with a filer method that leads to a more readable and pleasent overall function
 
-const uniqueInOrder = iterable => {
-  return [...iterable].filter((char, index, arr) => char !== arr[index + 1])
-}
+// const uniqueInOrder = iterable => {
+//   return [...iterable].filter((char, index, arr) => char !== arr[index + 1])
+// }
