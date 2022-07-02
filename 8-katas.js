@@ -4329,3 +4329,15 @@ function firstToLast(str, c) {
 function periodIsLate(last, today, cycleLength){
   return (today-last)/(1000*60*60*24) > cycleLength;
 }
+
+
+
+/*
+  Training JS #29: methods of arrayObject---concat() and join()
+*/
+
+function bigToSmall(arr){
+  return arr.reduce((finalArr, currentArr) => finalArr.concat(currentArr), [])
+    .sort((a, b) => b - a)
+    .join('>')
+}
