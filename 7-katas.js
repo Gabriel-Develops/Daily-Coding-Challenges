@@ -229,3 +229,22 @@ function findShort(s){
   
 //   return min
 // }
+
+
+
+/*
+  Complementary DNA
+*/
+  
+function DNAStrand(dna){
+  const DNAStrings = new Map([
+    ['A', 'T'],
+    ['T', 'A'],
+    ['C', 'G'],
+    ['G', 'C'],
+  ])
+  
+  return dna.split('')
+    .map(symbol => DNAStrings.get(symbol))
+    .join('')
+}
