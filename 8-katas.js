@@ -4376,3 +4376,15 @@ const quadratic = (x1, x2) => [1, -x1+(-x2), -x1*-x2]
 */
 
 const isReallyNaN = val => Number.isNaN(val)
+
+
+
+/*
+  101 Dalmatians - squash the bugs, not the dogs!
+*/
+
+function howManyDalmatians(number) {
+  const dogs = ["Hardly any", "More than a handful!", "Woah that's a lot of dogs!", "101 DALMATIANS!!!"];
+  
+  return number < 11 ? dogs[0] : number < 51 ? dogs[1] : number < 101 ? dogs[2] : dogs[3]
+}
