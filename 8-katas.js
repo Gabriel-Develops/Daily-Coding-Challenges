@@ -4388,3 +4388,19 @@ function howManyDalmatians(number) {
   
   return number < 11 ? dogs[0] : number < 51 ? dogs[1] : number < 101 ? dogs[2] : dogs[3]
 }
+
+
+
+/*
+  Return Two Highest Values in List
+*/
+
+function twoHighest(arr) {
+  return Array.from(new Set(arr)).sort((a, b) => b - a).slice(0, 2)
+}
+
+// The first step is to convert the array into a Set, removing duplicate values then back into an array
+// to allow us to use array methods
+// We then sort it from largest to smallest, and finally only return the first two elements
+// We can replacet he first step with the spread syntax.
+// [... new Set(arr)].sort().slice()
