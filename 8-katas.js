@@ -4404,3 +4404,13 @@ function twoHighest(arr) {
 // We then sort it from largest to smallest, and finally only return the first two elements
 // We can replacet he first step with the spread syntax.
 // [... new Set(arr)].sort().slice()
+
+
+
+/*
+  Training JS #14: Methods of Number object--toString() and toLocaleString()
+*/
+
+function colorOf(r,g,b){
+  return `#${r.toString(16).padStart(2,'0')}${g.toString(16).padStart(2,'0')}${b.toString(16).padStart(2,'0')}`;
+}
