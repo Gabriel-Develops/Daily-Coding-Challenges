@@ -4429,3 +4429,36 @@ function SafeInteger(n) {
 // A safeInteger is an integer that can be represented using JS's 53bit signed integers
 // In other words numbers no bigger than ± 9,007,199,254,740,991 or ± 2^53
 // Another solution would be to compare the number to the fixed properties MAX_SAFE_INTEGER AND MIN_SAFE_INTEGER that come with the Number Object
+
+
+
+/*
+  Training JS #14: Methods of Number object--toString() and toLocaleString()
+*/
+
+class Dog {
+  constructor(breed) {
+    this.breed = breed
+  }
+  bark() {
+    return 'Woof'
+  }
+}
+
+const snoopy = new Dog("Beagle");
+const scoobydoo = new Dog("Great Dane");
+
+// The point of the kata was to get us to assign methods to the prototype of a constructor instead of making one every time
+// So Ill include that solution as well
+
+// function Dog (breed) {
+//   this.breed = breed;
+// }
+
+// var snoopy = new Dog("Beagle");
+
+// Dog.prototype.bark = function() {
+//   return "Woof";
+// };
+
+// var scoobydoo = new Dog("Great Dane");
