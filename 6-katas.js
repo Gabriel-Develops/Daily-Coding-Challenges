@@ -267,3 +267,19 @@ const uniqueInOrder = iterable => {
 // const uniqueInOrder = iterable => {
 //   return [...iterable].filter((char, index, arr) => char !== arr[index + 1])
 // }
+
+
+
+/*
+  Playing with digits
+*/
+
+function digPow(n, p){
+  const nArray = n.toString().split('')
+  
+  const pSum = nArray.reduce((sum, num, index) => num ** (p + index) + sum, 0)
+  
+  return Number.isInteger(pSum / n) ? pSum / n : -1
+}
+
+// Improvements: rename num to digit and maybe add a unaryplus to it so that we dont rely on implicit type conversion
