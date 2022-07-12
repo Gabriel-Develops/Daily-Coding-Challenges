@@ -283,3 +283,23 @@ function digPow(n, p){
 }
 
 // Improvements: rename num to digit and maybe add a unaryplus to it so that we dont rely on implicit type conversion
+
+
+
+/*
+  Equal Sides Of An Array
+*/
+
+function findEvenIndex(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    const leftSum = arr.slice(0, i).reduce((sum, num) => sum + num, 0)
+    const rightSum = arr.slice(i + 1).reduce((sum, num) => sum + num, 0)
+    
+    if (leftSum === rightSum) 
+      return i
+  }
+  return -1
+}
+
+// This was a fun and easy problem to tackle. My solution is not the best performant as it runs two reduce methods every iteration.
+// A quick solution would be to set up two variables outside of the loop representing leftSum and rightSum and then add or subtract to that sum per iteration. Reducing the reduce methods to just one
