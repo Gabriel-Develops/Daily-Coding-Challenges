@@ -4462,3 +4462,16 @@ const scoobydoo = new Dog("Great Dane");
 // };
 
 // var scoobydoo = new Dog("Great Dane");
+
+
+
+/*
+  Training JS #14: Methods of Number object--toString() and toLocaleString()
+*/
+
+function barTriang(p1, p2, p3){
+  return [
+    +((p1[0] + p2[0] + p3[0]) / 3).toFixed(4),
+    +((p1[1] + p2[1] + p3[1]) / 3).toFixed(4)
+  ];
+}
