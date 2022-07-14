@@ -303,3 +303,24 @@ function findEvenIndex(arr) {
 
 // This was a fun and easy problem to tackle. My solution is not the best performant as it runs two reduce methods every iteration.
 // A quick solution would be to set up two variables outside of the loop representing leftSum and rightSum and then add or subtract to that sum per iteration. Reducing the reduce methods to just one
+
+
+
+/*
+  Detect Pangram
+*/
+
+function isPangram(string){
+  const phrase = string.toLowerCase()
+
+  // In ASCII, 97 = 'a', '122' = 'z'
+  for (let i = 97; i <= 122; i++) {
+    if (!phrase.includes(String.fromCharCode(i))) 
+      return false
+  }
+  
+  return true
+}
+
+// I didn't want to type out the alphabet into an array so I used ascii to help me solve this problem.
+// A time oriented solution was to type out the alphabet in order of most common usage which I thought was clever
