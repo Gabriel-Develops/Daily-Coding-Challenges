@@ -4475,3 +4475,15 @@ function barTriang(p1, p2, p3){
     +((p1[1] + p2[1] + p3[1]) / 3).toFixed(4)
   ];
 }
+
+
+
+/*
+  Training JS #14: Methods of Number object--toString() and toLocaleString()
+*/
+
+const ArrowFunc = arr => arr.map(val => String.fromCharCode(val)).join('');
+
+// When a variable name eludes me, I think I'll just use x, y, z. val as a var name doesn't server any specific purpose
+// An alternate method to solve this problem is to use the spread operator and create a string using the from char code method
+// return String.fromCharCode(...arr)
