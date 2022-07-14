@@ -259,3 +259,24 @@ function sumTwoSmallestNumbers(numbers) {
   numbers.sort((a,b) => a - b);
   return numbers[0] + numbers[1];
 };
+
+
+
+/*
+  Did she say hallo?
+*/
+
+function getSum(a, b) {
+  let sum = 0
+  for (let i = Math.min(a, b), upper = Math.max(a, b); i <= upper; i++) {
+    sum += i    
+  }
+  
+  return sum
+}
+
+// A simple for loop 
+// A mathematical solution would be to use Guass Summation formula which is 
+// n * (n + 1) / 2
+// That works when going from 1 to n but if you want a custom lower and upper bound then you have to use the variation which is
+// (lower + upper) * (upper - lower + 1) / 2
