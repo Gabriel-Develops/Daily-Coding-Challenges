@@ -4487,3 +4487,21 @@ const ArrowFunc = arr => arr.map(val => String.fromCharCode(val)).join('');
 // When a variable name eludes me, I think I'll just use x, y, z. val as a var name doesn't server any specific purpose
 // An alternate method to solve this problem is to use the spread operator and create a string using the from char code method
 // return String.fromCharCode(...arr)
+
+
+
+/*
+  Did she say hallo?
+*/
+
+function validateHello(message) {
+  const greetings = ['hello', 'ciao', 'salut', 'hallo', 'hola', 'ahoj', 'czesc']
+
+  for (const greeting of greetings) {
+    if (message.toLowerCase().includes(greeting)) return true
+  }
+  
+  return false
+}
+
+// Solving regex problems without using regex is always a little awkward as all of the other answers are one liners
