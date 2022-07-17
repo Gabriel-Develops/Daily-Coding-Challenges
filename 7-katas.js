@@ -461,3 +461,14 @@ function SeriesSum(n) {
   
   return sum.toFixed(2)
 }
+
+
+
+/*
+  Remove the minimum
+*/
+
+function removeSmallest(numbers) {
+  const minIndex = numbers.indexOf(Math.min(...numbers));
+  return numbers.filter((_, i) => i !== minIndex);
+}
