@@ -435,3 +435,13 @@ const number = busStops => {
 function oddOrEven(array) {
   return array.reduce((sum, x) => sum + x, 0) % 2 ? 'odd' : 'even';
 }
+
+
+
+/*
+  Reverse words
+*/
+
+function reverseWords(str) {
+  return str.split(" ").map((word) => word.split("").reverse().join("")).join(" ");
+}
