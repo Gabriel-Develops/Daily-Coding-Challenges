@@ -425,3 +425,13 @@ const number = busStops => {
 }
 
 // Deconstruction the stop array into [on, off] would lead to a more readable answer
+
+
+
+/*
+  Odd or Even?
+*/
+
+function oddOrEven(array) {
+  return array.reduce((sum, x) => sum + x, 0) % 2 ? 'odd' : 'even';
+}
