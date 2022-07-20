@@ -334,3 +334,23 @@ function isPangram(string){
 function findUniq(arr) {
   return arr.find( (x) => arr.indexOf(x) === arr.lastIndexOf(x));
 }
+
+
+
+/*
+  Sort the odd
+*/
+
+function sortArray(array) {
+  const sortedOdds = array.filter(x => Math.abs(x) % 2 === 1).sort((a,b) => a - b)
+  
+  for (let i = 0; i < array.length; i++) {
+    // Evens are ignored
+    if (array[i] % 2 === 0) continue
+    
+    // odds are replaced by an ordered array of odds in order
+    array[i] = sortedOdds.shift()
+  }
+  
+  return array
+}
