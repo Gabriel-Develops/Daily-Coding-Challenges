@@ -280,3 +280,18 @@ function getSum(a, b) {
 // n * (n + 1) / 2
 // That works when going from 1 to n but if you want a custom lower and upper bound then you have to use the variation which is
 // (lower + upper) * (upper - lower + 1) / 2
+
+
+
+/*
+  Two to One
+*/
+
+function longest(s1, s2) {
+  return Array.from(new Set(s1.concat(s2).split('').sort())).join('');
+}
+
+// A cleaner method is to use the spread operator and array symbol to your advantage
+// return [...new Set(s1 + s2)].sort().join('')
+
+// Of course an alternative is to split the steps up into multiple lines for readability
