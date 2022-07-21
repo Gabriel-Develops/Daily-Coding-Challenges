@@ -413,3 +413,15 @@ function rowSumOddNumbers(n) {
 const binaryArrayToNumber = arr => {
   return Number.parseInt(arr.join(""),2);
   };
+
+
+
+/*
+  Number of People in the Bus
+*/
+
+const number = busStops => {
+  return busStops.reduce((final, stop) => final += stop[0] - stop[1], 0)
+}
+
+// Deconstruction the stop array into [on, off] would lead to a more readable answer
