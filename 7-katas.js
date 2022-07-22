@@ -295,3 +295,18 @@ function longest(s1, s2) {
 // return [...new Set(s1 + s2)].sort().join('')
 
 // Of course an alternative is to split the steps up into multiple lines for readability
+
+
+
+/*
+  Growth of a Population
+*/
+
+function nbYear(p0, percent, aug, p) {
+  let totalYears = 0;
+  while (p0 < p) {
+    p0 += Math.floor((p0 * percent) / 100 + aug);
+    totalYears++;
+  }
+  return totalYears;
+}
