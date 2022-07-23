@@ -310,3 +310,20 @@ function nbYear(p0, percent, aug, p) {
   }
   return totalYears;
 }
+
+
+
+/*
+  Categorize New Member
+*/
+
+function openOrSenior(data) {
+  return data.map(info => {
+    if (info[0] >= 55 && info[1] > 7) return 'Senior';
+    else return 'Open';
+  })
+}
+
+// Deconstructing the input into an array of [age, handicap] can lead to an incredibly readable solution
+
+// return data.map([age, handicap] => ...)
