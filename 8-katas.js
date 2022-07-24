@@ -4544,3 +4544,13 @@ function yourFutureCareer() {
 
 
 yourFutureCareer();
+
+
+
+/*
+  Are there any arrows left?
+*/
+
+function anyArrows(arrows){
+  return arrows.some(arrow => !arrow.damaged);
+}
