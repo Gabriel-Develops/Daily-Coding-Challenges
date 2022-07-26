@@ -4554,3 +4554,13 @@ yourFutureCareer();
 function anyArrows(arrows){
   return arrows.some(arrow => !arrow.damaged);
 }
+
+
+
+/*
+  String repeat
+*/
+
+function repeatStr (n, s) {
+  return s.repeat(n)
+}
