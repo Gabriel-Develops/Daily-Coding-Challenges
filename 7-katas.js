@@ -327,3 +327,13 @@ function openOrSenior(data) {
 // Deconstructing the input into an array of [age, handicap] can lead to an incredibly readable solution
 
 // return data.map([age, handicap] => ...)
+
+
+
+/*
+  Friend or Foe?
+*/
+
+function friend(friends){
+  return friends.filter(name => name.length === 4)
+}
