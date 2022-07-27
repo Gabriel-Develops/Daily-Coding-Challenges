@@ -337,3 +337,13 @@ function openOrSenior(data) {
 function friend(friends){
   return friends.filter(name => name.length === 4)
 }
+
+
+
+/*
+  Find the next perfect square!
+*/
+
+function findNextSquare(sq) {
+  return Number.isInteger((Math.sqrt(sq) + 1) ** 2) ? (Math.sqrt(sq) + 1) ** 2 : -1
+}
