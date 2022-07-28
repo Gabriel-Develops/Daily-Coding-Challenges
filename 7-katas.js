@@ -347,3 +347,16 @@ function friend(friends){
 function findNextSquare(sq) {
   return Number.isInteger((Math.sqrt(sq) + 1) ** 2) ? (Math.sqrt(sq) + 1) ** 2 : -1
 }
+
+
+
+/*
+  Printer Errors
+*/
+
+function printerError(s) {
+  const errors = s.split('')
+    .filter(c => c < 'a' || c > 'm')
+    .length
+  return `${errors}/${s.length}`
+}
