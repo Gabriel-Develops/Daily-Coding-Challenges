@@ -360,3 +360,14 @@ function printerError(s) {
     .length
   return `${errors}/${s.length}`
 }
+
+
+
+/*
+  Regex validate PIN code
+*/
+
+function validatePIN (pin) {
+  return pin.split('').every(x => x >= '0' && x <= '9') &&
+    (pin.length === 4 || pin.length === 6)
+}
