@@ -371,3 +371,13 @@ function validatePIN (pin) {
   return pin.split('').every(x => x >= '0' && x <= '9') &&
     (pin.length === 4 || pin.length === 6)
 }
+
+
+
+/*
+  Binary Addition
+*/
+
+function addBinary(a,b){
+  return (a+b).toString(2)
+}
