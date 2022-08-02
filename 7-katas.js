@@ -393,3 +393,13 @@ function isTriangle(a,b,c)
   //Triangle Inequality Theorem
   return (a + b > c && a + c > b && b + c > a)
 }
+
+
+
+/*
+  Sum of odd numbers
+*/
+
+function rowSumOddNumbers(n) {
+  return n**3
+}
