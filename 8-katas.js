@@ -4597,3 +4597,13 @@ function isValid(formula){
     (formula.includes(5) ? formula.includes(6) : !formula.includes(6)) &&
     (formula.includes(7) || formula.includes(8))
 }
+
+
+
+/*
+  Enumerable Magic #20 - Cascading Subsets
+*/
+
+function eachCons(array, n) {
+  return array.map((x, i) => array.slice(i, i + n)).filter(x => x.length === n)
+}
