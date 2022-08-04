@@ -4584,3 +4584,16 @@ function fiveLine(s){
   
   return string
 }
+
+
+
+/*
+  Simple Fun #352: Reagent Formula
+*/
+
+function isValid(formula){
+  return (formula.includes(1) ? !formula.includes(2) : true) &&
+    (formula.includes(3) ? !formula.includes(4) : true) &&
+    (formula.includes(5) ? formula.includes(6) : !formula.includes(6)) &&
+    (formula.includes(7) || formula.includes(8))
+}
