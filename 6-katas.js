@@ -324,3 +324,13 @@ function isPangram(string){
 
 // I didn't want to type out the alphabet into an array so I used ascii to help me solve this problem.
 // A time oriented solution was to type out the alphabet in order of most common usage which I thought was clever
+
+
+
+/*
+  Find the unique number
+*/
+
+function findUniq(arr) {
+  return arr.find( (x) => arr.indexOf(x) === arr.lastIndexOf(x));
+}
