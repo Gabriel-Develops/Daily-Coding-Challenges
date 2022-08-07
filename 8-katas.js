@@ -4564,3 +4564,23 @@ function anyArrows(arrows){
 function repeatStr (n, s) {
   return s.repeat(n)
 }
+
+
+
+/*
+  Training JS #21: Methods of String object--trim() and the string template
+*/
+
+function fiveLine(s){
+  let string = ''
+  
+  for (let i = 0; i < 5; i++) {
+    for (let j = 0; j <= i; j++) {
+      string += s.trim()
+    }
+    if (i !== 4)
+      string += '\n'
+  }
+  
+  return string
+}
