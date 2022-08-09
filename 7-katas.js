@@ -403,3 +403,13 @@ function isTriangle(a,b,c)
 function rowSumOddNumbers(n) {
   return n**3
 }
+
+
+
+/*
+  Ones and Zeros
+*/
+
+const binaryArrayToNumber = arr => {
+  return Number.parseInt(arr.join(""),2);
+  };
