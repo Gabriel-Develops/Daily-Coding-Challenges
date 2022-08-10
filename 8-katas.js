@@ -4630,3 +4630,17 @@ const rooms = {
     }
   }
 };
+
+
+
+/*
+  Training JS #32: methods of Math---round() ceil() and floor()
+*/
+
+function roundIt(n){
+  const [left, right] = n.toString().split('.').map(x => x.length)
+  
+  if (left < right) return Math.ceil(n)
+  else if (left > right) return Math.floor(n)
+  else return Math.round(n)
+}
