@@ -4669,3 +4669,11 @@ function whatNumberIsIt(n){
     return `Input number is ${n}`
   }
 }
+
+
+
+/*
+  Geometry Basics: Circle Area in 2D
+*/
+
+const circleArea = circle => Math.PI * circle.radius ** 2
