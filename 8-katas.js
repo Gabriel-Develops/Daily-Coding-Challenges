@@ -4677,3 +4677,11 @@ function whatNumberIsIt(n){
 */
 
 const circleArea = circle => Math.PI * circle.radius ** 2
+
+
+
+/*
+  Enumerable Magic #2 - True for Any?
+*/
+
+const any = (arr, fun) => arr.some(x=>fun(x));
