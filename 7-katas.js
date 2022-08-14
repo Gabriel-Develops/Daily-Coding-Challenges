@@ -472,3 +472,13 @@ function removeSmallest(numbers) {
   const minIndex = numbers.indexOf(Math.min(...numbers));
   return numbers.filter((_, i) => i !== minIndex);
 }
+
+
+
+/*
+  The highest profit wins!
+*/
+
+function minMax(arr){
+  return [Math.min(...arr), Math.max(...arr)];
+}
