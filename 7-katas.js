@@ -445,3 +445,19 @@ function oddOrEven(array) {
 function reverseWords(str) {
   return str.split(" ").map((word) => word.split("").reverse().join("")).join(" ");
 }
+
+
+
+/*
+  Sum of the first nth term of Series
+*/
+
+function SeriesSum(n) {
+  let sum = 0
+  
+  for (let i = 0; i < n; i++) {
+    sum += (3 * i + 1) ** -1
+  }
+  
+  return sum.toFixed(2)
+}
