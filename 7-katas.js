@@ -482,3 +482,13 @@ function removeSmallest(numbers) {
 function minMax(arr){
   return [Math.min(...arr), Math.max(...arr)];
 }
+
+
+
+/*
+  Testing 1-2-3
+*/
+
+const number = array => {
+  return array.map((x, i)=> `${i+1}: ${x}`)
+}
