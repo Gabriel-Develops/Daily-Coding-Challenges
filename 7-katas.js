@@ -492,3 +492,13 @@ function minMax(arr){
 const number = array => {
   return array.map((x, i)=> `${i+1}: ${x}`)
 }
+
+
+
+/*
+  Find the stray number
+*/
+
+function stray(numbers) {
+  return numbers.find(x => numbers.indexOf(x) === numbers.lastIndexOf(x));
+}
