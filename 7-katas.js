@@ -502,3 +502,20 @@ const number = array => {
 function stray(numbers) {
   return numbers.find(x => numbers.indexOf(x) === numbers.lastIndexOf(x));
 }
+
+
+
+/*
+  Money, Money, Money
+*/
+
+function calculateYears(principal, interest, tax, desired) {
+  let years = 0
+  
+  while (principal < desired) {
+    principal *= (1 + interest - interest * tax)
+    years++
+  }
+  
+  return years
+}
