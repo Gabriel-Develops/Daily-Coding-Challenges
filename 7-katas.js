@@ -519,3 +519,22 @@ function calculateYears(principal, interest, tax, desired) {
   
   return years
 }
+
+
+
+/*
+  Money, Money, Money
+*/
+
+function getDivisorsCnt(n){
+  let divisor = n, total = 0
+  
+  while (divisor > 0) {
+    if (Number.isInteger(n / divisor))
+      total++
+    
+    divisor--
+  }
+  
+  return total
+}
