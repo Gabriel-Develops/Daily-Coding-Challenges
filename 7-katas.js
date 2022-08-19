@@ -523,7 +523,7 @@ function calculateYears(principal, interest, tax, desired) {
 
 
 /*
-  Money, Money, Money
+  Count the divisors of a number
 */
 
 function getDivisorsCnt(n){
@@ -534,6 +534,26 @@ function getDivisorsCnt(n){
       total++
     
     divisor--
+  }
+  
+  return total
+}
+
+
+
+/*
+  Count the Digit
+*/
+
+function nbDig(n, d) {
+  let total = 0
+  
+  for (let i = 0; i <= n; i++) {
+    let k = (i ** 2).toString()
+    
+    for (let x of k) {
+      if (x == d) total++
+    }
   }
   
   return total
