@@ -568,3 +568,13 @@ function nbDig(n, d) {
 function sortByLength (array) {
   return array.sort((a,b) => a.length - b.length);
 };
+
+
+
+/*
+  Round up to the next multiple of 5
+*/
+
+function roundToNext5(n){
+  return n % 5 === 0 ? n : roundToNext5(n+1);
+}
