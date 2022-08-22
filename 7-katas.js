@@ -578,3 +578,20 @@ function sortByLength (array) {
 function roundToNext5(n){
   return n % 5 === 0 ? n : roundToNext5(n+1);
 }
+
+
+
+/*
+  Find the middle element
+*/
+
+function gimme (triplet) {
+  return triplet.findIndex(x => x !== Math.min(...triplet) && x !==  Math.max(...triplet))
+}
+
+// This iteration was my inital solution but the math methods are being evaluated every run of the findIndex method. We could improve this quickly by defining max and min first.
+
+// function gimme (triplet) {
+//   const max = Math.max(...triplet), min = Math.min(...triplet)
+//   return triplet.findIndex(x => x !== max && x !== min)
+// }
