@@ -4695,3 +4695,13 @@ const any = (arr, fun) => arr.some(x=>fun(x));
 function playerRankUp (points) {
   return points >= 100 ? "Well done! You have advanced to the qualifying stage. Win 2 out of your next 3 games to rank up." : false;
 }
+
+
+
+/*
+  Count words
+*/
+
+function countWords(str) {
+  return str.includes('﻿') ? str.split('﻿').filter(x => x.length > 0).length : str.split(' ').filter(x => x.length > 0).length
+}
