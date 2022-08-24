@@ -595,3 +595,22 @@ function gimme (triplet) {
 //   const max = Math.max(...triplet), min = Math.min(...triplet)
 //   return triplet.findIndex(x => x !== max && x !== min)
 // }
+
+
+
+/*
+  Sum of a sequence
+*/
+
+function sequenceSum(begin, end, step) {
+  if (begin > end)   return 0
+  
+  let increment = begin, sum = 0
+  
+  while (increment <= end) {
+    sum += increment
+    increment += step
+  }
+  
+  return sum
+}
