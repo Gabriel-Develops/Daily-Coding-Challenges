@@ -614,3 +614,19 @@ function sequenceSum(begin, end, step) {
   
   return sum
 }
+
+
+
+/*
+  Find the capitals
+*/
+
+var capitals = function (word) {
+  let arr = []
+  for(let i=0; i<word.length; i++){
+    if(word[i]>="A" && word[i]<="Z"){
+      arr.push(i)
+    }
+  } 
+  return arr
+};
