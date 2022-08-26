@@ -640,3 +640,13 @@ var capitals = function (word) {
 var isAnagram = function(test, original) {
   return test.toLowerCase().split("").sort().join("") === original.toLowerCase().split("").sort().join("");
 };
+
+
+
+/*
+  Remove anchor from URL
+*/
+
+function removeUrlAnchor(url){
+  return url.split('#')[0];
+}
