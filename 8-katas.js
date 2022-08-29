@@ -4705,3 +4705,6 @@ function playerRankUp (points) {
 function countWords(str) {
   return str.includes('﻿') ? str.split('﻿').filter(x => x.length > 0).length : str.split(' ').filter(x => x.length > 0).length
 }
+
+// This kata was regex themed so solving it without using regex was a bit annoying.
+// The unicode character is a non breaking space character that some strings had in the test scenarios.
