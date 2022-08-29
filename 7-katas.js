@@ -710,3 +710,36 @@ function countDevelopers(list) {
   return list.reduce((c, x) => x.continent === 'Europe' && x.language === 'JavaScript' ? ++c : c, 0)
 }
 */
+
+
+
+/*
+  Alphabet war
+*/
+
+function alphabetWar(fight) {
+  const leftPower = {
+    w: 4,
+    p: 3,
+    b: 2,
+    s: 1
+  }
+  const rightPower = {
+    m: 4,
+    q: 3,
+    d: 2,
+    z: 1
+  }
+  
+  const [left, right] = fight.split('')
+  .reduce(([left, right], x) => {
+    if (x in leftPower)
+      return [left += leftPower[x], right]
+    else if (x in rightPower)
+      return [left, right += rightPower[x]]
+    else
+      return [left, right]
+  }, [0, 0])
+
+  return left > right ? 'Left side wins!' : left < right ? 'Right side wins!' : "Let's fight again!"
+}
