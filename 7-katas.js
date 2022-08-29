@@ -489,7 +489,7 @@ function minMax(arr){
   Testing 1-2-3
 */
 
-const number = array => {
+const number2 = array => {
   return array.map((x, i)=> `${i+1}: ${x}`)
 }
 
