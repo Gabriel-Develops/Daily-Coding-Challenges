@@ -692,3 +692,21 @@ function arithmetic(a, b, operator){
 function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
   return enteredCode === correctCode && Date.parse(currentDate) <= Date.parse(expirationDate)
 }
+
+
+
+/*
+  Coding Meetup #1 - Higher-Order Functions Series - Count the number of JavaScript developers coming from Europe
+*/
+
+function countDevelopers(list) {
+  return list.filter(x=>x.continent==='Europe' && x.language==='JavaScript').length
+}
+
+// I chose to solve this with a filter/length but you could also solve this question with a reduce method
+
+/*
+function countDevelopers(list) {
+  return list.reduce((c, x) => x.continent === 'Europe' && x.language === 'JavaScript' ? ++c : c, 0)
+}
+*/
