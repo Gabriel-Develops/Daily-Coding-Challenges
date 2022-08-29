@@ -4614,7 +4614,7 @@ function eachCons(array, n) {
   Grasshopper - Object syntax debug
 */
 
-const rooms = {
+const rooms2 = {
   first: {
     description: 'This is the first room',
     items: {
