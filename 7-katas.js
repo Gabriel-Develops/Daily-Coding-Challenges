@@ -1052,3 +1052,16 @@ function reverseLetter(str) {
     .filter(x => x.toLowerCase() !== x.toUpperCase())
     .join('')
 }
+
+
+
+/*
+  Summing a number's digits
+*/
+
+function sumDigits(number) {
+  return Math.abs(number)
+    .toString()
+    .split('')
+    .reduce((sum, x) => sum + +x, 0);
+}
