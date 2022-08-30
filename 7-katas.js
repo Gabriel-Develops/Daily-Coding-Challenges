@@ -743,3 +743,23 @@ function alphabetWar(fight) {
 
   return left > right ? 'Left side wins!' : left < right ? 'Right side wins!' : "Let's fight again!"
 }
+
+
+
+/*
+  Two fighters, one winner.
+*/
+
+function declareWinner(fighter1, fighter2, nextAttacker) {
+  while (fighter1.health > 0 && fighter2.health > 0) {
+    if (fighter1.name === nextAttacker) {
+      fighter2.health -= fighter1.damagePerAttack
+      nextAttacker = fighter2.name
+    } else {
+      fighter1.health -= fighter2.damagePerAttack
+      nextAttacker = fighter1.name
+    }
+  }
+  
+  return fighter1.health > 0 ? fighter1.name : fighter2.name
+}
