@@ -763,3 +763,13 @@ function declareWinner(fighter1, fighter2, nextAttacker) {
   
   return fighter1.health > 0 ? fighter1.name : fighter2.name
 }
+
+
+
+/*
+  Sort Numbers
+*/
+
+function solution(nums){
+  return nums ? nums.sort((a,b)=>a-b) : []
+}
