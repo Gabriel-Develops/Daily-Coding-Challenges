@@ -773,3 +773,19 @@ function declareWinner(fighter1, fighter2, nextAttacker) {
 function solution(nums){
   return nums ? nums.sort((a,b)=>a-b) : []
 }
+
+
+
+/*
+  Small enough? - Beginner
+*/
+
+function smallEnough(a, limit){
+  return a.every(x => x <= limit);
+}
+
+// A clever alternate solution would be to find the max in the array and compare that number with the limit
+
+// function smallEnough(a, limit){
+//   return Math.max(...a) <= limit
+// }
