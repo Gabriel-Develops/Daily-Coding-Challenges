@@ -789,3 +789,16 @@ function smallEnough(a, limit){
 // function smallEnough(a, limit){
 //   return Math.max(...a) <= limit
 // }
+
+
+
+/*
+  Most digits
+*/
+
+function findLongest(array){
+  const digitCount = array.map(x => x.toString().length)
+  const largest = Math.max(...digitCount)
+  
+  return array.find(x => x.toString().length === largest)
+}
