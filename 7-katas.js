@@ -802,3 +802,22 @@ function findLongest(array){
   
   return array.find(x => x.toString().length === largest)
 }
+
+
+
+/*
+  Check the exam
+*/
+
+function checkExam(array1, array2) {
+  const score = array1.reduce((acc, x, i) => {
+    if (x === array2[i]) 
+      return acc += 4
+    else if (!array2[i])
+      return acc
+    else
+      return acc -= 1
+  }, 0)
+  
+  return Math.max(score, 0)
+}
