@@ -831,3 +831,15 @@ function checkExam(array1, array2) {
 function maxMultiple(divisor, bound){
   return bound % divisor === 0 && bound > 0 ? bound : maxMultiple(divisor, --bound)
 }
+
+
+
+/*
+  Bumps in the Road
+*/
+
+function bump(x){
+  return (x.split("n").length - 1 > 15) 
+         ? "Car Dead" 
+         :"Woohoo!"
+}
