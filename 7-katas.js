@@ -821,3 +821,13 @@ function checkExam(array1, array2) {
   
   return Math.max(score, 0)
 }
+
+
+
+/*
+  Maximum Multiple
+*/
+
+function maxMultiple(divisor, bound){
+  return bound % divisor === 0 && bound > 0 ? bound : maxMultiple(divisor, --bound)
+}
