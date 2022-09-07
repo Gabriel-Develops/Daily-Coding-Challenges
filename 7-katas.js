@@ -859,3 +859,13 @@ function horMirror(strng) {
 function oper(fct, s) {
   return fct(s)
 }
+
+
+
+/*
+  Sum of Minimums!
+*/
+
+function sumOfMinimums(arr) {
+  return arr.reduce((sum, x) => sum + Math.min(...x), 0)
+}
