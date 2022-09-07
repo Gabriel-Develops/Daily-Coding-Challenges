@@ -869,3 +869,34 @@ function oper(fct, s) {
 function sumOfMinimums(arr) {
   return arr.reduce((sum, x) => sum + Math.min(...x), 0)
 }
+
+
+
+/*
+  Row Weights
+*/
+
+function rowWeights(array){
+  return [
+    array.reduce((acc, x, i) => i % 2 === 0 ? acc + x : acc, 0), 
+    array.reduce((acc, x, i) => i % 2 !== 0 ? acc + x : acc, 0)
+  ]
+}
+
+// My first solution was inneficient with two reduce methods, I wondered if I could get it down to one
+/*
+function rowWeights(array){
+  return array.reduce(([even, odd], x, i) => i % 2 === 0 ? [even + x, odd] : [even, odd + x], [0, 0])
+}
+*/
+// Mission success, with the help of deconstruction
+
+// Another method I saw was people using the comma operator ,
+
+/*
+function rowWeights(array){
+  return array.reduce((a, x, i) => (a[i % 2] += x, a), [0, 0])
+}
+*/
+
+// Comma Operator evaluates all operands and returns the right most operand
