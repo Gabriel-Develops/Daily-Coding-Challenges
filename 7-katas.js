@@ -922,3 +922,21 @@ function flattenAndSort(array) {
 function getEvenNumbers(numbersArray){
   return numbersArray.filter(x => x%2 === 0)
 }
+
+
+
+/*
+  Sorted? yes? no? how?
+*/
+
+function isSortedAndHow(array) {
+  const asc = array.slice().sort((a, b) => a - b)
+  const desc = array.slice().sort((a, b) => b - a)
+
+  if (array.every((x, i) => x === asc[i]))
+    return 'yes, ascending'
+  else if (array.every((x, i) => x === desc[i]))
+    return 'yes, descending'
+  else
+    return 'no'
+}
