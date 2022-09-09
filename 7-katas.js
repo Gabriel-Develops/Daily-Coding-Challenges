@@ -912,3 +912,13 @@ function rowWeights(array){
 function flattenAndSort(array) {
   return [].concat(...array).sort((a,b) => a - b);
 }
+
+
+
+/*
+  JavaScript Array Filter
+*/
+
+function getEvenNumbers(numbersArray){
+  return numbersArray.filter(x => x%2 === 0)
+}
