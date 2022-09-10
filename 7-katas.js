@@ -900,3 +900,15 @@ function rowWeights(array){
 */
 
 // Comma Operator evaluates all operands and returns the right most operand
+
+
+
+/*
+  Flatten and sort an array
+*/
+
+"use strict";
+
+function flattenAndSort(array) {
+  return [].concat(...array).sort((a,b) => a - b);
+}
