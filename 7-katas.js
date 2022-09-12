@@ -940,3 +940,13 @@ function isSortedAndHow(array) {
   else
     return 'no'
 }
+
+
+
+/*
+  No oddities here
+*/
+
+function noOdds( values ){
+  return values.filter( x => (x % 2) === 0);
+}
