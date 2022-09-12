@@ -950,3 +950,13 @@ function isSortedAndHow(array) {
 function noOdds( values ){
   return values.filter( x => (x % 2) === 0);
 }
+
+
+
+/*
+  Maximum Product 
+*/
+
+function adjacentElementsProduct(array) {
+  return Math.max( ...array.map((x, i) => x * array[i + 1]).filter(x => !Number.isNaN(x)) )
+}
