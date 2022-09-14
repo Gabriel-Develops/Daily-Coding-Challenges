@@ -960,3 +960,13 @@ function noOdds( values ){
 function adjacentElementsProduct(array) {
   return Math.max( ...array.map((x, i) => x * array[i + 1]).filter(x => !Number.isNaN(x)) )
 }
+
+
+
+/*
+  Even numbers in an array
+*/
+
+function evenNumbers(array, number) {
+  return array.filter(x=>x%2===0).slice(-number);
+}
