@@ -1001,3 +1001,13 @@ function minSum(arr)
             sum+= arr[i]*arr[arr.length-1-i];
       return sum;
   }
+
+
+
+/*
+  Coding Meetup #3 - Higher-Order Functions Series - Is Ruby coming?
+*/
+
+function isRubyComing(list) {
+  return list.some(e => e.language === 'Ruby');
+}
