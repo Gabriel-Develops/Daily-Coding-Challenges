@@ -986,3 +986,18 @@ function fizzbuzz(n) {
     else return num
   })
 }
+
+
+
+/*
+  Minimize Sum Of Array (Array Series #1) 
+*/
+
+function minSum(arr) 
+  {
+      arr.sort((a,b) => a-b);
+    let sum = 0;
+      for(let i = 0; i < arr.length/2; i++)
+            sum+= arr[i]*arr[arr.length-1-i];
+      return sum;
+  }
