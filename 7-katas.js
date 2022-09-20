@@ -1039,3 +1039,16 @@ function greetDevelopers(list) {
     return x;
   });
 }
+
+
+
+/*
+  Simple Fun #176: Reverse Letter
+*/
+
+function reverseLetter(str) {
+  return str.split('')
+    .reverse()
+    .filter(x => x.toLowerCase() !== x.toUpperCase())
+    .join('')
+}
