@@ -354,3 +354,26 @@ function sortArray(array) {
   
   return array
 }
+
+
+
+/*
+  The Supermarket Queue
+*/
+
+function queueTime(customers, n) {
+  let totalTime = 0
+  
+  while (customers.length > 0) {
+    totalTime++
+    
+    // Every iteration decreases queuetime for n customers
+    for (let i = 0; i < n; i++) {
+      customers[i]--
+    }
+    
+    // Remove 'finished' queues
+    customers = customers.filter(x => x > 0)
+  }
+  return totalTime
+}
