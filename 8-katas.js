@@ -4708,3 +4708,13 @@ function countWords(str) {
 
 // This kata was regex themed so solving it without using regex was a bit annoying.
 // The unicode character is a non breaking space character that some strings had in the test scenarios.
+
+
+
+/*
+  Parse nice int from char problem
+*/
+
+function getAge(inputString){
+  return +inputString.split(' ')[0];
+}
