@@ -1065,3 +1065,21 @@ function sumDigits(number) {
     .split('')
     .reduce((sum, x) => sum + +x, 0);
 }
+
+
+
+/*
+  Sum of Odd Cubed Numbers
+*/
+
+function cubeOdd(arr) {
+  if (arr.some(x => typeof x !== 'number'))
+    return undefined
+  else 
+    return arr.reduce((sum, x) => {
+    if (x % 2 === 0)
+      return sum
+    else
+      return sum + (x ** 3)
+  }, 0)
+}
