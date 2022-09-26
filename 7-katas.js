@@ -1093,3 +1093,14 @@ function cubeOdd(arr) {
 function toNumberArray(stringarray){
   return stringarray.map(x => +x)
 }
+
+
+
+/*
+  Coding Meetup #4 - Higher-Order Functions Series - Find the first Python developer
+*/
+
+function getFirstPython(list) {
+  const pythonIndex = list.findIndex(x => x.language = 'Python')
+  return pythonIndex === -1 ? 'There will be no Python developers' : `${list[pythonIndex].firstName}, ${list[pythonIndex].country}`
+}
