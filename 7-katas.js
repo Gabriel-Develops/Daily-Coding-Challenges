@@ -1104,3 +1104,26 @@ function getFirstPython(list) {
   const pythonIndex = list.findIndex(x => x.language = 'Python')
   return pythonIndex === -1 ? 'There will be no Python developers' : `${list[pythonIndex].firstName}, ${list[pythonIndex].country}`
 }
+
+// find method returns the element, leading to no need to use index to reretrieve the object
+
+
+
+/*
+  Divide and Conquer
+*/
+
+function divCon(x){
+  return x.reduce((sum, num) => {
+    if (typeof num === 'number')
+      return sum + num
+    else
+      return sum - +num
+  }, 0)
+}
+
+// I realized I could just do the if else statement on one line with a ternary solution
+
+// function divCon(numbers){
+//   return numbers.reduce((sum, x) => +x === x ? sum + x : sum - +x, 0)
+// }
