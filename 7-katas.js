@@ -1137,3 +1137,13 @@ function divCon(x){
 function digits(n) {
   return n.toString().length;
 }
+
+
+
+/*
+  Greet Me
+*/
+
+const greet = name => {
+  return `Hello ${name[0].toUpperCase() + name.slice(1).toLowerCase()}!`
+} 
