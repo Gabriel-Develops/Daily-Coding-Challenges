@@ -1127,3 +1127,13 @@ function divCon(x){
 // function divCon(numbers){
 //   return numbers.reduce((sum, x) => +x === x ? sum + x : sum - +x, 0)
 // }
+
+
+
+/*
+  Number of Decimal Digits
+*/
+
+function digits(n) {
+  return n.toString().length;
+}
