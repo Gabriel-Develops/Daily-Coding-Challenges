@@ -1161,3 +1161,24 @@ function solve(arr) {
     }).length
   })
 }
+
+
+
+/*
+  Switcheroo
+*/
+
+function switcheroo(x){
+  return x.split('')
+    .map(l => {
+    switch (l) {
+      case 'a':
+        return 'b'
+      case 'b':
+        return 'a'
+      default:
+        return l
+    }
+  })
+  .join('')
+}
