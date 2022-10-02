@@ -1147,3 +1147,17 @@ function digits(n) {
 const greet = name => {
   return `Hello ${name[0].toUpperCase() + name.slice(1).toLowerCase()}!`
 } 
+
+
+
+/*
+  Alphabet symmetry
+*/
+
+function solve(arr) {
+  return arr.map(x => {
+    return x.split('').filter((y, i) => {
+      return y.toLowerCase().charCodeAt() - 96 === i + 1
+    }).length
+  })
+}
