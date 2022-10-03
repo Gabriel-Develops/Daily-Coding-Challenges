@@ -1192,3 +1192,19 @@ function switcheroo(x){
 function sortGiftCode(code){
   return code.split('').sort().join('');
 }
+
+
+
+/*
+  Help the Fruit Guy
+*/
+
+function removeRotten(bagOfFruits){
+  if (!bagOfFruits) return []
+  
+  return bagOfFruits.map(x => x.startsWith('rotten') ? x[6].toLowerCase() + x.slice(7) : x)
+}
+
+// An improvement to this would be to check for falsiness in a ternary and remove the word rotten by using the replace method
+
+// return bagOfFruits ? bagOfFruits.map(x => x.replace('rotten', '').toLowerCase()) : []
