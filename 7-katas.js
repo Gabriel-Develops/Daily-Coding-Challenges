@@ -1208,3 +1208,13 @@ function removeRotten(bagOfFruits){
 // An improvement to this would be to check for falsiness in a ternary and remove the word rotten by using the replace method
 
 // return bagOfFruits ? bagOfFruits.map(x => x.replace('rotten', '').toLowerCase()) : []
+
+
+
+/*
+  Spacify
+*/
+
+function spacify(str) {
+  return str.split('').join(' ')
+}
