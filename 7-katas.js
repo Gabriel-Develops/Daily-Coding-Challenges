@@ -1391,3 +1391,17 @@ function solve(s){
   
   return lowerTotal > upperTotal ? s.toUpperCase() : s.toLowerCase()
 }
+
+
+
+/*
+  Are the numbers in order?
+*/
+
+function inAscOrder(arr) {
+  return arr.every((x, i) => i === 0 ? true : x > arr[i - 1])
+}
+
+// Kata didn't specify whether or not the numbers should be strictly ascending or if they could repeat. 
+// A solution without using the ternary would be to use the or short circuit evaluation.
+// i === 0 || x > arr[i - 1]
