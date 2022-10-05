@@ -1218,3 +1218,15 @@ function removeRotten(bagOfFruits){
 function spacify(str) {
   return str.split('').join(' ')
 }
+
+
+
+/*
+  Form The Minimum
+*/
+
+function minValue(values){
+  return +values.filter((x, i) => values.indexOf(x) === i)
+    .sort((a, b) => a - b)
+    .join('')
+}
