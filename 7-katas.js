@@ -1230,3 +1230,14 @@ function minValue(values){
     .sort((a, b) => a - b)
     .join('')
 }
+
+
+
+/*
+  Tidy Number (Special Numbers Series #9)
+*/
+
+function tidyNumber(n){
+  const arr = n.toString().split('')
+  return arr.slice(0, -1).every((x, i) => +x <= +arr[i + 1])
+}
