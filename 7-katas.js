@@ -1241,3 +1241,26 @@ function tidyNumber(n){
   const arr = n.toString().split('')
   return arr.slice(0, -1).every((x, i) => +x <= +arr[i + 1])
 }
+
+
+
+/*
+  Char Code Calculation
+*/
+
+function stringToSum(string) {
+  return string.split('').reduce((total, x) => total + +x, 0)
+}
+
+function calc(x){
+  const total1 = x.split('').reduce((total, y) => total + y.charCodeAt(), '')
+  let total2 = total1.replace('7', '1')
+  while(total2.includes('7')) {
+    total2 = total2.replace('7', '1')
+  }
+  
+  const sum1 = stringToSum(total1)
+  const sum2 = stringToSum(total2)
+
+  return sum1 - sum2
+}
