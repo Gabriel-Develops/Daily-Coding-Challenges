@@ -1264,3 +1264,46 @@ function calc(x){
 
   return sum1 - sum2
 }
+
+
+
+/*
+  SevenAte9
+*/
+
+function sevenAte9(str) {
+  return str.split('').filter((x, i) => x !== '9' || (str[i - 1] !== '7' || str[i + 1] !== '7')).join('')
+}
+
+// A fun challenge, I wanted to what it would look like if I did it with a for loop
+/*
+function sevenAte9(str) {
+  let final = str
+  
+  for (let i = 0; i < final.length; i++) {
+    if (final[i] !== '9') continue
+    
+    if (final[i - 1] !== '7' || final[i + 1] !== '7') continue
+    
+    // Current number is 9 and is surrounded by 7s
+    final = final.slice(0, i) + final.slice(i + 1)
+  }
+  
+  return final
+}
+*/
+
+// Now for something closer to my first answer but actually readable
+/*
+function sevenAte9(str) {
+  return str.split('')
+    .filter((x, i) => {
+    if (x !== '9')
+      return true
+    else if (str[i - 1] !== '7' || str[i + 1] !== '7')
+      return true
+    else
+      return false
+  }).join('')
+}
+*/
