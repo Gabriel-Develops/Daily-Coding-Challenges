@@ -1307,3 +1307,15 @@ function sevenAte9(str) {
   }).join('')
 }
 */
+
+
+
+/*
+  Filter the number
+*/
+
+var filterString = function(value) {
+  return +value.split('')
+    .filter(x => +x == x)
+    .join('')
+}
