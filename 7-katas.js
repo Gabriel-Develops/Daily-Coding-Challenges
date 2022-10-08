@@ -1378,3 +1378,16 @@ function last(x){
 function explode(s) {
   return s.split('').map(x => x.repeat(+x)).join('');
 }
+
+
+
+/*
+  Fix string case
+*/
+
+function solve(s){
+  const [lowerTotal, upperTotal] = s.split('')
+    .reduce(([lowerSum, upperSum], x) => x === x.toLowerCase() ? [lowerSum, ++upperSum] : [++lowerSum, upperSum], [0, 0])
+  
+  return lowerTotal > upperTotal ? s.toUpperCase() : s.toLowerCase()
+}
