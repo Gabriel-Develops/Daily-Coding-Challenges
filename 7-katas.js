@@ -1319,3 +1319,15 @@ var filterString = function(value) {
     .filter(x => +x == x)
     .join('')
 }
+
+
+
+/*
+  Odd-Even String Sort
+*/
+
+function sortMyString(S) {
+  return S.split('')
+    .reduce(([even, odd], x, i) => i % 2 === 0 ? [even + x, odd] : [even, odd + x],['', ''])
+    .join(' ')
+}
