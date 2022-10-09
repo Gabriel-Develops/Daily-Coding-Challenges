@@ -1331,3 +1331,20 @@ function sortMyString(S) {
     .reduce(([even, odd], x, i) => i % 2 === 0 ? [even + x, odd] : [even, odd + x],['', ''])
     .join(' ')
 }
+
+
+
+/*
+  All Inclusive?
+*/
+
+function containAllRots(str, arr) {
+  for (let i = 0; i < str.length; i++) {
+    const rotationStr = str.slice(i) + str.slice(0, i)
+    
+    if (!arr.includes(rotationStr)) 
+      return false
+  }
+  
+  return true
+}
