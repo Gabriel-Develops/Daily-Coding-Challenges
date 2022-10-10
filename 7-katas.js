@@ -1348,3 +1348,23 @@ function containAllRots(str, arr) {
   
   return true
 }
+
+
+
+/*
+  Sort by Last Char
+*/
+
+function last(x){
+  return x.split(' ').sort((a, b) => {
+    let aLast = a.slice(-1).toLowerCase()
+    let bLast = b.slice(-1).toLowerCase()
+    
+    if (aLast === bLast)
+      return 0
+    else if (aLast < bLast)
+      return -1
+    else
+      return 1
+  })
+}
