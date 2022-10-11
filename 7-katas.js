@@ -1368,3 +1368,13 @@ function last(x){
       return 1
   })
 }
+
+
+
+/*
+  Digits explosion
+*/
+
+function explode(s) {
+  return s.split('').map(x => x.repeat(+x)).join('');
+}
