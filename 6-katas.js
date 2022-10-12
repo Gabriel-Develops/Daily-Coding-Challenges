@@ -377,3 +377,27 @@ function queueTime(customers, n) {
   }
   return totalTime
 }
+
+
+
+/*
+  Build Tower
+*/
+
+function towerBuilder(nFloors) {
+  const arr = []
+  
+  for (let i = 0, j = 1; i < nFloors; i++, j += 2) {
+    let floor = ''
+    let spaces = ' '.repeat(nFloors - i - 1)
+
+    floor = `${spaces}${'*'.repeat(j)}${spaces}`
+    
+    arr.push(floor)
+  }
+  
+  return arr
+}
+
+// I initialized two variables in the for loop which I have done before but having two end results per turn is something I thought I'd try and worked out perfectly.
+// Nevertheless j is technically uneeded as we could just use i to derive it, we would do so by saying something like i * 2 + 1
