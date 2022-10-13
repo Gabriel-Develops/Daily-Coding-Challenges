@@ -423,3 +423,15 @@ function expandedForm(num) {
 }
 
 // At first I was adding the ' + ' at the end of every loop but that would lead to it being at the end. I could have solved this by slicing the string in the return, ignoring the last three characters. I felt their would be a better way so I transitioned to using an array and solving the issue using a join method. This works perfectly and it looks like most ended up doing similarly.
+
+
+
+/*
+  Break camelCase
+*/
+
+function solution(string) {
+  return string.split('')
+    .map(x => x.charCodeAt() < 91 && x.charCodeAt() > 64 ? ' ' + x : x)
+    .join('')
+}
