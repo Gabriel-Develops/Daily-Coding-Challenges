@@ -401,3 +401,25 @@ function towerBuilder(nFloors) {
 
 // I initialized two variables in the for loop which I have done before but having two end results per turn is something I thought I'd try and worked out perfectly.
 // Nevertheless j is technically uneeded as we could just use i to derive it, we would do so by saying something like i * 2 + 1
+
+
+
+/*
+  Write Number in Expanded Form
+*/
+
+function expandedForm(num) {
+  let numStr = num.toString()
+  let expandedNum = []
+  
+  for (let i = 0; i < numStr.length; i++) {
+    if (numStr[i] === '0') {
+      continue
+    }
+    expandedNum.push( numStr[i] + '0'.repeat(numStr.slice(i).length - 1) )
+  }
+  
+  return expandedNum.join(' + ')
+}
+
+// At first I was adding the ' + ' at the end of every loop but that would lead to it being at the end. I could have solved this by slicing the string in the return, ignoring the last three characters. I felt their would be a better way so I transitioned to using an array and solving the issue using a join method. This works perfectly and it looks like most ended up doing similarly.
