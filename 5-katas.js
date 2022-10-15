@@ -61,3 +61,31 @@ function domainName(url){
   url = url.replace('www.', '')
   return url.split('.')[0]
 }
+
+
+
+/*
+  Find the unique string
+*/
+
+function findUniq(arr) {
+  // For every element in the arr, we reducing it to its basic characters
+  // BbBb => b
+  // silvia && vasili => ailsv
+  const simpleArr = arr.map(
+    x => x.toLowerCase()
+      .split('')
+      .filter((x, i, subArr) => subArr.indexOf(x) === i)
+      .sort()
+      .join('')
+  )
+  
+  // All but one of the elements in the arr will be the same so we find the unique one  
+  const uniqueValue = simpleArr.filter((x, i) => i === simpleArr.indexOf(x) && i === simpleArr.lastIndexOf(x))
+    .join('')
+  
+  // Its position in the simpleArr will correlate with the position of the unique string in the primary array
+  const pos = simpleArr.findIndex(x => x === uniqueValue)
+  
+  return arr[pos]
+}
