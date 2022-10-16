@@ -435,3 +435,18 @@ function solution(string) {
     .map(x => x.charCodeAt() < 91 && x.charCodeAt() > 64 ? ' ' + x : x)
     .join('')
 }
+
+
+
+/*
+  Mexican Wave
+*/
+
+function wave(str){
+  // Empty array of size str.length
+  return Array.from({length: str.length})
+    // We are focusing on a different letter every loop and slicing the before and after
+    .map((_, i) => str[i] === ' ' ? '' : str.slice(0, i) + str[i].toUpperCase() + str.slice(i + 1))
+    // Filter out empty strings 
+    .filter(x => x)
+}
