@@ -91,3 +91,64 @@ function findUniq(arr) {
 }
 
 // This was a challenge. I decided to simplify the problem into steps. First I cleaned up the input, after cleaning it up the problem was a lot easier.
+
+
+
+/*
+  Find the unique string
+*/
+
+function movingShift(s, shift) {
+  const encryptedStr = s.split('')
+    .map((x, i) => {
+      // Not a letter
+      if (x.toLowerCase() === x.toUpperCase())
+        return x
+      // Lower Cased
+      else if (x === x.toLowerCase()) {
+        return String.fromCharCode((x.charCodeAt() - 97 + shift + i) % 26 + 97)
+      }
+      // Upper Cased
+      else if (x === x.toUpperCase())
+        return String.fromCharCode((x.charCodeAt() - 65 + shift + i) % 26 + 65)
+    })
+    .join('')
+  
+  const subLen = Math.ceil(encryptedStr.length / 5)
+  return [
+    encryptedStr.slice(0, subLen),
+    encryptedStr.slice(subLen, subLen * 2),
+    encryptedStr.slice(subLen * 2, subLen * 3),
+    encryptedStr.slice(subLen * 3, subLen * 4),
+    encryptedStr.slice(subLen * 4, subLen * 5),
+  ]
+}
+
+function demovingShift(arr, shift) {
+  return arr.join('')
+    .split('')
+    .map((x, i) => {
+      // Not a letter
+      if (x.toLowerCase() === x.toUpperCase())
+        return x
+      // Lower Cased
+      else if (x === x.toLowerCase()) {
+        let parShifted = x.charCodeAt() - 97 - shift - i
+        while (parShifted < 0) {
+          parShifted += 26
+        }
+        return String.fromCharCode(parShifted % 26 + 97)
+      }
+      // Upper Cased
+      else if (x === x.toUpperCase()) {
+        let parShifted = x.charCodeAt() - 65 - shift - i
+        while (parShifted < 0) {
+          parShifted += 26
+        }
+        return String.fromCharCode(parShifted % 26 + 65)
+      }
+    })
+    .join('')
+}
+
+// This was a fun challenge. I think the code readability can be improved in the areas where we performt the shift by using an external shift function
