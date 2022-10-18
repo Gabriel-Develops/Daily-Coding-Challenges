@@ -1405,3 +1405,16 @@ function inAscOrder(arr) {
 // Kata didn't specify whether or not the numbers should be strictly ascending or if they could repeat. 
 // A solution without using the ternary would be to use the or short circuit evaluation.
 // i === 0 || x > arr[i - 1]
+
+
+
+/*
+  Gauß needs help! (Sums of a lot of numbers).
+*/
+
+function f(n){
+  return Number.isInteger(n) && n > 0 && n * (n+1) / 2 
+};
+
+// Guass Summation, an algorathim for finding the sum of 1 + 2 + 3 + 4..... + n
+// The sum = (n + 1) * n / 2

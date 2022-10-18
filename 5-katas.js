@@ -89,3 +89,5 @@ function findUniq(arr) {
   
   return arr[pos]
 }
+
+// This was a challenge. I decided to simplify the problem into steps. First I cleaned up the input, after cleaning it up the problem was a lot easier.
