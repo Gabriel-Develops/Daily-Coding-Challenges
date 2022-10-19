@@ -4718,3 +4718,13 @@ function countWords(str) {
 function getAge(inputString){
   return +inputString.split(' ')[0];
 }
+
+
+
+/*
+  Get the mean of an array
+*/
+
+function getAverage(marks){
+  return Math.floor(marks.reduce((sum, x) => sum + x, 0)/marks.length)
+}
