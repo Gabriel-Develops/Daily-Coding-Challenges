@@ -1418,3 +1418,26 @@ function f(n){
 
 // Guass Summation, an algorathim for finding the sum of 1 + 2 + 3 + 4..... + n
 // The sum = (n + 1) * n / 2
+
+
+
+/*
+  Sum of array singles
+*/
+
+function repeats(arr){
+  return arr.filter(x => arr.indexOf(x) === arr.lastIndexOf(x)).reduce((sum, x) => sum + x, 0);
+};
+
+// The filter method has a O(n) and reduce has at lease O(n), it would be nice if we could combine these two into one loop
+// We can do that simply through a for loop instead of using arr methods
+
+// function repeats(arr){
+//   let sum = 0
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr.indexOf(arr[i]) === arr.lastIndexOf(arr[i])) {
+//       sum += arr[i]
+//     }
+//   }
+//   return sum
+// };
