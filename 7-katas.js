@@ -1633,3 +1633,26 @@ function sumTriangularNumbers(n) {
 function sumTriangularNumbers(n) {
   return n < 0 ? 0 : n * (n + 1) * (n + 2) / 6
 }
+
+
+
+/*
+  Sum of numbers from 0 to N
+*/
+
+class SequenceSum {
+  static showSequence(n) {
+    if (n < 0) {
+      return `${n}<0`
+    } else if (n === 0) {
+      return '0=0'
+    }
+    
+    let sum = 0, sumArr =[]
+    for (let i = 0; i <= n; i++) {
+      sumArr.push(i)
+      sum += i
+    }
+    return `${sumArr.join('+')} = ${sum}`
+  }
+}
