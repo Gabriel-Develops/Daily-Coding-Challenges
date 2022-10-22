@@ -1557,3 +1557,19 @@ function evaporator(content, evap_per_day, threshold){
 function angle(n) {
   return 180 * (n - 2)
 }
+
+
+
+/*
+  Find the vowels
+*/
+
+function vowelIndices(word){
+  const VOWELS = ['a', 'e', 'i', 'o', 'u', 'y']
+  const vowelIndex =[]
+  for (let i = 0, wordLower = word.toLowerCase(); i < word.length; i++) {
+    if (VOWELS.includes(wordLower[i]))
+      vowelIndex.push(i + 1)
+  }
+  return vowelIndex
+}
