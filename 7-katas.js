@@ -1534,3 +1534,16 @@ function predictAge(...ages){
 // function predictAge(...ages){
 //   return Math.floor( Math.hypot(...ages) / 2 )
 // }
+
+
+
+/*
+  Deodorant Evaporator
+*/
+
+function evaporator(content, evap_per_day, threshold){ 
+  for (let i = 1; true; i++) {
+    if ((((100 - evap_per_day) / 100) ** i) < (threshold / 100))
+      return i
+  }
+}
