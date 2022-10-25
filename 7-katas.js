@@ -1512,3 +1512,25 @@ function wordsToMarks(string){
 // function wordsToMarks(string){
 //   return string.split('').reduce((sum, x) => sum + x.charCodeAt() - 96, 0)
 // }
+
+
+
+/*
+  Love vs friendship
+*/
+
+function predictAge(...ages){
+  let sum = 0;
+  for(let age of ages){
+    sum += (age * age);
+  }
+  return Math.floor(Math.sqrt(sum) / 2);
+}
+
+
+// Math.hypot, returns the square root of a sum of inputs that have been squared. Therefore it is a perfect method for this problem
+// We only need to implement the division of two and Math.floor
+
+// function predictAge(...ages){
+//   return Math.floor( Math.hypot(...ages) / 2 )
+// }
