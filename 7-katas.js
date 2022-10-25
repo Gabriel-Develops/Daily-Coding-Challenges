@@ -1516,7 +1516,7 @@ function wordsToMarks(string){
 
 
 /*
-  Love vs friendship
+  Predict your age!
 */
 
 function predictAge(...ages){
