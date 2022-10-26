@@ -1492,3 +1492,23 @@ function largestPairSum (numbers) {
   const [largest, secondLargest, ...rest] = numbers.sort((a, b) => b - a)
   return largest + secondLargest
 }
+
+
+
+/*
+  Love vs friendship
+*/
+
+function wordsToMarks(string){
+  let sum = 0;
+  for(let char of string) {
+    sum += char.charCodeAt() - 96;
+  }
+  return sum;
+}
+
+// Alternatively you could also use methods to solve this problem, specifically split, and reduce
+
+// function wordsToMarks(string){
+//   return string.split('').reduce((sum, x) => sum + x.charCodeAt() - 96, 0)
+// }
