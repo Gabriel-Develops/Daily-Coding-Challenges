@@ -1441,3 +1441,13 @@ function repeats(arr){
 //   }
 //   return sum
 // };
+
+
+
+/*
+  Nth Smallest Element (Array Series #4)
+*/
+
+function nthSmallest(arr, pos){
+  return arr.sort((a,b)=>a-b)[pos-1]
+}
