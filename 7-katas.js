@@ -1451,3 +1451,22 @@ function repeats(arr){
 function nthSmallest(arr, pos){
   return arr.sort((a,b)=>a-b)[pos-1]
 }
+
+
+
+/*
+  Maximum Length Difference
+*/
+
+function mxdiflg(a1, a2) {
+  if (!a1.length || !a2.length) {
+    return -1
+  }
+  
+  firstArr = a1.map(x => x.length)
+  secondArr = a2.map(x => x.length)
+  return Math.max(
+    Math.abs(Math.max(...firstArr) - Math.min(...secondArr)),
+    Math.abs(Math.max(...secondArr) - Math.min(...firstArr))
+  )
+}
