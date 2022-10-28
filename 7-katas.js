@@ -1481,3 +1481,14 @@ function factorial(n){
   if(n===0)return 1;
   return n*factorial(n-1)
 }
+
+
+
+/*
+  Largest pair sum in array
+*/
+
+function largestPairSum (numbers) {
+  const [largest, secondLargest, ...rest] = numbers.sort((a, b) => b - a)
+  return largest + secondLargest
+}
