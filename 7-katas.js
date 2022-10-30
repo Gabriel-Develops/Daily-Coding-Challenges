@@ -1610,3 +1610,26 @@ function reverseNumber(n) {
   
   return +(n < 0 ? '-' + reversedNum : reversedNum)
 }
+
+
+
+/*
+  Sum of Triangular Numbers
+*/
+
+function sumTriangularNumbers(n) {
+  let sum = 0
+  for (let i = 1; i <= n; i++) {
+    sum += (i ** 2 + i) / 2
+  }
+  return sum
+}
+
+// This solution provides the summation of all triangular numbers from one to n which is what is asked.
+// But this summation is also known as a Tetrahedral number and their is a formula for this
+
+// In other words we can bring our time complexity down from O(n) to O(1)
+
+function sumTriangularNumbers(n) {
+  return n < 0 ? 0 : n * (n + 1) * (n + 2) / 6
+}
