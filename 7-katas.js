@@ -1573,3 +1573,40 @@ function vowelIndices(word){
   }
   return vowelIndex
 }
+
+
+
+/*
+  Reverse a Number
+*/
+
+function reverseNumber(n) {
+  if (n < 10 && n >= 0)
+    return n
+  
+  return Math.sign(n) * +(+reverseNumber(Math.abs(n).toString().slice(1)) + Math.abs(n).toString().slice(0, 1))
+}
+
+// An ugly solution that uses recursion
+
+function reverseNumber(n) {
+  if (n < 10 && n > -10)
+    return n
+  return Math.sign(n) * +(String(Math.abs(n) % 10) + String(reverseNumber(Math.floor(Math.abs(n) / 10))))
+}
+
+// Another ugly solution that uses recursion
+
+// A for loop solution
+
+function reverseNumber(n) {
+  let reversedNum = ''
+  
+  for (const num of n.toString()) {
+    if (num === '-')
+      continue
+    reversedNum = num + reversedNum
+  }
+  
+  return +(n < 0 ? '-' + reversedNum : reversedNum)
+}
