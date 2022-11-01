@@ -1656,3 +1656,19 @@ class SequenceSum {
     return `${sumArr.join('+')} = ${sum}`
   }
 }
+
+
+
+/*
+  Build a square
+*/
+
+const generateShape = (n) => ('+'.repeat(n) + '\n').repeat(Math.max(n - 1, 0)) + '+'.repeat(n)
+
+// Making use of repeat twice is quite clever but how do you get rid of the last \n? Well initially I made it so their wouldn't be one by adding in a third repeat.
+
+// A clever solution is to realize that trim() not only takes care of spaces but also tabs and line breaks. So we can use it here.
+
+// const generateShape = n => ('+'.repeat(n) = '\n').repeat(n).trim()
+
+// Easier to read and way more clever!
