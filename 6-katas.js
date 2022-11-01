@@ -464,3 +464,31 @@ function reverse(str){
     .join(' ')
     .trim()
 }
+
+
+
+/*
+  Halloween: trick or treat!
+*/
+
+function trickOrTreat(children, packets) {
+  if (packets.length < children) {
+    return 'Trick or treat!'
+  }
+  
+  let candyCount = -1
+  for (let packet of packets) {
+    let candyMap = packet.reduce((map, candy) => map.has(candy) ? map.set(candy, map.get(candy) + 1) : map.set(candy, 1), new Map())
+    if (candyMap.get('candy') < 2 || candyMap.get('bomb')) {
+      return 'Trick or treat!'
+    }
+    
+    if (candyCount === -1) {
+      candyCount = candyMap.get('candy')
+    } else if (candyCount !== candyMap.get('candy')) {
+      return 'Trick or treat!'
+    }
+  }
+  
+  return 'Thank you, strange uncle!'
+}
