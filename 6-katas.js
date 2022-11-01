@@ -492,3 +492,20 @@ function trickOrTreat(children, packets) {
   
   return 'Thank you, strange uncle!'
 }
+
+
+
+/*
+  String transformer
+*/
+
+function stringTransformer(str) {
+  return str.split(' ')
+    .reverse()
+    .map(
+      word => word.split('')
+                  .map(x => x === x.toLowerCase() ? x.toUpperCase() : x.toLowerCase())
+                  .join('')
+    )
+    .join(' ')
+}
