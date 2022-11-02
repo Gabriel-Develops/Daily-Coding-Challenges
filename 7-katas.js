@@ -1704,3 +1704,20 @@ function last(x){
       return 1
   })
 }
+
+
+
+/*
+  Speed Control
+*/
+
+function gps(s, x) {
+  let maxAvgSpeed = 0
+  for (let i = 0; i < x.length - 1; i++) {
+    let distance = x[i + 1] - x[i]
+    let avgSpeed = Math.floor( distance * 3600 / s  )
+    
+    maxAvgSpeed = avgSpeed > maxAvgSpeed ? avgSpeed : maxAvgSpeed
+  }
+  return maxAvgSpeed
+}
