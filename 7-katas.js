@@ -1672,3 +1672,35 @@ const generateShape = (n) => ('+'.repeat(n) + '\n').repeat(Math.max(n - 1, 0)) +
 // const generateShape = n => ('+'.repeat(n) = '\n').repeat(n).trim()
 
 // Easier to read and way more clever!
+
+
+
+/*
+  Sort by Last Char - Revisited
+*/
+
+// First Attempt
+function last(x) {
+  return x.split(' ')
+    .sort((a, b) => a.slice(-1).charCodeAt() - b.slice(-1).charCodeAt())
+}
+
+// Second and Final Attempt
+function last(x) {
+  return x.split(' ').sort((a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1))
+}
+
+// Old Attempt
+function last(x){
+  return x.split(' ').sort((a, b) => {
+    let aLast = a.slice(-1).toLowerCase()
+    let bLast = b.slice(-1).toLowerCase()
+    
+    if (aLast === bLast)
+      return 0
+    else if (aLast < bLast)
+      return -1
+    else
+      return 1
+  })
+}
