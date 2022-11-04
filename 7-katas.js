@@ -1721,3 +1721,13 @@ function gps(s, x) {
   }
   return maxAvgSpeed
 }
+
+
+
+/*
+  Over The Road
+*/
+
+function overTheRoad(address, n){
+  return n * 2 - address + 1;
+}
