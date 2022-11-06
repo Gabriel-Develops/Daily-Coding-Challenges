@@ -1753,3 +1753,15 @@ function sumCubes(n) {
 }
 
 // Sum of Cubes of n Natural Numbers Formula
+
+
+
+/*
+  Simple beads count
+*/
+
+function countRedBeads(n) {
+  return Math.max((n - 1)*2, 0) 
+}
+
+// We could have used a ternary but I figured this would be more readable
