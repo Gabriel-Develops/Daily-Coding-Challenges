@@ -1731,3 +1731,13 @@ function gps(s, x) {
 function overTheRoad(address, n){
   return n * 2 - address + 1;
 }
+
+
+
+/*
+  Lost number in number sequence
+*/
+
+function findDeletedNumber(arr, mixArr) {
+  return arr.find(x => !mixArr.includes(x)) || 0
+}
