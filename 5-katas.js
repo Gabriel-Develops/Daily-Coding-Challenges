@@ -152,3 +152,29 @@ function demovingShift(arr, shift) {
 }
 
 // This was a fun challenge. I think the code readability can be improved in the areas where we performt the shift by using an external shift function
+
+
+
+/*
+  Primes in numbers
+*/
+
+function primeFactors(n){
+  const factors = new Map()
+  
+  let divisor = 2
+  while (n >= 2) {
+    if (n % divisor === 0) {
+      factors.set(divisor, factors.get(divisor) + 1 || 1)
+      n /= divisor
+    } else {
+      divisor++
+    }
+  }
+  
+  let factorString = ''
+  factors.forEach((count, divisor) => factorString += `(${divisor}${count > 1 ? `**${count}` : ''})`)
+  return factorString
+}
+
+// This was a fun challenge, I was able to use short term evaluation within a map set and use the foreach method, a reduce would have been ideal
