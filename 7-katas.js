@@ -1765,3 +1765,19 @@ function countRedBeads(n) {
 }
 
 // We could have used a ternary but I figured this would be more readable
+
+
+
+/*
+  Find the nth Digit of a Number
+*/
+
+const findDigit = (num, nth) => {
+  const numString = Math.abs(num).toString()
+  
+  if (nth <= 0) {
+    return -1
+  }
+  
+  return +numString[numString.length - nth] || 0
+}
