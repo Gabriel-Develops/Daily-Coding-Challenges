@@ -1741,3 +1741,15 @@ function overTheRoad(address, n){
 function findDeletedNumber(arr, mixArr) {
   return arr.find(x => !mixArr.includes(x)) || 0
 }
+
+
+
+/*
+  Sum of Cubes
+*/
+
+function sumCubes(n) {
+  return (n * (n + 1) / 2) ** 2;
+}
+
+// Sum of Cubes of n Natural Numbers Formula
