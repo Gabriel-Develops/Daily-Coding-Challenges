@@ -1781,3 +1781,17 @@ const findDigit = (num, nth) => {
   
   return +numString[numString.length - nth] || 0
 }
+
+
+
+/*
+  Ordered Count of Characters
+*/
+
+const orderedCount = function (text) {
+  const charMap = new Map()
+  for (const letter of text) {
+    charMap.set(letter, charMap.get(letter) + 1 || 1)
+  }
+  return Array.from(charMap)
+}
