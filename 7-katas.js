@@ -1805,3 +1805,29 @@ const orderedCount = function (text) {
 function maxDiff(list) {
   return list.length > 1 ? Math.max(...list) - Math.min(...list) : 0
 }
+
+
+
+/*
+  Averages of numbers
+*/
+
+function averages(numbers) {
+  if (!numbers) return []
+  return numbers.map((x, i) => (x + numbers[i + 1]) / 2)
+    .slice(0, numbers.length - 1)
+}
+
+function averages(numbers) {
+  if (!numbers) {
+    return []
+  }
+  
+  const avgArr = []
+  for (let i = 0; i < numbers.length - 1; i++) {
+    avgArr.push(
+      (numbers[i] + numbers[i + 1]) / 2
+    )
+  }
+  return avgArr
+}
