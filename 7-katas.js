@@ -1845,3 +1845,14 @@ const reverse = array => {
   }
   return reversedArr
 }
+
+
+
+/*
+  The average length
+*/
+
+function averageLength(arr) { 
+  const avgLen = Math.round(arr.reduce((sum, x) => sum + x.length, 0) / arr.length)
+  return arr.map(x => x[0].repeat(avgLen))
+}
