@@ -519,3 +519,36 @@ function stringTransformer(str) {
 function arrayDiff(a, b) {
   return a.filter(x => !b.includes(x))
 }
+
+
+
+/*
+  Delete occurrences of an element if it occurs more than n times
+*/
+
+function deleteNth(arr,n){
+  const arrMap = new Map()
+  const newArr = []
+  
+  for (let i = 0; i < arr.length; i++) {
+    arrMap.set(arr[i], arrMap.get(arr[i]) + 1 || 1)
+    
+    if (arrMap.get(arr[i]) > n) {
+      continue
+    }
+    
+    newArr.push(arr[i])
+  }
+  
+  return newArr
+}
+
+// This could also be done by just using the filter method
+
+function deleteNth(arr,n){
+  const cache = new Map()
+  return arr.filter(x => {
+    cache.set(x, cache.get(x) + 1 || 1)
+    return cache.get(x) <= n
+  })
+}
