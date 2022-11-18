@@ -1856,3 +1856,19 @@ function averageLength(arr) {
   const avgLen = Math.round(arr.reduce((sum, x) => sum + x.length, 0) / arr.length)
   return arr.map(x => x[0].repeat(avgLen))
 }
+
+
+
+/*
+  Automorphic Number (Special Numbers Series #6)
+*/
+
+function automorphic(n){
+  return n.toString() === (n ** 2).toString().slice(-n.toString().length) ? 'Automorphic' : 'Not!!'
+}
+
+// endsWith method is the perfect method for this and allows us to bypass the need of slice and length from the previous answer
+
+function automorphic(n){
+  return (n ** 2).toString().endsWith(n.toString()) ? 'Automorphic' : 'Not!!'
+}
