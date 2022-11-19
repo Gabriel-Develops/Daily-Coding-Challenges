@@ -1872,3 +1872,13 @@ function automorphic(n){
 function automorphic(n){
   return (n ** 2).toString().endsWith(n.toString()) ? 'Automorphic' : 'Not!!'
 }
+
+
+
+/*
+  Simple remove duplicates
+*/
+
+function solve(arr) {
+  return arr.filter((x,i) => i === arr.lastIndexOf(x));
+};
