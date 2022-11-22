@@ -1882,3 +1882,19 @@ function automorphic(n){
 function solve(arr) {
   return arr.filter((x,i) => i === arr.lastIndexOf(x));
 };
+
+
+
+/*
+  Credit Card Mask
+*/
+
+function maskify(cc) {
+  return '#'.repeat(Math.max(cc.length - 4, 0)) + cc.slice(-4);
+}
+
+// This answer is perfectly fine as it uses Math.max to guarentee no negative input is fed into the repeat method. However if we used the string method padStart we could get a better solution.
+
+function maskify(cc) {
+  return cc.slice(-4).padStart(cc.length, '#')
+}
