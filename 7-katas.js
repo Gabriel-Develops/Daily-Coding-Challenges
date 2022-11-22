@@ -1898,3 +1898,15 @@ function maskify(cc) {
 function maskify(cc) {
   return cc.slice(-4).padStart(cc.length, '#')
 }
+
+
+
+/*
+  Remove consecutive duplicate words
+*/
+
+const removeConsecutiveDuplicates = s => {
+  return s.split(' ')
+    .filter((x, i, arr) => arr[i - 1] !== x)
+    .join(' ')
+}
