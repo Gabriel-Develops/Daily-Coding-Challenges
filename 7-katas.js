@@ -1930,3 +1930,13 @@ function addLetters(...letters) {
   sum = sum % 26
   return sum ? String.fromCharCode(sum + 96) : 'z'
 }
+
+
+
+/*
+  Thinking & Testing: A and B?
+*/
+
+const testit = (a,b) => a | b;
+
+// I did not like this kata at all...
