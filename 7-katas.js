@@ -1910,3 +1910,23 @@ const removeConsecutiveDuplicates = s => {
     .filter((x, i, arr) => arr[i - 1] !== x)
     .join(' ')
 }
+
+
+
+/*
+  Alphabetical Addition
+*/
+
+function addLetters(...letters) {
+  const value = letters.reduce((sum, x) => x.charCodeAt() + sum - 96, 0) % 26
+  return value ? String.fromCharCode(value + 96) : 'z'
+}
+
+function addLetters(...letters) {
+  let sum = 0
+  for (const letter of letters) {
+    sum += letter.charCodeAt() - 96
+  }
+  sum = sum % 26
+  return sum ? String.fromCharCode(sum + 96) : 'z'
+}
