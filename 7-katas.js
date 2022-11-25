@@ -1940,3 +1940,40 @@ function addLetters(...letters) {
 const testit = (a,b) => a | b;
 
 // I did not like this kata at all...
+
+
+
+/*
+  Mathemagics: the 21 Cards Trick
+*/
+
+function guessTheCard(audience) {
+  const guessOne = [[1,2,3,4,5,6,7], [8,9,10,11,12,13,14], [15,16,17,18,19,20,21]]
+  const answerOne = audience.getInput(guessOne)
+  
+  // this array contains the answer
+  let arrWithAns = guessOne.splice(answerOne, 1).flat()
+  // this array holds the numbers that are not the answer
+  let remaining = guessOne.flat()
+  
+  const guessTwo = [
+    arrWithAns.slice(0, 3).concat(remaining.slice(0, 4)),
+    arrWithAns.slice(3, 6).concat(remaining.slice(4, 8)),
+    arrWithAns.slice(6).concat(remaining.slice(8))
+  ]
+  const answerTwo = audience.getInput(guessTwo)
+  
+  arrWithAns = guessTwo[answerTwo].splice(0, 3)
+  remaining = guessTwo.flat()
+  
+  const guessThree = [
+    arrWithAns.slice(0, 1).concat(remaining.slice(0, 6)),
+    arrWithAns.slice(1, 2).concat(remaining.slice(6, 12)),
+    arrWithAns.slice(2, 3).concat(remaining.slice(12))
+  ]
+  const answerThree = audience.getInput(guessThree)
+  
+  return guessThree[answerThree][0]
+}
+
+// This was a pretty challenging problem
