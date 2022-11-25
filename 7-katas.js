@@ -1977,3 +1977,34 @@ function guessTheCard(audience) {
 }
 
 // This was a pretty challenging problem
+
+
+
+/*
+  Next Featured Number Higher than a Given Value
+*/
+
+function nextNumb(val) {
+  let attempt = val + 1
+  while(attempt < 9999999999) {
+    if (isOdd(attempt) && multipleOfThree(attempt) && uniqueDigits(attempt)) {
+      return attempt
+    } else {
+      attempt++
+    }
+  }
+  return 'There is no possible number that fulfills those requirements'
+}
+  
+function isOdd(num) {
+  return num % 2 === 1
+}
+  
+function multipleOfThree(num) {
+  return num % 3 === 0
+}
+  
+function uniqueDigits(num) {
+  const numArr = num.toString().split('')
+  return numArr.every(x => numArr.indexOf(x) === numArr.lastIndexOf(x))
+}
