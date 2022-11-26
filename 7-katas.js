@@ -2008,3 +2008,28 @@ function uniqueDigits(num) {
   const numArr = num.toString().split('')
   return numArr.every(x => numArr.indexOf(x) === numArr.lastIndexOf(x))
 }
+
+
+
+/*
+  Largest 5 digit number in a series
+*/
+
+function solution(digits){
+  const digitArr = []
+  while (digits.length > 4) {
+    digitArr.push(digits.slice(0, 5))
+    digits = digits.slice(1)
+  }
+  return Math.max(...digitArr)
+}
+
+// We could also do this with a for loop without affecting the input str and use the substr method instead of the slice method.
+
+function solution(digits){
+  const digitArr = []
+  for (let i = 0; i < digits.length - 4; i++) {
+    digitArr.push(digits.substr(i, 5))
+  }
+  return Math.max(...digitArr)
+}
