@@ -552,3 +552,30 @@ function deleteNth(arr,n){
     return cache.get(x) <= n
   })
 }
+
+
+
+/*
+  String array duplicates
+*/
+
+function dup(s) {
+  return s.map(string => {
+    let newString = ''
+    for (let i = 0; i < string.length; i++) {
+      if (string[i] !== string[i + 1]) {
+        newString += string[i]
+      }
+    }
+    return newString
+  })
+}
+
+// The last letter is always placed into the newString because string[i + 1] will return undefined when out of range(on the last letter)
+// This could alternatively be done using array methods specifically the filter method
+
+function dup(s) {
+  return s.map(word => word.split('')
+                           .filter((letter, i) => letter !== word[i + 1])
+                           .join(''))
+};
