@@ -2033,3 +2033,20 @@ function solution(digits){
   }
   return Math.max(...digitArr)
 }
+
+
+
+/*
+  Parts of a list
+*/
+
+function partlist(arr) {
+  const combinations = []
+  for (let i = 0; i < arr.length - 1; i++) {
+    combinations.push([
+      arr.slice(0, i + 1).join(' '), 
+      arr.slice(i + 1).join(' ')
+    ])
+  }
+  return combinations
+}
