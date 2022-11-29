@@ -2050,3 +2050,25 @@ function partlist(arr) {
   }
   return combinations
 }
+
+
+
+/*
+  Strong Number (Special Numbers Series #2)
+*/
+
+function strong(n) {
+  const string = n.toString()
+  let sum = 0
+  for (let digit of string) {
+    sum += factorial(+digit)
+  }
+  return n === sum ? 'STRONG!!!!' : 'Not Strong !!'
+}
+  
+function factorial(n) {
+  if (n < 2) {
+    return 1
+  }
+  return n * factorial(n - 1)
+}
