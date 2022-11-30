@@ -2088,3 +2088,14 @@ function seven(m) {
   }
   return [num, steps]
 }
+
+
+
+/*
+  Absent vowel
+*/
+
+function absentVowel(x) {
+  const VOWELS = ['a', 'e', 'i', 'o', 'u']
+  return VOWELS.findIndex(vowel => !x.includes(vowel))
+}
