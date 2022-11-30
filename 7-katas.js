@@ -2072,3 +2072,19 @@ function factorial(n) {
   }
   return n * factorial(n - 1)
 }
+
+
+
+/*
+  A Rule of Divisibility by 7
+*/
+
+function seven(m) {
+  let steps = 0, num = m, string = m.toString()
+  while (string.length > 2) {
+    num = +string.slice(0, string.length - 1) - +string.slice(-1) * 2
+    string = num.toString()
+    steps++
+  }
+  return [num, steps]
+}
