@@ -2099,3 +2099,29 @@ function absentVowel(x) {
   const VOWELS = ['a', 'e', 'i', 'o', 'u']
   return VOWELS.findIndex(vowel => !x.includes(vowel))
 }
+
+
+
+/*
+  Sort Out The Men From Boys 
+*/
+
+function menFromBoys(arr){
+  const evens = [], odds = []
+  for (let number of arr) {
+    if (evens.includes(number) || odds.includes(number))
+      continue
+    
+    if (isEven(number))
+      evens.push(number)
+    else
+      odds.push(number)
+  }
+  evens.sort((a, b) => a - b)
+  odds.sort((a, b) => b - a)
+  return [...evens, ...odds]
+}
+
+function isEven(x) {
+  return Math.abs(x) % 2 === 0
+}
