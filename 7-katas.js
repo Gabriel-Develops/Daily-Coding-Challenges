@@ -2125,3 +2125,32 @@ function menFromBoys(arr){
 function isEven(x) {
   return Math.abs(x) % 2 === 0
 }
+
+
+
+/*
+  Folding your way to the moon
+*/
+
+function foldTo(distance) {
+  if (distance < 0) return null
+  return Math.max(Math.ceil(Math.log(10000 * distance) / Math.log(2)), 0)
+}
+
+// The formula I thought of for reaching the amount of folds required is 
+// .001 * 2^(total_folds) = distance
+// Solving for total_folds we get
+// total_folds = Math.log(10000 * distance) / Math.log(2)
+// This allows us to reach a constant time solution
+
+// An alternative would be to use a less math heavy, more readable but now linear time complexity solution
+
+function foldTo(distance) {
+  if (distance < 0) return null
+  let paperThickness = .0001, folds = 0
+  while(paperThickness < distance) {
+    paperThickness *= 2
+    folds++
+  }
+  return folds
+}
