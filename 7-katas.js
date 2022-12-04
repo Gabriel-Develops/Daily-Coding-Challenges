@@ -2154,3 +2154,24 @@ function foldTo(distance) {
   }
   return folds
 }
+
+
+
+/*
+  Folding your way to the moon
+*/
+
+function squares(x, n) {
+  if (n < 1) return []
+  
+  const arr = [x]
+  while (arr.length < n) {
+    arr.push( arr.slice(-1) ** 2 )
+  }
+  return arr
+}
+
+// I was very close to the one line answer which would look like this
+
+// return Array.from({length: n}).map((_, i) => Math.pow(x, Math.pow(2, i)))
+// I could think of how to do the second Math.pow as I knew that the 2 would have to grow by i and I didn't think of nesting the powers
