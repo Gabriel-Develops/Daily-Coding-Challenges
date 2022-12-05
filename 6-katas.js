@@ -579,3 +579,24 @@ function dup(s) {
                            .filter((letter, i) => letter !== word[i + 1])
                            .join(''))
 };
+
+
+
+/*
+  Count characters in your string
+*/
+
+function count (string) {  
+  return Object.fromEntries(string.split('').reduce((charMap, x) => charMap.set(x, (charMap.get(x) + 1) || 1), new Map()))
+}
+
+// Had some fun trying to get this into a one line and using a map
+// A more optimal solution would to use a for loop
+
+function count (string) { 
+  const charMap = {}
+  for (let char of string) {
+    charMap[char] = (charMap[char] + 1) || 1
+  }
+  return charMap
+}
