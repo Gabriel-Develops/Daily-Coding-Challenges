@@ -2175,3 +2175,17 @@ function squares(x, n) {
 
 // return Array.from({length: n}).map((_, i) => Math.pow(x, Math.pow(2, i)))
 // I could think of how to do the second Math.pow as I knew that the 2 would have to grow by i and I didn't think of nesting the powers
+
+
+
+/*
+  Maximum Triplet Sum (Array Series #7) 
+*/
+
+function maxTriSum(numbers){
+  const uniqueArr = Array.from(new Set(numbers))
+  uniqueArr.sort((a, b) => a - b)
+  const bigThree = uniqueArr.slice(-3)
+  
+  return bigThree.reduce((sum, x) => sum + x, 0)
+}
