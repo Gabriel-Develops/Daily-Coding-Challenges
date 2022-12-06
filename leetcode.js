@@ -12,7 +12,7 @@ const removeDuplicates = nums => {
 
 
 
-771. Jewels and Stones
+// 771. Jewels and Stones
 
 const numJewelsInStones = (jewels, stones) => {
     let sum = 0
