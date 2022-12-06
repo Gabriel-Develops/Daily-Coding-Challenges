@@ -2189,3 +2189,33 @@ function maxTriSum(numbers){
   
   return bigThree.reduce((sum, x) => sum + x, 0)
 }
+
+
+
+/*
+  Simple consecutive pairs
+*/
+
+function pairs(ar){
+  const len = ar.length % 2 ? ar.length - 1 : ar.length
+  let total = 0
+  for (let i = 0; i < len; i += 2) {
+    let [first, second] = [ar[i], ar[i + 1]]
+    if (first === second - 1 || first === second + 1)
+      total++
+  }
+  return total
+};
+
+// We can instead look at the absolute difference between the two numbers and compare it to 1
+// We don't have to worry about undefined if we are going to compare it to one as it will fail the test
+
+function pairs(ar){
+  let total = 0
+  for (let i = 0; i < ar.length; i += 2) {
+    let [first, second] = ar.slice(i, i + 2)
+    if (Math.abs(first - second) === 1)
+      total++
+  }
+  return total
+};
