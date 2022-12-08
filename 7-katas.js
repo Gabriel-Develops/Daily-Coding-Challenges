@@ -2229,3 +2229,27 @@ function pairs(ar){
 function vaporcode(string) {
   return string.toUpperCase().split('').filter(x => x !== ' ').join('  ');
 }
+
+
+
+/*
+  Alternate case
+*/
+
+function alternateCase(s) {
+  let final = ''
+  for (let i = 0; i < s.length; i++) {
+    final += s[i] === s[i].toUpperCase() ? s[i].toLowerCase() : s[i].toUpperCase()
+  }
+  return final
+}
+
+// We don't need the counter variable for anything special so we can use a for...of loop instead
+
+function alternateCase(s) {
+  let final = ''
+  for (let letter of s) {
+    final += letter === letter.toUpperCase() ? letter.toLowerCase() : letter.toUpperCase()
+  }
+  return final
+}
