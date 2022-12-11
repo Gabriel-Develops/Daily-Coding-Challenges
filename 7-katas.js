@@ -2263,3 +2263,13 @@ function alternateCase(s) {
 function incrementer(nums) { 
   return nums.map((x, i) => (x + (i + 1)) % 10); 
 }
+
+
+
+/*
+  Currying functions: multiply all elements in an array
+*/
+
+function multiplyAll(array) {
+  return (factor) => array.map(x => x * factor)
+}
