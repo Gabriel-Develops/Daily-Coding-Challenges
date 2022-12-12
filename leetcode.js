@@ -22,3 +22,11 @@ const numJewelsInStones = (jewels, stones) => {
     }
     return sum
 };
+
+
+
+// 217. Contains Duplicate
+
+var containsDuplicate = function(nums) {
+    return nums.some(x => nums.indexOf(x) !== nums.lastIndexOf(x))
+};
