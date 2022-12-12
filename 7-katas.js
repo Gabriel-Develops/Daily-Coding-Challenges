@@ -2273,3 +2273,11 @@ function incrementer(nums) {
 function multiplyAll(array) {
   return (factor) => array.map(x => x * factor)
 }
+
+
+
+/*
+  Functional Addition
+*/
+
+const add = a => b => a + b;
