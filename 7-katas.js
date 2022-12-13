@@ -2281,3 +2281,20 @@ function multiplyAll(array) {
 */
 
 const add = a => b => a + b;
+
+
+
+/*
+  Going to the cinema
+*/
+
+function movie(card, ticket, perc) {
+  let count = 1
+  let aSum = ticket, bSum = card + ticket * perc
+  while(aSum <= Math.ceil(bSum)) {
+    aSum += ticket
+    bSum += ticket * (perc ** (count + 1)) 
+    count++
+  }
+  return count
+};
