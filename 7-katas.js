@@ -2298,3 +2298,15 @@ function movie(card, ticket, perc) {
   }
   return count
 };
+
+
+
+/*
+  Product Of Maximums Of Array (Array Series #2) 
+*/
+
+function maxProduct(numbers, size){
+  return numbers.sort((a, b) => a - b)
+    .slice(-size)
+    .reduce((product, x) => product * x, 1)
+}
