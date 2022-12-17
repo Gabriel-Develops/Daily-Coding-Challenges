@@ -2310,3 +2310,24 @@ function maxProduct(numbers, size){
     .slice(-size)
     .reduce((product, x) => product * x, 1)
 }
+
+
+
+/*
+  Simple string characters
+*/
+
+function solve(s){
+  return s.split('')
+    .reduce(([upper, lower, num, special], x) => {
+    if (!Number.isNaN(+x))
+      num++
+    else if (x.toLowerCase() === x.toUpperCase())
+      special++
+    else if (x === x.toLowerCase())
+      lower++
+    else if (x === x.toUpperCase())
+      upper++
+    return [upper, lower, num, special]
+  }, [0, 0, 0, 0])
+}
