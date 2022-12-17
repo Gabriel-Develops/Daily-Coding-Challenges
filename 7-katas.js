@@ -2546,3 +2546,18 @@ const factorial = n => {
   if (n < 2) return 1
   return n * factorial(n - 1)
 }
+
+
+
+/*
+  Jumping Number (Special Numbers Series #4)
+*/
+
+function jumpingNumber(n){
+  let prevDigit = +n.toString()[0]
+  for (let digit of n.toString().slice(1)) {
+    if (Math.abs(prevDigit - +digit) !== 1) return 'Not!!'
+    prevDigit = +digit
+  }
+  return 'Jumping!!'
+}
