@@ -2331,3 +2331,21 @@ function solve(s){
     return [upper, lower, num, special]
   }, [0, 0, 0, 0])
 }
+
+
+
+/*
+  The Office I - Outed
+*/
+
+function outed(meet, boss) {
+  const count = Object.keys(meet).length
+  let score = 0
+  for (let person in meet) {
+    if (person === boss)
+      score += meet[person] * 2
+    else
+      score += meet[person]
+  }
+  return score / count <= 5 ? 'Get Out Now!' : 'Nice Work Champ!'
+}
