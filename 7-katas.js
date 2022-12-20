@@ -2349,3 +2349,25 @@ function outed(meet, boss) {
   }
   return score / count <= 5 ? 'Get Out Now!' : 'Nice Work Champ!'
 }
+
+
+
+/*
+  Difference Of Squares
+*/
+
+function differenceOfSquares(n){
+  return (n*(n+1)/2)**2 - n*(n+1)*(2*n+1)/6
+}
+
+// This solves the problem in constant time but uses a mathematical formula which may be difficult to understand and modify
+// We can solve this problem in linear time by using a for loop, although slower the answer is now more readable and can easily be modified
+
+function differenceOfSquares(n){
+  let sum1 = 0, sum2 = 0
+  for (let i = 1; i <= n; i++) {
+    sum1 += i
+    sum2 += i ** 2
+  }
+  return sum1 ** 2 - sum2
+}
