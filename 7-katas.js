@@ -2371,3 +2371,17 @@ function differenceOfSquares(n){
   }
   return sum1 ** 2 - sum2
 }
+
+
+
+/*
+  Disarium Number (Special Numbers Series #3)
+*/
+
+function disariumNumber(n){
+  let disariumSum = 0, str = n.toString()
+  for (let i = 0; i < str.length; i++) {
+    disariumSum += str[i] ** (i + 1)
+  }
+  return disariumSum === n ? 'Disarium !!' : 'Not !!'
+}
