@@ -2385,3 +2385,23 @@ function disariumNumber(n){
   }
   return disariumSum === n ? 'Disarium !!' : 'Not !!'
 }
+
+
+
+/*
+  Smallest value of an array
+*/
+
+function min(arr, toReturn) {
+  const min = {
+    'value': Infinity,
+    'index': -1
+  }
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < min.value) {
+      min.value = arr[i]
+      min.index = i
+    }
+  }
+  return min[toReturn]  
+}
