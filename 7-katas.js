@@ -2432,3 +2432,13 @@ function boredom(staff){
   return total > 99 ? 'party time!!' : 
          total > 80 ? 'i can handle this' : 'kill me now'
 }
+
+
+
+/*
+  Digital cypher
+*/
+
+function encode(str,  n) {
+  return str.split('').map((x, i) => x.charCodeAt() - 96 + +n.toString()[i % n.toString().length])
+}
