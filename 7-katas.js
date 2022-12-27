@@ -2442,3 +2442,16 @@ function boredom(staff){
 function encode(str,  n) {
   return str.split('').map((x, i) => x.charCodeAt() - 96 + +n.toString()[i % n.toString().length])
 }
+
+
+
+/*
+  Coding Meetup #5 - Higher-Order Functions Series - Prepare the count of languages
+*/
+
+function countLanguages(list) {
+  return list.reduce((languageObj, dev) => {
+    languageObj[dev.language] = languageObj[dev.language] + 1 || 1
+    return languageObj
+  }, {})
+}
