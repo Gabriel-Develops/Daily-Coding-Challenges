@@ -2471,3 +2471,18 @@ const closestMultiple10 = num => {
     return num + (10 - remainder)
   }
 };
+
+
+
+/*
+  Debug Sum of Digits of a Number
+*/
+
+function getSumOfDigits(integer){
+  let sum = 0;
+  const digits = integer.toString();
+  for(let i = 0; i < digits.length; i++){
+    sum += +digits[i];
+  }
+  return sum;
+}
