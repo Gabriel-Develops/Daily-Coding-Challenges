@@ -2455,3 +2455,19 @@ function countLanguages(list) {
     return languageObj
   }, {})
 }
+
+
+
+/*
+  Return the closest number multiple of 10
+*/
+
+const closestMultiple10 = num => {
+  const remainder = num % 10
+  
+  if (remainder < 5) {
+    return num - remainder
+  } else {
+    return num + (10 - remainder)
+  }
+};
