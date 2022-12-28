@@ -2486,3 +2486,18 @@ function getSumOfDigits(integer){
   }
   return sum;
 }
+
+
+
+/*
+  Indexed capitalization
+*/
+
+function capitalize(s,arr){
+  let final = s
+  for (let pos of arr) {
+    if (pos > s.length - 1) continue
+    final = final.slice(0, pos) + final[pos].toUpperCase() + final.slice(pos + 1)
+  }
+  return final
+};
