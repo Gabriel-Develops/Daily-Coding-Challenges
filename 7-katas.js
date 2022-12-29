@@ -2501,3 +2501,11 @@ function capitalize(s,arr){
   }
   return final
 };
+
+
+
+/*
+  Return the first M multiples of N
+*/
+
+const multiples = (m, n) => Array.from({length: m}).map((_, i) => n * (i + 1))
