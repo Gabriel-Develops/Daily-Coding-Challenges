@@ -2531,3 +2531,18 @@ function wordValue(a) {
   }
   return finalArr
 }
+
+
+
+/*
+  Recursion #1 - Factorial
+*/
+
+const factorial = n => n < 2 ? 1 : n * factorial(--n)
+
+// and a non one liner
+
+const factorial = n => {
+  if (n < 2) return 1
+  return n * factorial(n - 1)
+}
