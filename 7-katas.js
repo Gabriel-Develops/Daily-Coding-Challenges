@@ -2509,3 +2509,25 @@ function capitalize(s,arr){
 */
 
 const multiples = (m, n) => Array.from({length: m}).map((_, i) => n * (i + 1))
+
+
+
+/*
+  Word values
+*/
+
+const wordValue = a => a.map((word, pos) => word.split('').reduce((sum, letter) => sum + Math.max(letter.charCodeAt() - 96, 0), 0) * ++pos)
+
+// After writing that most unreadable code, I wanted to see if we could do something a bit more readable
+
+function wordValue(a) {
+  const finalArr = []
+  for (let i = 0; i < a.length; i++) {
+    let sum = 0
+    for (let letter of a[i]) {
+      sum += Math.max(letter.charCodeAt() - 96, 0)
+    }
+    finalArr.push(sum * (i + 1))
+  }
+  return finalArr
+}
