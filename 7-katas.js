@@ -2571,3 +2571,24 @@ function jumpingNumber(n){
 function solution(value){
   return `Value is ${value.toString().padStart(5,'0')}`
 }
+
+
+
+/*
+  Longest vowel chain
+*/
+
+function solve(s){
+  const VOWELS = ['a', 'e', 'i', 'o', 'u']
+  const sublengths = []
+  let currentLength = 0
+  for (let char of s) {
+     if (VOWELS.includes(char))
+       currentLength++
+     else if (currentLength) {
+       sublengths.push(currentLength)
+       currentLength = 0
+     }
+   }
+   return Math.max(...sublengths, currentLength)
+ }
