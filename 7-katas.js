@@ -2592,3 +2592,20 @@ function solve(s){
    }
    return Math.max(...sublengths, currentLength)
  }
+
+
+
+/*
+  Basic Sequence Practice
+*/
+
+function sumOfN(n) {
+  const series = [0]
+  for (let i = 1; i <= Math.abs(n); i++) {
+    // Guass Summation
+    series.push(
+      (i * (i+1))/2 * Math.sign(n)
+    )
+  }
+  return series
+};
