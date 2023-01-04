@@ -2609,3 +2609,18 @@ function sumOfN(n) {
   }
   return series
 };
+
+
+
+/*
+  Numbers to Letters
+*/
+
+function switcher(x) {
+  const LEGEND = 'zyxwvutsrqponmlkjihgfedcba!? '
+  let finalWord = ''
+  for (let value of x) {
+    finalWord += LEGEND[value - 1]
+  }
+  return finalWord
+}
