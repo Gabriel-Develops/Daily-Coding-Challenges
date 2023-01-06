@@ -2634,3 +2634,9 @@ function switcher(x) {
 function discoverOriginalPrice(discountedPrice, salePercentage){
   return Math.round(discountedPrice / (100 - salePercentage) * 10000) / 100
 }
+
+// It'd be a bit easier to read if we converted the salePercentage into a decimal first and then used toFixed to handle the rounding.
+
+function discoverOriginalPrice(discountedPrice, salePercentage){
+  return +(discountedPrice / (1 - salePercentage / 100)).toFixed(2)
+}
