@@ -2650,3 +2650,13 @@ function discoverOriginalPrice(discountedPrice, salePercentage){
 function isSameLanguage(list) {
   return list.every(dev => dev.language === list[0].language);
 }
+
+
+
+/*
+  Cat and Mouse - Easy Version
+*/
+
+function catMouse(x){
+  return x.length > 5 ? 'Escaped!' : 'Caught!';
+}
