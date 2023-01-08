@@ -2660,3 +2660,16 @@ function isSameLanguage(list) {
 function catMouse(x){
   return x.length > 5 ? 'Escaped!' : 'Caught!';
 }
+
+
+
+/*
+  The Office IV - Find a Meeting Room
+*/
+
+function meeting(x){
+  const roomIndex = x.findIndex(room => room === 'O')
+  if (roomIndex === -1) 
+    return 'None available!'
+  return roomIndex
+}
