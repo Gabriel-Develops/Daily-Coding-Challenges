@@ -2640,3 +2640,13 @@ function discoverOriginalPrice(discountedPrice, salePercentage){
 function discoverOriginalPrice(discountedPrice, salePercentage){
   return +(discountedPrice / (1 - salePercentage / 100)).toFixed(2)
 }
+
+
+
+/*
+  Coding Meetup #6 - Higher-Order Functions Series - Can they code in the same language?
+*/
+
+function isSameLanguage(list) {
+  return list.every(dev => dev.language === list[0].language);
+}
