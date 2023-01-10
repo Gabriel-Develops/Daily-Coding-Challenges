@@ -2673,3 +2673,14 @@ function meeting(x){
     return 'None available!'
   return roomIndex
 }
+
+
+
+/*
+  Special Number (Special Numbers Series #5)
+*/
+
+function specialNumber(n){
+  const special = ['0', '1', '2', '3', '4', '5']
+  return n.toString().split('').every(x => special.includes(x)) ? 'Special!!' : 'NOT!!'
+}
