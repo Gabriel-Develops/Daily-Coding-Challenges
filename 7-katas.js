@@ -2684,3 +2684,18 @@ function specialNumber(n){
   const special = ['0', '1', '2', '3', '4', '5']
   return n.toString().split('').every(x => special.includes(x)) ? 'Special!!' : 'NOT!!'
 }
+
+
+
+/*
+  Unlucky Days
+*/
+
+function unluckyDays(year){
+  let total = 0
+  for (let i = 0; i < 12; i++) {
+    if (new Date(year, i, 13).getDay() === 5)
+      total++
+  }
+  return total
+}
