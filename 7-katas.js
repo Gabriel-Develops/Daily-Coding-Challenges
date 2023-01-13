@@ -2699,3 +2699,16 @@ function unluckyDays(year){
   }
   return total
 }
+
+
+
+/*
+  Last Survivor
+*/
+
+function lastSurvivor(letters, coords) {
+  for (let coord of coords) {
+    letters = letters.slice(0,coord) + letters.slice(coord+1);
+  }
+    return letters;
+  }
