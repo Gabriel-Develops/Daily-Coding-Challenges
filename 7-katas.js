@@ -2712,3 +2712,21 @@ function lastSurvivor(letters, coords) {
   }
     return letters;
   }
+
+
+
+/*
+  All Star Code Challenge #22
+*/
+
+function toTime(seconds) {
+  const hours = Math.floor(seconds / (60 * 60));
+  const minutes = Math.floor(seconds % (60 * 60) / 60);
+  return `${hours} hour(s) and ${minutes} minute(s)`;
+}
+
+function toTime(seconds) {
+  const hours = Math.floor(seconds / 3600)
+  const minutes = Math.floor(seconds % 3600 / 60)
+  return `${hours} hour(s) and ${minutes} minute(s)`
+}
