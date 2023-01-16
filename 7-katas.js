@@ -2730,3 +2730,34 @@ function toTime(seconds) {
   const minutes = Math.floor(seconds % 3600 / 60)
   return `${hours} hour(s) and ${minutes} minute(s)`
 }
+
+
+
+/*
+  ToLeetSpeak
+*/
+
+function toLeetSpeak(str) {
+  const LEGEND = {
+    A: '@',
+    B: '8',
+    C: '(',
+    E: '3',
+    G: '6',
+    H: '#',
+    I: '!',
+    L: '1',
+    O: '0',
+    S: '$',
+    T: '7',
+    Z: '2'
+  }
+  let final = ''
+  for (let char of str) {
+    if (char in LEGEND)
+      final += LEGEND[char]
+    else
+      final += char
+  }
+  return final
+}
