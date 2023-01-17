@@ -2761,3 +2761,22 @@ function toLeetSpeak(str) {
   }
   return final
 }
+
+
+
+/*
+  Clean up after your dog
+*/
+
+function crap(x, bags, cap){
+  let poopCount = 0
+  for (let row of x) {
+    for (let pos of row) {
+      if (pos === 'D') 
+        return 'Dog!!'
+      if (pos === '@') 
+        poopCount++
+    }
+  }
+  return bags * cap < poopCount ? 'Cr@p' : 'Clean'
+}
