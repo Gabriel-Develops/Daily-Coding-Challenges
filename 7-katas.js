@@ -2780,3 +2780,21 @@ function crap(x, bags, cap){
   }
   return bags * cap < poopCount ? 'Cr@p' : 'Clean'
 }
+
+
+
+/*
+  The old switcheroo
+*/
+
+function vowel2index(str) {
+  const VOWELS = ['a', 'e', 'i', 'o', 'u']
+  let final = ''
+  for (let i = 0; i < str.length; i++) {
+    if (VOWELS.includes( str[i].toLowerCase() ))
+      final += i + 1
+    else
+      final += str[i]
+  }
+  return final
+}
