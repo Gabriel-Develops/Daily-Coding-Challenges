@@ -2798,3 +2798,24 @@ function vowel2index(str) {
   }
   return final
 }
+
+
+
+/*
+  All Star Code Challenge #3
+*/
+
+const removeVowels = str => str.split('').filter(x => !['a', 'e', 'i', 'o', 'u'].includes(x.toLowerCase())).join('')
+
+// Fancy oneliner but let me write a more readable solution
+
+function removeVowels(str) {
+  const VOWELS = ['a', 'e', 'i', 'o', 'u']
+  let final = ''
+  for (let char of str) {
+    if (VOWELS.includes(char))
+      continue
+    final += char
+  }
+  return final
+}
