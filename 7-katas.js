@@ -2819,3 +2819,23 @@ function removeVowels(str) {
   }
   return final
 }
+
+
+
+/*
+  Unique string characters
+*/
+
+function solve(a,b){
+  let aFiltered = ''
+  let bFiltered = ''
+  for (let i = 0, n = Math.max(a.length, b.length); i < n; i++) {
+    if (!b.includes(a[i]) && a[i])
+      aFiltered += a[i]
+    if (!a.includes(b[i]) && b[i])
+      bFiltered += b[i]
+  }
+  return aFiltered + bFiltered
+};
+
+const solve = (a, b) => [...a, ...b].filter(x => a.includes(x) ^ b.includes(x)).join('')
