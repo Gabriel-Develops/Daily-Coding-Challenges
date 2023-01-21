@@ -2901,3 +2901,13 @@ function productArray(numbers){
   const totalProduct = numbers.reduce((product, x) => product * x, 1)
   return numbers.map(number => totalProduct / number)
 }
+
+
+
+/*
+  Evens and Odds
+*/
+
+function evensAndOdds(num){
+  return num % 2 ? num.toString(16) : num.toString(2);
+}
