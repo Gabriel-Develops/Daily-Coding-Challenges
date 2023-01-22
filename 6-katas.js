@@ -600,3 +600,36 @@ function count (string) {
   }
   return charMap
 }
+
+
+
+/*
+  Count the smiley faces!
+*/
+
+function countSmileys(arr) {
+  const smileyFaces = [':)', ';)', ':D', ';D', ':-)', ';-)', ':~D', ';-D', ':~)', ';~D', ':-D', ';~)']
+  return arr.reduce((total, x) => smileyFaces.includes(x) ? ++total : total, 0)
+}
+
+// This of course only works if the restrictions are low, a better solution would be to do manual checks on each char or to use a Regex solution
+
+function countSmileys(arr) {
+  let total = 0
+  const validEyes = [':', ';'], validNose = ['-', '~'], validMouth = [')', 'D']
+  for (let face of arr) {
+    let eyes = face[0], nose, mouth
+    if (face.length > 2) {
+      nose = face[1]
+      mouth = face[2]
+    } else {
+      mouth = face[1]
+    }
+    
+    if (!validEyes.includes(eyes) || !validMouth.includes(mouth) || (nose && !validNose.includes(nose))) {
+      continue
+    }
+    total++
+  }
+  return total
+}
