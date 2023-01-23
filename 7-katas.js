@@ -2874,3 +2874,30 @@ class Block{
     return 2 * (this.width * this.length + this.width * this.height + this.length * this.height);
   }
 }
+
+
+
+/*
+  Product Array (Array Series #5)
+*/
+
+function productArray(numbers){
+  const newArr = []
+  for (let i = 0; i < numbers.length; i++) {
+    let product = 1
+    for (let j = 0; j < numbers.length; j++) {
+      if (i === j) continue
+      product *= numbers[j]
+    }
+    newArr.push(product)
+  }
+  return newArr
+}
+
+// A thing to realize is that each position can be calculated as the total product divided by the number in that position.
+// Knowing that we can find a solution that is O(n)
+
+function productArray(numbers){
+  const totalProduct = numbers.reduce((product, x) => product * x, 1)
+  return numbers.map(number => totalProduct / number)
+}
