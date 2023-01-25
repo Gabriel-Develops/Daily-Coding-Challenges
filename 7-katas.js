@@ -2921,3 +2921,24 @@ function evensAndOdds(num){
 function stringMerge(string1, string2, letter) {
   return string1.slice(0, string1.indexOf(letter)) + string2.slice(string2.indexOf(letter));
 }
+
+
+
+/*
+  ATM
+*/
+
+function solve(n) {
+  if (n % 10 !== 0)
+    return -1
+  
+  const banknotes = [500, 200, 100, 50, 20, 10]
+  let totalNotes = 0
+  for (let note of banknotes) {
+    if (n < note) 
+      continue
+    totalNotes += Math.floor(n / note)
+    n = n % note
+  }
+  return totalNotes
+}
