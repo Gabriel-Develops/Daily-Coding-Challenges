@@ -2942,3 +2942,11 @@ function solve(n) {
   }
   return totalNotes
 }
+
+
+
+/*
+  Nth Root of a Number
+*/
+
+const root = (x, n) => x ** (1/n);
