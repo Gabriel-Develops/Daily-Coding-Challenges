@@ -2950,3 +2950,14 @@ function solve(n) {
 */
 
 const root = (x, n) => x ** (1/n);
+
+
+
+/*
+  Coding Meetup #11 - Higher-Order Functions Series - Find the average age
+*/
+
+function getAverageAge(list) {
+  const ageSum = list.reduce((total, dev) => total + dev.age, 0)
+  return Math.round( ageSum / list.length )
+}
