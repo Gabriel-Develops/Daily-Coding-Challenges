@@ -2961,3 +2961,23 @@ function getAverageAge(list) {
   const ageSum = list.reduce((total, dev) => total + dev.age, 0)
   return Math.round( ageSum / list.length )
 }
+
+
+
+/*
+  Valid Spacing
+*/
+
+function validSpacing(s) {
+  return s === s.split(' ').filter(x => x).join(' ')
+}
+
+
+
+/*
+  Remove All The Marked Elements of a List
+*/
+
+Array.prototype.remove_ = (integer_list, values_list) => {
+  return integer_list.filter(x => !values_list.includes(x))
+}
