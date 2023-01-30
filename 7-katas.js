@@ -2981,3 +2981,17 @@ function validSpacing(s) {
 Array.prototype.remove_ = (integer_list, values_list) => {
   return integer_list.filter(x => !values_list.includes(x))
 }
+
+
+
+/*
+  Split In Parts
+*/
+
+const splitInParts = (s, partLength) => {
+  const finalArr = []
+  for (let i = 0; i < s.length; i += partLength) {
+    finalArr.push( s.slice(i, i + partLength) )
+  }
+  return finalArr.join(' ')
+}
