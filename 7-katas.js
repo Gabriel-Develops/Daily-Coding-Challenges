@@ -2995,3 +2995,13 @@ const splitInParts = (s, partLength) => {
   }
   return finalArr.join(' ')
 }
+
+
+
+/*
+  Find the lucky numbers
+*/
+
+const filterLucky = list => {
+  return list.filter(x => String(x).includes('7'))
+}
