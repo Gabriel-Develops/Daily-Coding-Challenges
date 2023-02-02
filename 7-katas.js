@@ -3005,3 +3005,20 @@ const splitInParts = (s, partLength) => {
 const filterLucky = list => {
   return list.filter(x => String(x).includes('7'))
 }
+
+
+
+/*
+  Maximum Gap (Array Series #4)
+*/
+
+function maxGap (numbers){
+  const sorted = [...numbers].sort((a, b) => a - b)
+  let maxDifference = -Infinity
+  for (let i = 1; i < sorted.length; i++) {
+    let currentDifference = sorted[i] - sorted[i - 1]
+    if (currentDifference > maxDifference)
+      maxDifference = currentDifference
+  }
+  return maxDifference
+}
