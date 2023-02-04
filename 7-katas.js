@@ -3022,3 +3022,16 @@ function maxGap (numbers){
   }
   return maxDifference
 }
+
+
+
+/*
+  Responsible Drinking
+*/
+
+function hydrate(s) {
+  const total = s.split('')
+    .filter(x => x >= '0' && x <= '9')
+    .reduce((sum, x) => sum + +x, 0) 
+  return `${total} glass${total > 1 ? 'es' : ''} of water`
+}
