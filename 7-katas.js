@@ -3035,3 +3035,14 @@ function hydrate(s) {
     .reduce((sum, x) => sum + +x, 0) 
   return `${total} glass${total > 1 ? 'es' : ''} of water`
 }
+
+
+
+/*
+  Consecutive items
+*/
+
+function consecutive(arr, a, b) {
+  const pos = arr.findIndex(x => x === a)
+  return arr[pos - 1] === b || arr[pos + 1] === b
+}
