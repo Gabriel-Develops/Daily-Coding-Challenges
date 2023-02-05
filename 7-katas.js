@@ -3046,3 +3046,19 @@ function consecutive(arr, a, b) {
   const pos = arr.findIndex(x => x === a)
   return arr[pos - 1] === b || arr[pos + 1] === b
 }
+
+
+
+/*
+  Minimum Steps (Array Series #6)
+*/
+
+function minimumSteps(numbers, value){
+  const sorted = [...numbers].sort((a, b) => b - a)
+  let count = 0, sum = sorted.pop()
+  while (sum < value) {
+    sum += sorted.pop()
+    count++
+  }
+  return count
+}
