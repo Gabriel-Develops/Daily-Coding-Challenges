@@ -3062,3 +3062,26 @@ function minimumSteps(numbers, value){
   }
   return count
 }
+
+
+
+/*
+  Minimum Steps (Array Series #6)
+*/
+
+function lostSheep(friday,saturday,total){
+  const mostGroups = Math.max(friday.length, saturday.length)
+  let sum = 0
+  
+  for (let i = 0; i < mostGroups; i++) {
+    sum += (friday[i] || 0) + (saturday[i] || 0)
+  }
+  
+  return total - sum
+}
+
+// This answer is too manual and has low readability. If we were to join the arrays, we can use a reduce method to decrease the total per group of sheep
+
+function lostSheep(friday,saturday,total){
+  return [...friday, ...saturday].reduce((remaining, x) => remaining - x, total)
+}
