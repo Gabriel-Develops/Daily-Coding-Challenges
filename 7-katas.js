@@ -3085,3 +3085,13 @@ function lostSheep(friday,saturday,total){
 function lostSheep(friday,saturday,total){
   return [...friday, ...saturday].reduce((remaining, x) => remaining - x, total)
 }
+
+
+
+/*
+  How many arguments
+*/
+
+function args_count(...args){
+  return args.length
+}
