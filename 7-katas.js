@@ -3095,3 +3095,17 @@ function lostSheep(friday,saturday,total){
 function args_count(...args){
   return args.length
 }
+
+
+
+/*
+  Changing letters
+*/
+
+function swap(string) {
+  const VOWELS = ['a', 'e', 'i', 'o', 'u']
+  
+  return string.split('')
+    .map(x => VOWELS.includes(x) ? x.toUpperCase() : x)
+    .join('')
+}
