@@ -3109,3 +3109,13 @@ function swap(string) {
     .map(x => VOWELS.includes(x) ? x.toUpperCase() : x)
     .join('')
 }
+
+
+
+/*
+  Return String of First Characters
+*/
+
+function makeString(s){
+  return s.split(' ').map(x => x[0]).join('')
+}
