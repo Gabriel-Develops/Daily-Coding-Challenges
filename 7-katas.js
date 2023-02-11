@@ -3123,7 +3123,7 @@ function makeString(s){
 
 
 /*
-  Return String of First Characters
+  Inspiring Strings
 */
 
 function longestWord(stringOfWords){
