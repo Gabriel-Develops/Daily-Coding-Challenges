@@ -3119,3 +3119,20 @@ function swap(string) {
 function makeString(s){
   return s.split(' ').map(x => x[0]).join('')
 }
+
+
+
+/*
+  Return String of First Characters
+*/
+
+function longestWord(stringOfWords){
+  let maxLength = 0, maxWord = ''
+  for (let word of stringOfWords.split(' ')) {
+    if (word.length >= maxLength) {
+      maxWord = word
+      maxLength = word.length
+    }
+  }
+  return maxWord
+}
