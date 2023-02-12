@@ -3136,3 +3136,27 @@ function longestWord(stringOfWords){
   }
   return maxWord
 }
+
+
+
+/*
+  Letterbox Paint-Squad
+*/
+
+const paintLetterboxes = (start, end) => {
+  let string = ''
+  for (let i = start; i <= end; i++) {
+    string += i
+  }
+  
+  let stringMap = new Map()
+  for (let digit of string) {
+    stringMap.set(+digit, stringMap.get(+digit) + 1 || 1)
+  }
+  
+  let arr = []
+  for (let i = 0; i <= 9; i++) {
+    arr.push(stringMap.get(i) || 0)
+  }
+  return arr
+}
