@@ -3160,3 +3160,32 @@ const paintLetterboxes = (start, end) => {
   }
   return arr
 }
+
+
+
+/*
+  Letterbox Paint-Squad
+*/
+
+function stantonMeasure(arr) {
+  const count = arr.reduce((total, x) => x === 1 ? ++total : total, 0)
+  return arr.reduce((total, x) => x === count ? ++total : total, 0)
+}
+
+// Rather inneficient as we have to perform two reduce methods.
+
+function stantonMeasure(arr) {
+  const digitMap = new Map()
+  for (let x of arr) {
+    digitMap.set(x, digitMap.get(x) + 1 || 1)
+  }
+  return digitMap.get(digitMap.get(1)) || 0
+}
+
+// Definitely an improvement as we only have to traverse the array once using a map
+// We can probably make it a bit shorter if we use the reduce method.
+
+function stantonMeasure(arr) {
+  const digitMap = arr.reduce((map, x) => map.set(x, map.get(x) + 1 || 1), new Map())
+  return digitMap.get(digitMap.get(1)) || 0
+}
