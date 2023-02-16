@@ -3200,3 +3200,25 @@ function mostFrequentItemCount(collection) {
   const digitMap = collection.reduce((map, x) => map.set(x, map.get(x) + 1 || 1), new Map([[0, 0]]))
   return Math.max(...digitMap.values())
 }
+
+
+
+/*
+  Head, Tail, Init and Last
+*/
+
+function head(arr) {
+  return arr[0]
+}
+
+function tail(arr) {
+  return arr.slice(1);
+}
+
+function init(arr) {
+  return arr.slice(0, -1);
+}
+
+function last(arr) {
+  return arr[arr.length - 1];
+}
