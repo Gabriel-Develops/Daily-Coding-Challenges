@@ -3164,7 +3164,7 @@ const paintLetterboxes = (start, end) => {
 
 
 /*
-  Letterbox Paint-Squad
+  Stanton measure
 */
 
 function stantonMeasure(arr) {
@@ -3188,4 +3188,15 @@ function stantonMeasure(arr) {
 function stantonMeasure(arr) {
   const digitMap = arr.reduce((map, x) => map.set(x, map.get(x) + 1 || 1), new Map())
   return digitMap.get(digitMap.get(1)) || 0
+}
+
+
+
+/*
+  Find Count of Most Frequent Item in an Array
+*/
+
+function mostFrequentItemCount(collection) {
+  const digitMap = collection.reduce((map, x) => map.set(x, map.get(x) + 1 || 1), new Map([[0, 0]]))
+  return Math.max(...digitMap.values())
 }
