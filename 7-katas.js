@@ -3272,3 +3272,14 @@ function shorter_reverse_longer(a,b){
 function average(scores) {
   return Math.round(scores.reduce((sum, x) => sum + x, 0) / scores.length);
 }
+
+
+
+/*
+  By 3, or not by 3? That is the question . . .
+*/
+
+function divisibleByThree(str){
+  const sum = [...str].reduce((sum, x) => sum + +x, 0)
+  return sum % 3 === 0
+}
