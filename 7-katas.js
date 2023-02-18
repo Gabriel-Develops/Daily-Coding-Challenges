@@ -3222,3 +3222,18 @@ function init(arr) {
 function last(arr) {
   return arr[arr.length - 1];
 }
+
+
+
+/*
+  Nth power rules them all!
+*/
+
+function modifiedSum(a, n) {
+  let squareSum = 0, sum = 0
+  for (let num of a) {
+    squareSum += num ** n
+    sum += num
+  }
+  return squareSum - sum
+}
