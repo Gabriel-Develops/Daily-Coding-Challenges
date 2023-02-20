@@ -3262,3 +3262,13 @@ function shorter_reverse_longer(a,b){
   const longer = a.length < b.length ? b : a
   return shorter + longer.split('').reverse().join('') + shorter
 }
+
+
+
+/*
+  Average Scores
+*/
+
+function average(scores) {
+  return Math.round(scores.reduce((sum, x) => sum + x, 0) / scores.length);
+}
