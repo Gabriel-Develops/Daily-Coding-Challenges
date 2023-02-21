@@ -3256,3 +3256,9 @@ function shorter_reverse_longer(a,b){
   
   return shorter + longer.split('').reverse().join('') + shorter
 }
+
+function shorter_reverse_longer(a,b){
+  const shorter = a.length < b.length ? a : b
+  const longer = a.length < b.length ? b : a
+  return shorter + longer.split('').reverse().join('') + shorter
+}
