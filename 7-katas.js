@@ -3237,3 +3237,22 @@ function modifiedSum(a, n) {
   }
   return squareSum - sum
 }
+
+
+
+/*
+  shorter concat [reverse longer]
+*/
+
+function shorter_reverse_longer(a,b){
+  let shorter, longer
+  if (a.length < b.length) {
+    shorter = a
+    longer = b
+  } else {
+    shorter = b
+    longer = a
+  }
+  
+  return shorter + longer.split('').reverse().join('') + shorter
+}
