@@ -3283,3 +3283,19 @@ function divisibleByThree(str){
   const sum = [...str].reduce((sum, x) => sum + +x, 0)
   return sum % 3 === 0
 }
+
+
+
+/*
+  Holiday III - Fire on the boat
+*/
+
+function fireFight(s){
+  return s.split(' ').map(item => item === 'Fire' ? '~~' : item).join(' ')
+}
+
+// We can use the string method replaceAll instead of the map array method
+
+function fireFight(s){
+  return s.replaceAll('Fire', '~~')
+}
