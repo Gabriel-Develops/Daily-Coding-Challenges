@@ -3299,3 +3299,19 @@ function fireFight(s){
 function fireFight(s){
   return s.replaceAll('Fire', '~~')
 }
+
+
+
+/*
+  Number Of Occurrences
+*/
+
+Object.defineProperty(Array.prototype, 'numberOfOccurrences',{ 
+  value : function numberOfOccurrences(element) {
+    return this.reduce((count, x) => x === element ? ++count : count, 0)
+  }
+});
+
+Array.prototype.numberOfOccurrences = function(element) {
+  return this.reduce((count, x) => x === element ? ++count : count, 0)
+}
