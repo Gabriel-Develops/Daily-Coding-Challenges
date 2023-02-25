@@ -3315,3 +3315,13 @@ Object.defineProperty(Array.prototype, 'numberOfOccurrences',{
 Array.prototype.numberOfOccurrences = function(element) {
   return this.reduce((count, x) => x === element ? ++count : count, 0)
 }
+
+
+
+/*
+  Basic Math (Add or Subtract)
+*/
+
+function calculate(str) {
+  return eval(str.replaceAll('plus', '+').replaceAll('minus', '-')) + ''
+}
