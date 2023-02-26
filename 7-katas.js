@@ -3325,3 +3325,18 @@ Array.prototype.numberOfOccurrences = function(element) {
 function calculate(str) {
   return eval(str.replaceAll('plus', '+').replaceAll('minus', '-')) + ''
 }
+
+
+
+/*
+  Reverse the bits in an integer
+*/
+
+function reverseBits (n) {
+  return Number.parseInt(n
+      .toString(2)
+      .split('')
+      .reverse()
+      .join('')
+      , 2);
+}
