@@ -3340,3 +3340,11 @@ function reverseBits (n) {
       .join('')
       , 2);
 }
+
+
+
+/*
+  Flatten
+*/
+
+const flatten = array => array.flat();
