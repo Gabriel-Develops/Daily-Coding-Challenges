@@ -3356,3 +3356,17 @@ const flatten = array => array.flat();
 */
 
 const greet = name =>  name ? `hello ${name}!` : null;
+
+
+
+/*
+  Arithmetic progression
+*/
+
+function arithmeticSequenceElements(a, d, n) {
+	const sequence = []
+  for (let i = 0; i < n; i++) {
+    sequence.push( i * d + a )
+  }
+  return sequence.join(', ')
+}
