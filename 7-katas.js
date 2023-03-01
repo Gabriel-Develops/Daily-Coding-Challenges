@@ -3370,3 +3370,19 @@ function arithmeticSequenceElements(a, d, n) {
   }
   return sequence.join(', ')
 }
+
+
+
+/*
+  Double Sort
+*/
+
+function dbSort(a){
+  const numbers = [], strings = []
+  for (let el of a) {
+    typeof el === 'number' ? numbers.push(el) : strings.push(el)
+  }
+  numbers.sort((a, b) => a - b)
+  strings.sort()
+  return [...numbers, ...strings]
+}
