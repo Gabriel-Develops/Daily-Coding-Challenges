@@ -3348,3 +3348,11 @@ function reverseBits (n) {
 */
 
 const flatten = array => array.flat();
+
+
+
+/*
+  Say hello!
+*/
+
+const greet = name =>  name ? `hello ${name}!` : null;
