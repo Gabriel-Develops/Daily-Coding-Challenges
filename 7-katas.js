@@ -3386,3 +3386,15 @@ function dbSort(a){
   strings.sort()
   return [...numbers, ...strings]
 }
+
+
+
+/*
+  Check three and two
+*/
+
+function checkThreeAndTwo(array) {
+  const charMap = array.reduce((map, x) => map.set(x, map.get(x) + 1 || 1), new Map())
+  const values = [...charMap.values()]
+  return values.includes(2) && values.includes(3)
+}
