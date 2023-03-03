@@ -3398,3 +3398,18 @@ function checkThreeAndTwo(array) {
   const values = [...charMap.values()]
   return values.includes(2) && values.includes(3)
 }
+
+
+
+/*
+  Looking for a benefactor
+*/
+
+function newAvg(arr, newavg) {
+  const total = arr.reduce((sum, x) => sum + x, 0)
+  const neededDonation = Math.ceil(newavg * (arr.length + 1) - total)
+  if (neededDonation < 0) {
+    throw new Error('Expected New Average is too low')
+  }
+  return neededDonation
+}
