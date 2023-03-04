@@ -3413,3 +3413,18 @@ function newAvg(arr, newavg) {
   }
   return neededDonation
 }
+
+
+
+/*
+  Add property to every object in array
+*/
+
+questions.forEach((question, i) => {
+  const newQuestion = {...question, usersAnswer: null}
+  questions.splice(i, 1, newQuestion)
+})
+
+// A bit overengineered, to add a new property to an object, we can simply use dot notation.
+
+questions.forEach(question => question.usersAnswer = null)
