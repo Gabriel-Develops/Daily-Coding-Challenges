@@ -3428,3 +3428,13 @@ questions.forEach((question, i) => {
 // A bit overengineered, to add a new property to an object, we can simply use dot notation.
 
 questions.forEach(question => question.usersAnswer = null)
+
+
+
+/*
+  Find min and max
+*/
+
+function getMinMax(arr){
+  return [Math.min(...arr), Math.max(...arr)]
+}
