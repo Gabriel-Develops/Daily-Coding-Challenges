@@ -3438,3 +3438,17 @@ questions.forEach(question => question.usersAnswer = null)
 function getMinMax(arr){
   return [Math.min(...arr), Math.max(...arr)]
 }
+
+
+
+/*
+  Especially Joyful Numbers
+*/
+
+function numberJoy(n) {
+  const digitString = n.toString()
+  const digitArr = [...digitString].map(x => +x)
+  const digitSum = digitArr.reduce((sum, x) => sum + x, 0)
+  const reverseDigitSum = +String(digitSum).split('').reverse().join('')
+  return digitSum * reverseDigitSum === n
+}
