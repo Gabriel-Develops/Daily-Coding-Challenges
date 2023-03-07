@@ -3452,3 +3452,15 @@ function numberJoy(n) {
   const reverseDigitSum = +String(digitSum).split('').reverse().join('')
   return digitSum * reverseDigitSum === n
 }
+
+
+
+/*
+  Interview Question (easy)
+*/
+
+function getStrings(city){
+  const charArray = city.toLowerCase().split('').filter(x => x !== ' ')
+  const charMap = charArray.reduce((map, char) => map.set(char, (map.get(char) || '') + '*'), new Map())
+  return [...charMap].map(x => x.join(':')).join(',')
+}
