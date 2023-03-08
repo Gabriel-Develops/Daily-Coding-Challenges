@@ -3464,3 +3464,11 @@ function getStrings(city){
   const charMap = charArray.reduce((map, char) => map.set(char, (map.get(char) || '') + '*'), new Map())
   return [...charMap].map(x => x.join(':')).join(',')
 }
+
+
+
+/*
+  Sum of all arguments
+*/
+
+const sum = (...arr) => arr.reduce((sum, x) => sum + x, 0)
