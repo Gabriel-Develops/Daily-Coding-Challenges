@@ -3472,3 +3472,15 @@ function getStrings(city){
 */
 
 const sum = (...arr) => arr.reduce((sum, x) => sum + x, 0)
+
+
+
+/*
+  Regexp Basics - is it a vowel?
+*/
+
+String.prototype.vowel = function() {
+  const VOWELS = ['a', 'e', 'i', 'o', 'u']
+  const string = this.toString().toLowerCase()
+  return VOWELS.includes(string)
+};
