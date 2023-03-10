@@ -3484,3 +3484,17 @@ String.prototype.vowel = function() {
   const string = this.toString().toLowerCase()
   return VOWELS.includes(string)
 };
+
+
+
+/*
+  Nickname Generator
+*/
+
+function nicknameGenerator(name){
+  if (name.length < 4) 
+    return 'Error: Name too short'
+  
+  const VOWELS = ['a', 'e', 'i', 'o', 'u']
+  return VOWELS.includes(name[2]) ? name.slice(0, 4) : name.slice(0, 3)
+}
