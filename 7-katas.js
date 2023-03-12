@@ -3512,3 +3512,22 @@ function isNice(arr) {
     return arr.includes(x - 1) || arr.includes(x + 1)
   })
 }
+
+
+
+/*
+  Computer problem series #1: Fill the Hard Disk Drive
+*/
+
+function save(sizes, hd) {
+  let sum = 0, arr = []
+  
+  for (let size of sizes) {
+    if (sum + size > hd)
+      break
+    
+    sum += size
+    arr.push(size)
+  }
+  return arr.length
+}
