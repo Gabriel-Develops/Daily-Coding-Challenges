@@ -3531,3 +3531,17 @@ function save(sizes, hd) {
   }
   return arr.length
 }
+
+
+
+/*
+  makeBackronym
+*/
+
+const makeBackronym = string => {
+  return string
+  	.toUpperCase()
+    .split('')
+    .map(letter => dict[letter] )
+    .join(' ');
+};
