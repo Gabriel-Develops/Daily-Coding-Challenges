@@ -3498,3 +3498,17 @@ function nicknameGenerator(name){
   const VOWELS = ['a', 'e', 'i', 'o', 'u']
   return VOWELS.includes(name[2]) ? name.slice(0, 4) : name.slice(0, 3)
 }
+
+
+
+/*
+  Nice Array
+*/
+
+function isNice(arr) {
+  if (!arr.length) 
+    return false
+  return arr.every(x => {
+    return arr.includes(x - 1) || arr.includes(x + 1)
+  })
+}
