@@ -3545,3 +3545,22 @@ const makeBackronym = string => {
     .map(letter => dict[letter] )
     .join(' ');
 };
+
+
+
+/*
+  Band name generator
+*/
+
+function bandNameGenerator(str) {
+  let repeat = false
+  if (str.at(0) === str.at(-1))
+    repeat = true
+  
+  let uppercased = str[0].toUpperCase() + str.slice(1)
+  
+  if (repeat)
+    return `${uppercased}${uppercased.slice(1)}`
+  else
+    return `The ${uppercased}`
+}
