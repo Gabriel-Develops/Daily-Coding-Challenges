@@ -3564,3 +3564,15 @@ function bandNameGenerator(str) {
   else
     return `The ${uppercased}`
 }
+
+
+
+/*
+  Largest Elements
+*/
+
+function largest(n, array) {
+  if (n === 0) return []
+  const sorted = [...array].sort((a, b) => a - b)
+  return sorted.slice( -n )
+}
