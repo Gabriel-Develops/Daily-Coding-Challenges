@@ -3576,3 +3576,16 @@ function largest(n, array) {
   const sorted = [...array].sort((a, b) => a - b)
   return sorted.slice( -n )
 }
+
+
+
+/*
+  Vowel one
+*/
+
+function vowelOne(s){
+  const VOWELS = 'aeiou'
+  return s.split('')
+    .map(x => VOWELS.includes(x.toLowerCase()) ? '1' : '0')
+    .join('')
+}
