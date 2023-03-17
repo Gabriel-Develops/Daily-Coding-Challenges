@@ -3589,3 +3589,24 @@ function vowelOne(s){
     .map(x => VOWELS.includes(x.toLowerCase()) ? '1' : '0')
     .join('')
 }
+
+
+
+/*
+  Return the Missing Element
+*/
+
+function getMissingElement(superImportantArray){
+  for(let i=0;i<=9;i++){
+    if(!superImportantArray.includes(i)){
+      return i;
+    }
+  }
+}
+
+// Our previous solution works as we step through each number and explicitely find the missing one, we can also realize that the sum of the array should be 45 and therefore if we subtract our arrSum from 45 we will arrive at the missing value
+
+function getMissingElement(superImportantArray){
+  const arrSum = superImportantArray.reduce((sum, x) => sum + x, 0)
+  return 45 - arrSum
+}
