@@ -3610,3 +3610,19 @@ function getMissingElement(superImportantArray){
   const arrSum = superImportantArray.reduce((sum, x) => sum + x, 0)
   return 45 - arrSum
 }
+
+
+
+/*
+  Drone Fly-By
+*/
+
+function flyBy(lamps, drone){
+  const lampsTurnedOn = Math.min(drone.length, lamps.length)
+  const lampsLeft = Math.max(0, lamps.length - drone.length)
+  return 'o'.repeat(lampsTurnedOn) + 'x'.repeat(lampsLeft)
+}
+
+// Of course this kata can be perfectly solved by using the fill method which fills an array with a static value from a starting to ending index.
+
+const flyBy = (lamps, drone) => [...lamps].fill('o', 0, drone.length).join('')
