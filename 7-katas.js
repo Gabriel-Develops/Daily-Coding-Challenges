@@ -3626,3 +3626,25 @@ function flyBy(lamps, drone){
 // Of course this kata can be perfectly solved by using the fill method which fills an array with a static value from a starting to ending index.
 
 const flyBy = (lamps, drone) => [...lamps].fill('o', 0, drone.length).join('')
+
+
+
+/*
+  Insert dashes
+*/
+
+function insertDash(num) {
+  let dashedNum = '', wasOdd = false
+  for (let digit of num.toString()) {
+    if (wasOdd && digit % 2 === 1)
+      dashedNum += '-' + digit
+    else
+      dashedNum += digit
+    
+    if (digit % 2 === 1)
+      wasOdd = true
+    else
+      wasOdd = false
+  }
+  return dashedNum
+}
