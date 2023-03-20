@@ -3648,3 +3648,13 @@ function insertDash(num) {
   }
   return dashedNum
 }
+
+
+
+/*
+  L2: Triple X
+*/
+
+function tripleX(str){
+  return str.indexOf('x') === str.indexOf('xxx') && str.includes('x')
+}
