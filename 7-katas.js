@@ -3669,3 +3669,20 @@ function evenLast(numbers) {
   if (!numbers.length) return 0
   return numbers.reduce((sum, x, i) => i % 2 === 0 ? sum + x : sum, 0) * numbers.at(-1)
 }
+
+
+
+/*
+  Exclamation marks series #13: Count the number of exclamation marks and question marks, return the product
+*/
+
+function product (string) {
+  let exclamSum = 0, questionSum = 0
+  for (const char of string) {
+    if (char === '!')
+      exclamSum++
+    else if (char === '?')
+      questionSum++
+  }
+  return exclamSum * questionSum
+}
