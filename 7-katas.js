@@ -3658,3 +3658,14 @@ function insertDash(num) {
 function tripleX(str){
   return str.indexOf('x') === str.indexOf('xxx') && str.includes('x')
 }
+
+
+
+/*
+  Evens times last
+*/
+
+function evenLast(numbers) {
+  if (!numbers.length) return 0
+  return numbers.reduce((sum, x, i) => i % 2 === 0 ? sum + x : sum, 0) * numbers.at(-1)
+}
