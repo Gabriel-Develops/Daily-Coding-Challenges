@@ -3696,3 +3696,23 @@ function product (string) {
 function filterLongWords(sentence, n) {
   return sentence.split(" ").filter(x => x.length > n)
 }
+
+
+
+/*
+  lucky number
+*/
+
+function isLucky(n) {
+  const sumOfDigits = n.toString()
+    .split('')
+    .reduce((sum, x) => sum + +x, 0)
+  return sumOfDigits === 0 || sumOfDigits % 9 === 0
+}
+
+// And I thought this was a clever and concise answer, turns out you can just do the modulus of n and it will work because of math
+// therfore this is a valid answer
+
+function isLucky(n) {
+  return n % 9 === 0 || n === 0
+}
