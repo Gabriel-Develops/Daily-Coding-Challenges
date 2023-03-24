@@ -3716,3 +3716,33 @@ function isLucky(n) {
 function isLucky(n) {
   return n % 9 === 0 || n === 0
 }
+
+
+
+/*
+  Scaling Squared Strings
+*/
+
+function scale(strng, k, n) {
+  if (!strng)
+    return ''
+  
+  const strArray = strng.split('\n')
+  
+  const horizontalScaled = strArray.map(word => {
+    let newWord = ''
+    for (const letter of word) {
+      newWord += letter.repeat(k)
+    }
+    return newWord
+  })
+  
+  const verticallyScaled = []
+  for (const entry of horizontalScaled) {
+    for (let i = 0; i < n; i++) {
+      verticallyScaled.push(entry)
+    }
+  }
+  
+  return verticallyScaled.join('\n')
+}
