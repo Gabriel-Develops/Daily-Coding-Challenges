@@ -3756,3 +3756,22 @@ function scale(strng, k, n) {
 function solution(pairs){
   return Object.entries(pairs).map(([key, value]) => `${key} = ${value}`).join(',');
 }
+
+
+
+/*
+  Initialize my name
+*/
+
+function initializeNames(name){
+  const nameArray = name.split(' ')
+  if (nameArray.length < 3)
+    return name
+  
+  return nameArray.map((x, i) => {
+    if (i > 0 && i < nameArray.length - 1)
+      return `${x[0]}.`
+    else
+      return x
+  }).join(' ')
+}
