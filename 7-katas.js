@@ -3775,3 +3775,15 @@ function initializeNames(name){
       return x
   }).join(' ')
 }
+
+
+
+/*
+  Unscrambled eggs
+*/
+
+const unscrambleEggs = word => word.split('egg').join('');
+
+// This uses the split and join method, if we wanted to simply use a single method we could use the replaceAll method
+
+const unscrambleEggs = word => word.replaceAll('egg', '')
