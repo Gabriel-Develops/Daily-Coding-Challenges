@@ -3787,3 +3787,21 @@ const unscrambleEggs = word => word.split('egg').join('');
 // This uses the split and join method, if we wanted to simply use a single method we could use the replaceAll method
 
 const unscrambleEggs = word => word.replaceAll('egg', '')
+
+
+
+/*
+  Broken sequence
+*/
+
+function findMissingNumber(sequence) {
+  if (sequence.includes('a')) return 1
+  if (!sequence.length) return 0
+  
+  const numberArr = sequence.split(' ')
+  for (let i = 1; i <= numberArr.length; i++) {
+    if (!numberArr.includes(i.toString()))
+      return i
+  }
+  return 0
+}
