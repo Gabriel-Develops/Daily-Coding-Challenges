@@ -3805,3 +3805,25 @@ function findMissingNumber(sequence) {
   }
   return 0
 }
+
+
+
+/*
+  Find all occurrences of an element in an array
+*/
+
+const findAll = (array, n) => {
+  const finalArr = []
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === n)
+      finalArr.push(i)
+  }
+  return finalArr
+}
+
+// It might look like we could use a map and filter method but it would be a bit convoluted
+// A better array method would be to use a reduce
+
+const findAll = (array, n) => {
+  return array.reduce((finalArr, x, i) => x === n ? [...finalArr, i] : finalArr, [])
+}
