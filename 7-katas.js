@@ -3827,3 +3827,24 @@ const findAll = (array, n) => {
 const findAll = (array, n) => {
   return array.reduce((finalArr, x, i) => x === n ? [...finalArr, i] : finalArr, [])
 }
+
+
+
+/*
+  Find the divisors!
+*/
+
+function divisors(integer) {
+  const divisorsArr = []
+  
+  for (let i = 2; i<integer; i++) {
+    if ((integer % i) === 0) {
+      divisorsArr.push(i)
+    }
+  }
+  if (!divisorsArr.length) {
+    return `${integer} is prime`
+  }
+  
+  return divisorsArr
+};
