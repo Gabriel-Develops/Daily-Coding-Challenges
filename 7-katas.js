@@ -3848,3 +3848,11 @@ function divisors(integer) {
   
   return divisorsArr
 };
+
+
+
+/*
+  String ends with?
+*/
+
+const solution = (str, ending) => str.endsWith(ending);
