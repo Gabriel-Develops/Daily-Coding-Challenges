@@ -3856,3 +3856,19 @@ function divisors(integer) {
 */
 
 const solution = (str, ending) => str.endsWith(ending);
+
+
+
+/*
+  Don't give me five!
+*/
+
+function dontGiveMeFive(start, end) {
+  let total = 0
+  for (let i = start; i <= end; i++) {
+    if (i.toString().includes('5'))
+      continue
+    total++
+  }
+  return total
+}
