@@ -3880,3 +3880,13 @@ function dontGiveMeFive(start, end) {
 */
 
 const breakChocolate=(n,m)=>Math.max(n*m-1,0)
+
+
+
+/*
+  Two Oldest Ages
+*/
+
+function twoOldestAges(ages) {
+  return ages.sort((a, b) => a - b).slice(-2);
+}
