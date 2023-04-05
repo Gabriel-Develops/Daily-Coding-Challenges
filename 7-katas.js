@@ -3890,3 +3890,19 @@ const breakChocolate=(n,m)=>Math.max(n*m-1,0)
 function twoOldestAges(ages) {
   return ages.sort((a, b) => a - b).slice(-2);
 }
+
+
+
+/*
+  Remove duplicate words
+*/
+
+function removeDuplicateWords (s) {
+  return s.split(' ')
+    .filter((x, i, arr) => i === arr.indexOf(x))
+    .join(' ')
+}
+
+// We can also use the Set class to filter out duplicates
+
+const removeDuplicateWords = s => [...new Set(s.split(' '))].join(' ')
