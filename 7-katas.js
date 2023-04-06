@@ -3914,3 +3914,24 @@ const removeDuplicateWords = s => [...new Set(s.split(' '))].join(' ')
 */
 
 const triangular = n => n > 0 ? n*(n+1)/2 : 0;
+
+
+
+/*
+  Palindrome chain length
+*/
+
+function isPalindrome(n) {
+  const string = n.toString()
+  return string === string.split('').reverse().join('')
+}
+
+const palindromeChainLength = n => {
+  let steps = 0
+  while(!isPalindrome(n)) {
+    const reversed = +n.toString().split('').reverse().join('')
+    n += reversed
+    steps++
+  }
+  return steps
+}
