@@ -3906,3 +3906,11 @@ function removeDuplicateWords (s) {
 // We can also use the Set class to filter out duplicates
 
 const removeDuplicateWords = s => [...new Set(s.split(' '))].join(' ')
+
+
+
+/*
+  Triangular Treasure
+*/
+
+const triangular = n => n > 0 ? n*(n+1)/2 : 0;
