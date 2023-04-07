@@ -3945,3 +3945,13 @@ const palindromeChainLength = n => {
 function hasUniqueChars(str){
   return str === [...new Set(str)].join('');
 }
+
+
+
+/*
+  Sum even numbers
+*/
+
+function sumEvenNumbers(input) {
+  return input.filter(x => x % 2 === 0).reduce((sum, x) => sum + x, 0);
+}
