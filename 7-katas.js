@@ -3935,3 +3935,13 @@ const palindromeChainLength = n => {
   }
   return steps
 }
+
+
+
+/*
+  All unique
+*/
+
+function hasUniqueChars(str){
+  return str === [...new Set(str)].join('');
+}
