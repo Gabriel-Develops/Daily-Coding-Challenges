@@ -3955,3 +3955,26 @@ function hasUniqueChars(str){
 function sumEvenNumbers(input) {
   return input.filter(x => x % 2 === 0).reduce((sum, x) => sum + x, 0);
 }
+
+
+
+/*
+  Halving Sum
+*/
+
+function halvingSum(n) {
+  let i = 1, sum = 0
+  while(Math.floor(n / i) >= 1) {
+    sum += Math.floor(n / i)
+    i = i * 2
+  }
+  return sum
+}
+
+// Recursion can make this solution a lot easier to read
+
+function halvingSum(n) {
+  if (n <= 1)
+    return 1
+  return n + halvingSum(Math.floor(n / 2))
+}
