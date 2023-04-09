@@ -3978,3 +3978,11 @@ function halvingSum(n) {
     return 1
   return n + halvingSum(Math.floor(n / 2))
 }
+
+
+
+/*
+  Boiled Eggs
+*/
+
+const cookingTime = eggs => Math.ceil(eggs / 8) * 5;
