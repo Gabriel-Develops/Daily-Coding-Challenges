@@ -3851,3 +3851,18 @@ function twoDecimalPlaces(number) {
 function twoDecimalPlaces(number) {
   return Math.trunc(number * 100) / 100
 }
+
+
+
+/*
+  Calculate Two People's Individual Ages
+*/
+
+function getAges(sum, difference) {
+  const age1 = (sum + difference) / 2
+  const age2 = (sum - difference) / 2
+  
+  return Math.min(age1, age2, sum, difference) < 0 ? null : [age1, age2]
+}
+
+// The check on the last line is awesome, before I was checking each var individually combining them with an || but this works out best
