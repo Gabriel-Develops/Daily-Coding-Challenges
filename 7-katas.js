@@ -3827,3 +3827,11 @@ const findAll = (array, n) => {
 const findAll = (array, n) => {
   return array.reduce((finalArr, x, i) => x === n ? [...finalArr, i] : finalArr, [])
 }
+
+
+
+/*
+  Between Extremes
+*/
+
+const betweenExtremes = numbers => Math.max(...numbers) - Math.min(...numbers);
