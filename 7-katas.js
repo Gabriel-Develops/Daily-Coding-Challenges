@@ -3835,3 +3835,19 @@ const findAll = (array, n) => {
 */
 
 const betweenExtremes = numbers => Math.max(...numbers) - Math.min(...numbers);
+
+
+
+/*
+  Formatting decimal places #1
+*/
+
+function twoDecimalPlaces(number) {
+  return Math.sign(number)*Math.floor(Math.abs(number)*100)/100;
+}
+
+// This was my solution without refrencing the docs, after refrencing the docs I realized we can use Math.trunc to truncate the decimals
+
+function twoDecimalPlaces(number) {
+  return Math.trunc(number * 100) / 100
+}
