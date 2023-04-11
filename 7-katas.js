@@ -3831,6 +3831,165 @@ const findAll = (array, n) => {
 
 
 /*
+  Find the divisors!
+*/
+
+function divisors(integer) {
+  const divisorsArr = []
+  
+  for (let i = 2; i<integer; i++) {
+    if ((integer % i) === 0) {
+      divisorsArr.push(i)
+    }
+  }
+  if (!divisorsArr.length) {
+    return `${integer} is prime`
+  }
+  
+  return divisorsArr
+};
+
+
+
+/*
+  String ends with?
+*/
+
+const solution = (str, ending) => str.endsWith(ending);
+
+
+
+/*
+  Don't give me five!
+*/
+
+function dontGiveMeFive(start, end) {
+  let total = 0
+  for (let i = start; i <= end; i++) {
+    if (i.toString().includes('5'))
+      continue
+    total++
+  }
+  return total
+}
+
+
+
+/*
+  Breaking chocolate problem
+*/
+
+const breakChocolate=(n,m)=>Math.max(n*m-1,0)
+
+
+
+/*
+  Two Oldest Ages
+*/
+
+function twoOldestAges(ages) {
+  return ages.sort((a, b) => a - b).slice(-2);
+}
+
+
+
+/*
+  Remove duplicate words
+*/
+
+function removeDuplicateWords (s) {
+  return s.split(' ')
+    .filter((x, i, arr) => i === arr.indexOf(x))
+    .join(' ')
+}
+
+// We can also use the Set class to filter out duplicates
+
+const removeDuplicateWords = s => [...new Set(s.split(' '))].join(' ')
+
+
+
+/*
+  Triangular Treasure
+*/
+
+const triangular = n => n > 0 ? n*(n+1)/2 : 0;
+
+
+
+/*
+  Palindrome chain length
+*/
+
+function isPalindrome(n) {
+  const string = n.toString()
+  return string === string.split('').reverse().join('')
+}
+
+const palindromeChainLength = n => {
+  let steps = 0
+  while(!isPalindrome(n)) {
+    const reversed = +n.toString().split('').reverse().join('')
+    n += reversed
+    steps++
+  }
+  return steps
+}
+
+
+
+/*
+  All unique
+*/
+
+function hasUniqueChars(str){
+  return str === [...new Set(str)].join('');
+}
+
+
+
+/*
+  Sum even numbers
+*/
+
+function sumEvenNumbers(input) {
+  return input.filter(x => x % 2 === 0).reduce((sum, x) => sum + x, 0);
+}
+
+
+
+/*
+  Halving Sum
+*/
+
+function halvingSum(n) {
+  let i = 1, sum = 0
+  while(Math.floor(n / i) >= 1) {
+    sum += Math.floor(n / i)
+    i = i * 2
+  }
+  return sum
+}
+
+// Recursion can make this solution a lot easier to read
+
+function halvingSum(n) {
+  if (n <= 1)
+    return 1
+  return n + halvingSum(Math.floor(n / 2))
+}
+
+
+
+/*
+  Boiled Eggs
+*/
+
+const cookingTime = eggs => Math.ceil(eggs / 8) * 5;
+
+
+
+/*
   Between Extremes
 */
 
