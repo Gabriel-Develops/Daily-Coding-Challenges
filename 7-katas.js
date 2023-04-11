@@ -4025,3 +4025,13 @@ function getAges(sum, difference) {
 }
 
 // The check on the last line is awesome, before I was checking each var individually combining them with an || but this works out best
+
+
+
+/*
+  Coding Meetup #12 - Higher-Order Functions Series - Find GitHub admins
+*/
+
+function findAdmin(list, lang) {
+  return list.filter(dev => dev.language === lang && dev.githubAdmin === 'yes');
+}
