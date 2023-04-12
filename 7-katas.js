@@ -4035,3 +4035,15 @@ function getAges(sum, difference) {
 function findAdmin(list, lang) {
   return list.filter(dev => dev.language === lang && dev.githubAdmin === 'yes');
 }
+
+
+
+/*
+  Who is the killer?
+*/
+
+function killer(suspectInfo, dead) {
+  for(let suspect in suspectInfo)
+    if(dead.every(x=>suspectInfo[suspect].includes(x)))
+      return suspect
+}
