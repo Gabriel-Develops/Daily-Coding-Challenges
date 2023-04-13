@@ -4093,3 +4093,17 @@ const prevMultOfThree = n => {
     return prevMultOfThree(+n.toString().slice(0, -1));
   }
 }
+
+
+
+/*
+  Frequency sequence
+*/
+
+function freqSeq(str, sep) {
+  const arr = str.split('')
+  const charMap = arr.reduce((map, x) => map.set(x, map.get(x) + 1 || 1), new Map())
+  
+  return arr.map(x => charMap.get(x))
+    .join(sep)
+}
