@@ -4047,3 +4047,33 @@ function killer(suspectInfo, dead) {
     if(dead.every(x=>suspectInfo[suspect].includes(x)))
       return suspect
 }
+
+
+
+/*
+  Dot Calculator
+*/
+
+function dotCalculator (equation) {
+  const [first, operator, second] = equation.split(' ')
+  let length = 0
+  switch (operator) {
+    case "+": {
+      length = first.length + second.length
+      break
+    }
+    case "-": {
+      length = first.length - second.length
+      break
+    }
+    case "*": {
+      length = first.length * second.length
+      break
+    }
+    case "//": {
+      length = first.length / second.length
+      break
+    }
+  }
+  return '.'.repeat(length)
+}
