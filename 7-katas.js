@@ -4107,3 +4107,15 @@ function freqSeq(str, sep) {
   return arr.map(x => charMap.get(x))
     .join(sep)
 }
+
+
+
+/*
+  Help Bob count letters and digits.
+*/
+
+function countLettersAndDigits(input) {
+  return input.split('') 
+    .filter(x => (x.toLowerCase() >= 'a' && x.toLowerCase() <= 'z') || (x >= '0' && x <= '9'))
+    .length
+}
