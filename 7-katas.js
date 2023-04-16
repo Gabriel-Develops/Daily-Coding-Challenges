@@ -4077,3 +4077,19 @@ function dotCalculator (equation) {
   }
   return '.'.repeat(length)
 }
+
+
+
+/*
+  Previous multiple of three
+*/
+
+const prevMultOfThree = n => {
+  if (n === 0) {
+    return null;
+  } else if (n % 3 === 0) {
+    return n;
+  } else {
+    return prevMultOfThree(+n.toString().slice(0, -1));
+  }
+}
