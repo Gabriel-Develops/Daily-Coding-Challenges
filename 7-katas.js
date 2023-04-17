@@ -4119,3 +4119,14 @@ function countLettersAndDigits(input) {
     .filter(x => (x.toLowerCase() >= 'a' && x.toLowerCase() <= 'z') || (x >= '0' && x <= '9'))
     .length
 }
+
+
+
+/*
+  Find Screen Size
+*/
+
+function findScreenHeight(width, ratio) {
+  const [x,y] = ratio.split(':')
+  return `${width}x${width*y/x}`
+}
