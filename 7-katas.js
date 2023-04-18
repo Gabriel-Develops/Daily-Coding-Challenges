@@ -4156,3 +4156,18 @@ function elevatorDistance(array) {
   
   return total;
 }
+
+
+
+/*
+  Enumerable Magic #5- True for Just One?
+*/
+
+function one(arr, fun){
+  let total = 0
+  for (let number of arr) {
+    if (fun(number))
+      total++
+  }
+  return total === 1
+}
