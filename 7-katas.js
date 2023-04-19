@@ -4171,3 +4171,15 @@ function one(arr, fun){
   }
   return total === 1
 }
+
+
+
+/*
+  How many consecutive numbers are needed?
+*/
+
+function consecutive(arr) {
+  return arr.length > 0
+    ? Math.max(...arr) - Math.min(...arr) + 1 - arr.length
+    : 0;
+}
