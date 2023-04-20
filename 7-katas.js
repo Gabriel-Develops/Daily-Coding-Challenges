@@ -4130,3 +4130,13 @@ function findScreenHeight(width, ratio) {
   const [x,y] = ratio.split(':')
   return `${width}x${width*y/x}`
 }
+
+
+
+/*
+  Sort arrays - 1
+*/
+
+function sortme( names ){
+  return names.sort();
+}
