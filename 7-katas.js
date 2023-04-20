@@ -4140,3 +4140,19 @@ function findScreenHeight(width, ratio) {
 function sortme( names ){
   return names.sort();
 }
+
+
+
+/*
+  Elevator Distance
+*/
+
+function elevatorDistance(array) {
+  let total = 0;
+  
+  for (let i = 0; i < array.length - 1; i++) {
+    total += Math.abs(array[i] - array[i + 1]);
+  }
+  
+  return total;
+}
