@@ -4183,3 +4183,15 @@ function consecutive(arr) {
     ? Math.max(...arr) - Math.min(...arr) + 1 - arr.length
     : 0;
 }
+
+
+
+/*
+  Coding Meetup #14 - Higher-Order Functions Series - Order the food
+*/
+
+function orderFood(list) {
+  return Object.fromEntries(
+    list.reduce((map, dev) => map.set(dev.meal, map.get(dev.meal) + 1 || 1), new Map())
+  )
+}
