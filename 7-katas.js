@@ -4217,3 +4217,21 @@ function solve(arr) {
   }
   return final
 }
+
+
+
+/*
+  Hells Kitchen
+*/
+
+function gordon(a) {
+  const map = new Map([
+    ['A', '@'],
+    ['E', '*'],
+    ['I', '*'],
+    ['O', '*'],
+    ['U', '*'],
+  ])
+  return a.split('').map(char => map.get(char.toUpperCase()) || char.toUpperCase()).join('')
+    .split(' ').map(word => `${word}!!!!`).join(' ')
+}
