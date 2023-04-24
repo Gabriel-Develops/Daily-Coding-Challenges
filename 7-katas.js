@@ -4195,3 +4195,25 @@ function orderFood(list) {
     list.reduce((map, dev) => map.set(dev.meal, map.get(dev.meal) + 1 || 1), new Map())
   )
 }
+
+
+
+/*
+  Max-min arrays
+*/
+
+function solve(arr) {
+  arr.sort((a, b) => a - b)
+  const firstHalf = arr.slice(0, Math.min(arr.length / 2))
+  const secondHalf = arr.slice(Math.min(arr.length / 2))
+  
+  const final = []
+  for (let i = 0; i < arr.length; i++) {
+    if (i % 2 === 0) {
+      final.push(secondHalf.pop())
+    } else {
+      final.push(firstHalf.shift())
+    }
+  }
+  return final
+}
