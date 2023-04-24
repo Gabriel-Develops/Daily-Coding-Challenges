@@ -4235,3 +4235,21 @@ function gordon(a) {
   return a.split('').map(char => map.get(char.toUpperCase()) || char.toUpperCase()).join('')
     .split(' ').map(word => `${word}!!!!`).join(' ')
 }
+
+
+
+/*
+  Extra Perfect Numbers (Special Numbers Series #7)
+*/
+
+function extraPerfect(n){
+  const arr = [];
+  for (let i = 1; i <= n; i += 2){
+    arr.push(i);
+  }
+  return arr;
+}
+
+function extraPerfect(n){
+  return Array.from({length: Math.floor((n + 1) / 2)}).map((_, i) => i * 2 + 1)
+}
