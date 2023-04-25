@@ -4253,3 +4253,34 @@ function extraPerfect(n){
 function extraPerfect(n){
   return Array.from({length: Math.floor((n + 1) / 2)}).map((_, i) => i * 2 + 1)
 }
+
+
+
+/*
+  Fun with ES6 Classes #2 - Animals and Inheritance
+*/
+
+class Shark extends Animal {
+  constructor(name, age, status) {
+    super(name, age, 0, "shark", status);
+  }
+}
+
+class Cat extends Animal {
+  constructor(name, age, status) {
+    super(name, age, 4, "cat", status);
+  }
+  introduce() {
+    return `${super.introduce()}  Meow meow!`;
+  }
+}
+
+class Dog extends Animal {
+  constructor(name, age, status, master) {
+    super(name, age, 4, "dog", status);
+    this.master = master;
+  }
+  greetMaster() {
+    return `Hello ${this.master}`;
+  }
+}
