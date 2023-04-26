@@ -4284,3 +4284,19 @@ class Dog extends Animal {
     return `Hello ${this.master}`;
   }
 }
+
+
+
+/*
+  Even or Odd - Which is Greater?
+*/
+
+function evenOrOdd(str) {
+  const [evenSum, oddSum] = str.split('').reduce(([sum1, sum2], x) => x % 2 === 0 ? [sum1 + +x, sum2] : [sum1, sum2 + +x], [0, 0])
+  if (evenSum > oddSum)
+    return 'Even is greater than Odd'
+  else if (evenSum < oddSum)
+    return 'Odd is greater than Even'
+  else
+    return 'Even and Odd are the same'
+}
