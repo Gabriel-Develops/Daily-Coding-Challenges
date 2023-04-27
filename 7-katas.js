@@ -4300,3 +4300,16 @@ function evenOrOdd(str) {
   else
     return 'Even and Odd are the same'
 }
+
+
+
+/*
+  Move 10
+*/
+
+function moveTen(s) {
+  return String.fromCharCode(
+    ...s.split('')
+    .map(x => (x.charCodeAt() - 97 + 10) % 26 + 97)
+  )
+}
