@@ -4313,3 +4313,34 @@ function moveTen(s) {
     .map(x => (x.charCodeAt() - 97 + 10) % 26 + 97)
   )
 }
+
+
+
+/*
+  Correct the time-string
+*/
+
+function timeCorrect(timestring) {
+  if (timestring === '')
+    return ''
+  // Checks for null and three valid number inputs
+  if (timestring === null || 
+      timestring.split(':').length < 3 || 
+      timestring.split('').some(x => x.toLowerCase() !== x.toUpperCase()))
+    return null
+
+  let [h, m, s] = timestring.split(':')
+  if (s >= 60) {
+    m = +m + Math.floor(s / 60)
+    s = s % 60
+  }
+  if (m >= 60) {
+    h = +h + Math.floor(m / 60)
+    m = m % 60
+  }
+  if (h >= 24) {
+    h = h % 24
+  }
+  
+  return [h, m, s].map(x => x.toString().padStart(2, '0')).join(':')
+}
