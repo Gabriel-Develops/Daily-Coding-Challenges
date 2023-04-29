@@ -633,3 +633,24 @@ function countSmileys(arr) {
   }
   return total
 }
+
+
+
+/*
+  Consecutive strings
+*/
+
+function longestConsec(strarr, k) {
+  if (strarr.length === 0 || k > strarr.length || k <= 0)
+    return ''
+  
+  const strings = []
+  for (let i = 0; i < strarr.length - k + 1; i++) {
+    let currentStr = ''
+    for (let j = i; j < k + i; j++) {
+      currentStr += strarr[j]
+    }
+    strings.push(currentStr)
+  }
+  return strings.sort((a, b) => b.length - a.length)[0]
+}
