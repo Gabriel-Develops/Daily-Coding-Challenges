@@ -4344,3 +4344,14 @@ function timeCorrect(timestring) {
   
   return [h, m, s].map(x => x.toString().padStart(2, '0')).join(':')
 }
+
+
+
+/*
+  last digits of a number
+*/
+
+function lastDigit(n, d) {
+  if (d <= 0) return []
+  return n.toString().slice(-d).split('').map(Number)
+}
