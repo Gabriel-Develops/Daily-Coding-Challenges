@@ -4355,3 +4355,20 @@ function lastDigit(n, d) {
   if (d <= 0) return []
   return n.toString().slice(-d).split('').map(Number)
 }
+
+
+
+/*
+  Split The Bill
+*/
+
+function splitTheBill(x) {
+  const total = Object.values(x).reduce((sum, cost) => sum + cost, 0)
+  const n = Object.keys(x).length
+  
+  const final = {}
+  for (let person in x) {
+    final[person] = +(x[person] - total / n).toFixed(2)
+  }
+  return final
+}
