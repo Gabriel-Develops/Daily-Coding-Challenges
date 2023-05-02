@@ -4372,3 +4372,13 @@ function splitTheBill(x) {
   }
   return final
 }
+
+
+
+/*
+  Unique Sum
+*/
+
+function uniqueSum(lst) {
+  return lst.length ? [...new Set(lst)].reduce((sum, x) => sum + x, 0) : null
+}
