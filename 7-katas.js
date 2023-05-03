@@ -4382,3 +4382,17 @@ function splitTheBill(x) {
 function uniqueSum(lst) {
   return lst.length ? [...new Set(lst)].reduce((sum, x) => sum + x, 0) : null
 }
+
+
+
+/*
+  Well of Ideas - Harder Version
+*/
+
+function well(x) {
+  const total = x.reduce((sum, subArr) => sum + subArr.filter(y => (y + '').toLowerCase() === 'good').length, 0)
+  
+  if (total > 2) return 'I smell a series!'
+  else if (total > 0) return 'Publish!'
+  else return 'Fail!'
+}
