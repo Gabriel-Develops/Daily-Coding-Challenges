@@ -4463,3 +4463,23 @@ const calculate = (a, o, b) => {
     return null
   }
 }
+
+
+
+/*
+  Interactive Dictionary
+*/
+
+class Dictionary {
+  constructor() {
+    this.memory = new Map()
+  }
+  
+  newEntry(key, value) {
+    this.memory.set(key, value)
+  }
+  
+  look(key) {
+    return this.memory.has(key) ? this.memory.get(key) : `Can't find entry for ${key}`
+  }
+}
