@@ -4396,3 +4396,19 @@ function well(x) {
   else if (total > 0) return 'Publish!'
   else return 'Fail!'
 }
+
+
+
+/*
+  Search for letters
+*/
+
+function change(string){
+  string = string.toLowerCase()
+  let finalStr = ''
+  for (let i = 0; i < 26; i++) {
+    const letter = String.fromCharCode(i + 97)
+    finalStr += string.includes(letter) ? '1' : '0'
+  }
+  return finalStr
+}
