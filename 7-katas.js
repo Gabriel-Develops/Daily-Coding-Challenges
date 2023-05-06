@@ -4412,3 +4412,11 @@ function change(string){
   }
   return finalStr
 }
+
+
+
+/*
+  Javascript filter - 1
+*/
+
+const searchNames = logins => logins.filter(([username, email]) => username.endsWith('_'))
