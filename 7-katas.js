@@ -4420,3 +4420,13 @@ function change(string){
 */
 
 const searchNames = logins => logins.filter(([username, email]) => username.endsWith('_'))
+
+
+
+/*
+  The Office III - Broken Photocopier
+*/
+
+function broken(x){
+  return x.split('').map(l => l === '1' ? '0' : '1').join('')
+}
