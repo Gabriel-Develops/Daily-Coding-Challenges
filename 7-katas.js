@@ -4430,3 +4430,16 @@ const searchNames = logins => logins.filter(([username, email]) => username.ends
 function broken(x){
   return x.split('').map(l => l === '1' ? '0' : '1').join('')
 }
+
+
+
+/*
+  "Very Even" Numbers.
+*/
+
+function isVeryEvenNumber(n) {
+  while (n > 9) {
+    n = n.toString().split('').reduce((sum, x) => sum + +x, 0)
+  }
+  return n % 2 === 0
+}
