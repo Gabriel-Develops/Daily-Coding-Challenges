@@ -4443,3 +4443,23 @@ function isVeryEvenNumber(n) {
   }
   return n % 2 === 0
 }
+
+
+
+/*
+  Debug Basic Calculator
+*/
+
+const calculate = (a, o, b) => {
+  if(o === "+") { 
+    return a + b
+  } else if(o === "-") {
+    return a - b
+  } else if(o === "/" && b !== 0) { 
+    return a / b
+  } else if(o === "*") {
+    return a * b
+  } else {
+    return null
+  }
+}
