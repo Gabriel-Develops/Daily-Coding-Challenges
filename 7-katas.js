@@ -4483,3 +4483,15 @@ class Dictionary {
     return this.memory.has(key) ? this.memory.get(key) : `Can't find entry for ${key}`
   }
 }
+
+
+
+/*
+  We Have Liftoff
+*/
+
+function liftoff(instructions){
+  instructions.sort((a, b) => b - a );
+  instructions.push('liftoff!');
+  return instructions.join(' ');
+}
