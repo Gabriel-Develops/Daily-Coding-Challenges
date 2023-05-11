@@ -4495,3 +4495,13 @@ function liftoff(instructions){
   instructions.push('liftoff!');
   return instructions.join(' ');
 }
+
+
+
+/*
+  Length and two values.
+*/
+
+function alternate(n, firstValue, secondValue){
+  return Array.from({ length: n }).map((_, i) => i % 2 ? secondValue : firstValue)
+}
