@@ -4505,3 +4505,20 @@ function liftoff(instructions){
 function alternate(n, firstValue, secondValue){
   return Array.from({ length: n }).map((_, i) => i % 2 ? secondValue : firstValue)
 }
+
+
+
+/*
+  Merge two arrays
+*/
+
+function mergeArrays(a, b) {
+  const finalArr = []
+  for (let i = 0, maxLen = Math.max(a.length, b.length); i < maxLen; i++) {
+    if (i < a.length)
+      finalArr.push(a[i])
+    if (i < b.length)
+      finalArr.push(b[i])
+  }
+  return finalArr
+}
