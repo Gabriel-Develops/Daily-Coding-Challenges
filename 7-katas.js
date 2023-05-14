@@ -4532,3 +4532,15 @@ function mergeArrays(a, b) {
 function unusedDigits(...args) {
   return [...'0123456789'].filter(x => !args.join('').includes(x)).join('')
 }
+
+
+
+/*
+  Scrolling Text
+*/
+
+function scrollingText(text){
+  const upperCased = text.toUpperCase()
+  return Array.from({length: text.length})
+    .map((_, i) => upperCased.slice(i) + upperCased.slice(0, i))
+}
