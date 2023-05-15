@@ -4544,3 +4544,31 @@ function scrollingText(text){
   return Array.from({length: text.length})
     .map((_, i) => upperCased.slice(i) + upperCased.slice(0, i))
 }
+
+
+
+/*
+  Sum of a Beach
+*/
+
+function sumOfABeach(beach) {
+  const string = beach.toLowerCase()
+  const keywords = ['sand', 'water', 'fish', 'sun']
+
+  return keywords.reduce((total, x) => total += string.split(x).length - 1, 0)
+}
+
+function sumOfABeach(beach) {
+  let string = beach.toLowerCase()
+  const keywords = ['sand', 'water', 'fish', 'sun']
+  
+  let total = 0
+  while(keywords.some(x => string.includes(x))) {
+    const word = keywords.find(x => string.includes(x))
+    string = string.replace(word, '')
+    total++
+  }
+  return total
+}
+
+// The first solve uses splitting as a method of cleverly finding the total of keywords in a string, the second is a more manual solution
