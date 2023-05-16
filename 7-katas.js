@@ -4572,3 +4572,20 @@ function sumOfABeach(beach) {
 }
 
 // The first solve uses splitting as a method of cleverly finding the total of keywords in a string, the second is a more manual solution
+
+
+
+/*
+  Exclamation marks series #5: Remove all exclamation marks from the end of words
+*/
+
+function remove (string) {
+  return string.split(' ')
+               .map(x => {
+                    while (x.endsWith('!')) {
+                      x = x.slice(0, -1)
+                    }
+                    return x
+                  })
+               .join(' ')
+}
