@@ -4610,3 +4610,21 @@ function consonantCount(str) {
   const VOWELS = ['a', 'e', 'i', 'o', 'u']
   return str.toLowerCase().split('').filter(x => !VOWELS.includes(x) && x >= 'a' && x <= 'z').length
 }
+
+
+
+/*
+  Find Duplicates 
+*/
+
+function duplicates(arr) {
+  const dupes = []
+  const arrayMap = new Map()
+  for (let number of arr) {
+    if (arrayMap.has(number) && !dupes.includes(number))
+      dupes.push(number)
+    else
+      arrayMap.set(number, true)
+  }
+  return dupes
+}
