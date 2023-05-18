@@ -4628,3 +4628,15 @@ function duplicates(arr) {
   }
   return dupes
 }
+
+
+
+/*
+  Plus - minus - plus - plus - ... - Count 
+*/
+
+const catchSignChange = arr => arr.reduce(([total, isPositive], x) => Math.sign(x) >= 0 === isPositive ? [total, isPositive] : [++total, !isPositive], [0, Math.sign(arr[0]) >= 0])[0]
+
+// Your typical codewars one liner that is completely unreadable ... yes
+// I decided to try to go for a one liner as the kata was presented as a arrow function and wanted it to stay one line.
+// The answer uses a reduce function to return an array composed of two elements, the total amount of changes between pos and neg and the state of the last element. We then return only the first element of this array at the end
