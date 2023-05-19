@@ -4599,3 +4599,14 @@ function remove (string) {
 function filterEvenLengthWords(words) {
   return words.filter(x => x.length % 2 === 0)
 }
+
+
+
+/*
+  Count consonants
+*/
+
+function consonantCount(str) {
+  const VOWELS = ['a', 'e', 'i', 'o', 'u']
+  return str.toLowerCase().split('').filter(x => !VOWELS.includes(x) && x >= 'a' && x <= 'z').length
+}
