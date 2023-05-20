@@ -4640,3 +4640,13 @@ const catchSignChange = arr => arr.reduce(([total, isPositive], x) => Math.sign(
 // Your typical codewars one liner that is completely unreadable ... yes
 // I decided to try to go for a one liner as the kata was presented as a arrow function and wanted it to stay one line.
 // The answer uses a reduce function to return an array composed of two elements, the total amount of changes between pos and neg and the state of the last element. We then return only the first element of this array at the end
+
+
+
+/*
+  Numbers to Objects
+*/
+
+const numObj = s => s.map(x => ({[x.toString()]: String.fromCharCode(x)}))
+
+// the toString method is unnecessary and can be left out
