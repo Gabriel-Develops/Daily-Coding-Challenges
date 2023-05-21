@@ -4650,3 +4650,19 @@ const catchSignChange = arr => arr.reduce(([total, isPositive], x) => Math.sign(
 const numObj = s => s.map(x => ({[x.toString()]: String.fromCharCode(x)}))
 
 // the toString method is unnecessary and can be left out
+
+
+
+/*
+  Multiply Word in String
+*/
+
+function modifyMultiply (str,loc,num) {
+  const word = str.split(' ')[loc]
+  return `${word}-`.repeat(num).slice(0, -1)
+} 
+
+// Theres two methods of finding the solution, we can repeat the word n times with a hyphen at the end and slice it off
+// or create an array of size n, fill it with the word and join on the hyphen
+
+// return Array.from({length: num}).fill(word).join('-')
