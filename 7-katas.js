@@ -4666,3 +4666,24 @@ function modifyMultiply (str,loc,num) {
 // or create an array of size n, fill it with the word and join on the hyphen
 
 // return Array.from({length: num}).fill(word).join('-')
+
+
+
+/*
+  Number-Star ladder
+*/
+
+function pattern(n) {
+  const output = []
+  for (let i = 0; i < n; i++) {
+    let string = '1'
+    string += '*'.repeat(i)
+    
+    if (i !== 0) {
+      string += `${i + 1}`
+    }
+    
+    output.push(string)
+  }
+  return output.join('\n')
+}
