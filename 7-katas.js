@@ -4687,3 +4687,17 @@ function pattern(n) {
   }
   return output.join('\n')
 }
+
+
+
+/*
+  Is n divisible by (...)?
+*/
+
+function isDivisible(...numbers) {
+  return numbers.slice(1).every(x => numbers[0] % x === 0)
+}
+
+function isDivisible(first, ...numbers){
+  return numbers.every(x => first % x === 0)
+}
