@@ -4701,3 +4701,21 @@ function isDivisible(...numbers) {
 function isDivisible(first, ...numbers){
   return numbers.every(x => first % x === 0)
 }
+
+
+
+/*
+  Consecutive letters
+*/
+
+function solve(s) {
+  // Checks if all characters are unique
+  if (new Set(s).size !== s.length) 
+    return false
+  
+  // Checks that every letter preceding each character is one away on the ascii chart
+  const alphabeticalOrder = s.split('').sort()
+  return alphabeticalOrder
+    .slice(1)
+    .every((x, i) => x.charCodeAt() - alphabeticalOrder[i].charCodeAt() === 1)
+}
