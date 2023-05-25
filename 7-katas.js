@@ -4719,3 +4719,16 @@ function solve(s) {
     .slice(1)
     .every((x, i) => x.charCodeAt() - alphabeticalOrder[i].charCodeAt() === 1)
 }
+
+
+
+/*
+  Exclamation marks series #7: Remove words from the sentence if it contains one exclamation mark 
+*/
+
+function remove (string) {
+  return string
+    .split(' ')
+    .filter(x => x.indexOf('!') !== x.lastIndexOf('!') || !x.includes('!'))
+    .join(' ')
+}
