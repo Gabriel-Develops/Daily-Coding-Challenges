@@ -4732,3 +4732,21 @@ function remove (string) {
     .filter(x => x.indexOf('!') !== x.lastIndexOf('!') || !x.includes('!'))
     .join(' ')
 }
+
+
+
+/*
+  Calculate mean and concatenate string
+*/
+
+function mean(lst) {
+  const [intSum, charString] = lst.reduce(([intSum, charString], x) => {
+    if (x.toLowerCase() === x.toUpperCase())
+      intSum += +x
+    else
+      charString += x
+    return [intSum, charString]
+  }, [0, ''])
+  
+  return [intSum / 10, charString]
+}
