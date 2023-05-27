@@ -4750,3 +4750,23 @@ function mean(lst) {
   
   return [intSum / 10, charString]
 }
+
+
+
+/*
+  Password maker
+*/
+
+function makePassword(phrase) {
+  const charMap = new Map([
+    ['i', 1],
+    ['o', 0],
+    ['s', 5]
+  ])
+  
+  let string = ''
+  for (let [char, ...restOfWord] of phrase.split(' ')) {
+    string += charMap.has(char.toLowerCase()) ? charMap.get(char.toLowerCase()) : char
+  }
+  return string
+}
