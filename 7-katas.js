@@ -4770,3 +4770,17 @@ function makePassword(phrase) {
   }
   return string
 }
+
+
+
+/*
+  sPoNgEbOb MeMe
+*/
+
+function spongeMeme(sentence) {
+  return sentence
+      .split('')
+      .map((x, i) => i % 2 ? x.toLowerCase() : x.toUpperCase())
+      .join('')
+      ;
+}
