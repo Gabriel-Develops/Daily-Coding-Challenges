@@ -4784,3 +4784,13 @@ function spongeMeme(sentence) {
       .join('')
       ;
 }
+
+
+
+/*
+  Running out of space
+*/
+
+function spacey(array) {
+  return array.map((x, i) => array.slice(0, i + 1).join(''))
+}
