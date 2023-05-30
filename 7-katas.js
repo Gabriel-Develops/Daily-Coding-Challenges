@@ -4794,3 +4794,13 @@ function spongeMeme(sentence) {
 function spacey(array) {
   return array.map((x, i) => array.slice(0, i + 1).join(''))
 }
+
+
+
+/*
+  Powers of i
+*/
+
+function pofi(n){
+  return ["1","i","-1","-i"][n%4];
+}
