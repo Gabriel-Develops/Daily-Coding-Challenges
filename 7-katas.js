@@ -4815,3 +4815,24 @@ function heron(a, b, c) {
   const s = (a + b + c) / 2;
   return Math.sqrt(s * (s - a) * (s - b) * (s - c));
 }
+
+
+
+/*
+  How Green Is My Valley?
+*/
+
+function makeValley(arr) {
+  arr.sort((a, b) => b - a)
+  
+  const left = [], right = []
+  for (let i = 0; i < arr.length; i++) {
+    if (i % 2 === 0)
+      left.push(arr[i])
+    else
+      right.push(arr[i])
+  }
+  right.reverse()
+  
+  return [...left, ...right]
+}
