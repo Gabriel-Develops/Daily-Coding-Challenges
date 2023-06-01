@@ -4798,6 +4798,16 @@ function spacey(array) {
 
 
 /*
+  Substring fun
+*/
+
+function nthChar(words) {
+  return words.reduce((finalWord, word, i) => finalWord += word[i], '')
+}
+
+
+
+/*
   Powers of i
 */
 
