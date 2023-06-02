@@ -4836,3 +4836,14 @@ function makeValley(arr) {
   
   return [...left, ...right]
 }
+
+
+
+/*
+  How Green Is My Valley?
+*/
+
+function evenChars(string) {
+  if (string.length < 2 || string.length > 100) return "invalid string";
+  return string.split('').filter((_, i) => i % 2 === 1);
+}
