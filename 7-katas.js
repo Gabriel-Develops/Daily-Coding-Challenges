@@ -4872,3 +4872,17 @@ function multiples(first, second, limit) {
   }
   return finalArr
 }
+
+
+
+/*
+  Return a string's even characters.
+*/
+
+function evenChars(string) {
+  if (string.length < 2 || string.length > 100)
+    return 'invalid string'
+  
+  return string.split('')
+    .filter((_, i) => i % 2 === 1)
+}
