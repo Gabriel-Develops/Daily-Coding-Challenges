@@ -4857,3 +4857,18 @@ function evenChars(string) {
   if (string.length < 2 || string.length > 100) return "invalid string";
   return string.split('').filter((_, i) => i % 2 === 1);
 }
+
+
+
+/*
+  Show multiples of 2 numbers within a range
+*/
+
+function multiples(first, second, limit) {
+  const finalArr = []
+  for (let i = Math.max(first, second); i < limit; i++) {
+    if (i % first === 0 && i % second === 0)
+      finalArr.push(i)
+  }
+  return finalArr
+}
