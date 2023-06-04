@@ -4886,3 +4886,13 @@ function evenChars(string) {
   return string.split('')
     .filter((_, i) => i % 2 === 1)
 }
+
+
+
+/*
+  Find the Capitals
+*/
+
+function capital(capitals){
+  return capitals.map(({state, country, capital}) => `The capital of ${state || country} is ${capital}`)
+}
