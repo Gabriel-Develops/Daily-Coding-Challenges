@@ -4896,3 +4896,15 @@ function evenChars(string) {
 function capital(capitals){
   return capitals.map(({state, country, capital}) => `The capital of ${state || country} is ${capital}`)
 }
+
+
+
+/*
+  Help Suzuki rake his garden!
+*/
+
+function rakeGarden(garden) {
+  return garden.split(' ')
+  	.map(x => (x === 'rock' || x === 'gravel') ? x : 'gravel')
+		.join(' ');
+}
