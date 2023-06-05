@@ -4908,3 +4908,13 @@ function rakeGarden(garden) {
   	.map(x => (x === 'rock' || x === 'gravel') ? x : 'gravel')
 		.join(' ');
 }
+
+
+
+/*
+  How many times should I go?
+*/
+
+function howManyTimes(annualPrice, individualPrice) {
+  return Math.ceil(annualPrice / individualPrice);
+}
