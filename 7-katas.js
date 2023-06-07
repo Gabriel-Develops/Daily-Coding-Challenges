@@ -4918,3 +4918,11 @@ function rakeGarden(garden) {
 function howManyTimes(annualPrice, individualPrice) {
   return Math.ceil(annualPrice / individualPrice);
 }
+
+
+
+/*
+  Alphabetically ordered
+*/
+
+const alphabetic = s => s === s.split('').sort().join('');
