@@ -4926,3 +4926,14 @@ function howManyTimes(annualPrice, individualPrice) {
 */
 
 const alphabetic = s => s === s.split('').sort().join('');
+
+
+
+/*
+  Sum a list but ignore any duplicates
+*/
+
+function sumNoDuplicates(numList) {
+  return numList.filter(x => numList.indexOf(x) === numList.lastIndexOf(x))
+    .reduce((sum, x) => sum + x, 0)
+}
