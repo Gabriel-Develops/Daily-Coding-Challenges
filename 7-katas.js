@@ -4937,3 +4937,16 @@ function sumNoDuplicates(numList) {
   return numList.filter(x => numList.indexOf(x) === numList.lastIndexOf(x))
     .reduce((sum, x) => sum + x, 0)
 }
+
+
+
+/*
+  The Office VI - Sabbatical
+*/
+
+function sabb(s, val, happiness){
+  const total = s.split('').filter(x => [...'sabbatical'].includes(x)).length
+  return total + val + happiness > 22 ? 'Sabbatical! Boom!' : 'Back to your desk, boy.'
+}
+
+// The tests didn't check for casing but if they did then using toLowerCase before the split would solve that
