@@ -4950,3 +4950,17 @@ function sabb(s, val, happiness){
 }
 
 // The tests didn't check for casing but if they did then using toLowerCase before the split would solve that
+
+
+
+/*
+  Arithmetic sequence - sum of n elements
+*/
+
+function ArithmeticSequenceSum(a, r, n) {
+  let sum = a * n
+  for (let i = 1; i < n; i++) {
+    sum += r * i
+  }
+  return sum
+}
