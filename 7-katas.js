@@ -4964,3 +4964,13 @@ function ArithmeticSequenceSum(a, r, n) {
   }
   return sum
 }
+
+
+
+/*
+  No Loops 1 - Small enough?
+*/
+
+function smallEnough(a, limit){
+  return limit >= Math.max(...a);
+}
