@@ -4974,3 +4974,19 @@ function ArithmeticSequenceSum(a, r, n) {
 function smallEnough(a, limit){
   return limit >= Math.max(...a);
 }
+
+
+
+/*
+  Find all non-consecutive numbers
+*/
+
+function allNonConsecutive(arr) {
+  const inconsecutives = []
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] - arr[i - 1] === 1)
+      continue
+    inconsecutives.push({i: i, n: arr[i]})
+  }
+  return inconsecutives
+}
