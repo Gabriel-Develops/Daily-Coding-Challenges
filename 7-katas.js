@@ -4990,3 +4990,13 @@ function allNonConsecutive(arr) {
   }
   return inconsecutives
 }
+
+
+
+/*
+  All Star Code Challenge #16
+*/
+
+function noRepeat(str) {
+  return [...str].find((x, _, arr) => arr.indexOf(x) === arr.lastIndexOf(x))
+}
