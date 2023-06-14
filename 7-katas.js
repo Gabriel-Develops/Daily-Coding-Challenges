@@ -5045,3 +5045,28 @@ function fizzBuzzCuckooClock(time) {
   else
     return 'tick'
 }
+
+
+
+/*
+  Vampire Numbers
+*/
+
+var vampire_test = function(a, b){
+  const string = `${a}${b}_${a * b}`
+  const [multiplicandsMap, productMap] = string.split('_')
+    .map(subArr => subArr.split('')
+      .reduce((map, x) => map.set(x, map.get(x) + 1 || 1), new Map()))
+  
+  for (let [key, value] of multiplicandsMap) {
+    if (productMap.get(key) !== value)
+      return false
+  }
+  return true
+}
+
+var vampire_test = function(a, b){
+  const multiplicandsSorted = `${a}${b}`.split('').sort().join('')
+  const productSorted = `${a * b}`.split('').sort().join('')
+  return multiplicandsSorted === productSorted
+}
