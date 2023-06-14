@@ -5000,3 +5000,26 @@ function allNonConsecutive(arr) {
 function noRepeat(str) {
   return [...str].find((x, _, arr) => arr.indexOf(x) === arr.lastIndexOf(x))
 }
+
+
+
+/*
+  Tail Swap
+*/
+
+function tailSwap(arr) {
+  const modifiedArr = arr.map(x => x.split(':'))
+  const finalArr = []
+  for (let i = 0; i < modifiedArr.length; i++) {
+    const first = modifiedArr[i][0]
+    const last = modifiedArr[modifiedArr.length - i - 1][1]
+    finalArr.push([first, last])
+  }
+  return finalArr.map(x => x.join(':'))
+}
+
+function tailSwap([first, second]) {
+  const [aa, ab] = first.split(':')
+  const [ba, bb] = second.split(':')
+  return [`${aa}:${bb}`, `${ba}:${ab}`] 
+}
