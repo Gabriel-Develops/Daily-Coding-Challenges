@@ -5023,3 +5023,25 @@ function tailSwap([first, second]) {
   const [ba, bb] = second.split(':')
   return [`${aa}:${bb}`, `${ba}:${ab}`] 
 }
+
+
+
+/*
+  Fizz Buzz Cuckoo Clock
+*/
+
+function fizzBuzzCuckooClock(time) {
+  const [hour, minutes] = time.split(':').map(x => +x)
+  if (minutes === 0)
+    return Array.from({length: hour % 12 || 12}).map(x => 'Cuckoo').join(' ')
+  else if (minutes === 30)
+    return 'Cuckoo'
+  else if (minutes % 15 === 0)
+    return 'Fizz Buzz'
+  else if (minutes % 3 === 0)
+    return 'Fizz'
+  else if (minutes % 5 === 0)
+    return 'Buzz'
+  else
+    return 'tick'
+}
