@@ -5070,3 +5070,13 @@ var vampire_test = function(a, b){
   const productSorted = `${a * b}`.split('').sort().join('')
   return multiplicandsSorted === productSorted
 }
+
+
+
+/*
+  Dominant array elements
+*/
+
+function solve(arr) {
+  return arr.filter((x, i) => arr.slice(i + 1).every(y => x > y));
+}
