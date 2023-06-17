@@ -5080,3 +5080,31 @@ var vampire_test = function(a, b){
 function solve(arr) {
   return arr.filter((x, i) => arr.slice(i + 1).every(y => x > y));
 }
+
+
+
+/*
+  The Poet And The Pendulum
+*/
+
+function pendulum(values) {
+  values.sort((a, b) => a - b)
+  const finalArr = []
+  for (let num of values) {
+    finalArr.length % 2
+      ? finalArr.push(num)
+      : finalArr.unshift(num)
+  }
+  return finalArr
+}
+
+function pendulum(values) {
+  values.sort((a, b) => a - b)
+  const left = [], right = []
+  for (let i = 0; i < values.length; i++) {
+    i % 2 === 0
+      ? left.push(values[i])
+      : right.push(values[i])
+  }
+  return [...left.reverse(), ...right]
+}
